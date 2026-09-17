@@ -1,6 +1,6 @@
 # FOCIVO WEB PROJECT STRUCTURE
 
-Status: FOUNDATION LOCKED / CONTENT PHASES PENDING
+Status: WEB-001 FOUNDATION ESTABLISHED / WEB-002 GLOBAL SHELL ESTABLISHED / CATEGORY CONTENT PHASES PENDING
 
 ## Visual base
 
@@ -18,6 +18,10 @@ General product knowledge, feature explanations, Learn/Academy and general Suppo
 
 No planned project, feature or version is promoted as public product news before it is complete, tested, functional and accepted. Unfinished route shells are development structure only and remain noindex until their dedicated phase is complete.
 
+## Global shell rule
+
+The website must not overload the visitor with equal-weight choices. The global shell exposes the most common destinations directly and groups secondary destinations under More / Περισσότερα. LOGIN remains a distinct label. EN / ΕΛ and GET FOCIVO remain visible actions. Mobile navigation exposes the same information in a clean vertical structure.
+
 ## Route foundation
 
 - `/` — Home — accepted visual base
@@ -32,4 +36,4 @@ No planned project, feature or version is promoted as public product news before
 - `/get-focivo/` — Get FOCIVO
 - `/login/` — LOGIN
 
-Each category will be designed and completed separately after the project foundation is stable.
+Each category will be designed and completed separately after the project foundation is stable. Route shells remain noindex until their dedicated category phase passes acceptance.

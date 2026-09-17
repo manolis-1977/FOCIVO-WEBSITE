@@ -5,47 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#081225" />
   <meta name="robots" content="noindex,nofollow" />
+  <meta name="description" content="FOCIVO website section under structured development." />
   <link rel="icon" href="../assets/favicon.webp" type="image/webp" />
   <link rel="stylesheet" href="../design-system.css" />
   <link rel="stylesheet" href="../route-shell.css" />
   <title>FOCIVO</title>
 </head>
 <body>
-  <header class="route-header">
-    <div class="shell route-nav">
-      <a class="route-brand" href="../"><img src="../assets/focivo-symbol.webp" alt="" /><span>FOCIVO</span></a>
-      <a class="route-home" href="../">Home</a>
-    </div>
-  </header>
-  <main class="route-main">
+  <a class="shell-skip" href="#main">Skip to content</a>
+  <header class="shell-header" id="siteHeader"></header>
+  <main class="route-main" id="main">
     <div class="shell">
-      <section class="route-card" aria-labelledby="route-title">
-        <span class="route-kicker">FOCIVO WEB FOUNDATION</span>
-        <h1 id="route-title">FOCIVO</h1>
-        <p id="route-description">The route structure is ready.</p>
-        <div class="route-note">Structure only. Final content, search, interactions and category-specific UX will be implemented and accepted in the dedicated phase before this route becomes public/indexable.</div>
+      <section class="route-intro route-card" aria-labelledby="route-title">
+        <span class="route-kicker" data-shell-kicker>FOCIVO WEB FOUNDATION</span>
+        <h1 id="route-title" data-shell-title>FOCIVO</h1>
+        <p class="route-note" data-shell-note>This category has been structurally prepared. Final content and category-specific UX will be completed in its dedicated phase.</p>
+        <span class="route-status">STRUCTURE ONLY · NOINDEX</span>
       </section>
     </div>
   </main>
-  <footer class="route-footer"><div class="shell route-footer-row"><div class="route-footer-brand"><img src="../assets/focivo-symbol.webp" alt="" /><span>FOCIVO</span></div><span>© 2026 FOCIVO</span></div></footer>
-  <script>
-    const key=location.pathname.split('/').filter(Boolean).pop()||'home';
-    const routes={
-      about:['ABOUT FOCIVO','ΠΟΙΟΙ ΕΙΜΑΣΤΕ / ABOUT FOCIVO'],
-      'how-it-works':['HOW IT WORKS','How FOCIVO works'],
-      features:['FEATURES','FOCIVO Features'],
-      learn:['LEARN / ACADEMY','FOCIVO Learn / Academy'],
-      support:['SUPPORT','FOCIVO Support'],
-      ideas:['HELP SHAPE FOCIVO','Help Shape FOCIVO'],
-      'whats-new':["WHAT'S NEW","What's New"],
-      security:['SECURITY & PROTECTION','Security & Protection'],
-      'get-focivo':['GET FOCIVO','Get FOCIVO'],
-      login:['LOGIN','FOCIVO LOGIN']
-    };
-    const data=routes[key]||['FOCIVO','FOCIVO'];
-    document.querySelector('.route-kicker').textContent=data[0];
-    document.getElementById('route-title').textContent=data[1];
-    document.title=data[1]+' — FOCIVO';
-  </script>
+  <footer class="shell-footer" id="siteFooter"></footer>
+  <script src="../route-shell.js"></script>
 </body>
 </html>
