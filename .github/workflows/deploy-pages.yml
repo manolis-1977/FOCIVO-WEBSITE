@@ -1,4 +1,4 @@
-name: Deploy FOCIVO Website
+name: Deploy FORYMO Website
 
 on:
   push:
