@@ -2,7 +2,7 @@ const translations = {
   en: {
     "nav.product":"Product","nav.how":"How it works","nav.desktop":"Desktop","nav.mobile":"Mobile","nav.faq":"FAQ","nav.cta":"See FORYMO",
     "hero.eyebrow":"FOCUS · RHYTHM · MOMENTS","hero.title":"Your day is more than a list of tasks.","hero.lead":"FORYMO brings together what deserves your attention, what builds your daily rhythm and what needs to happen at the right moment.","hero.primary":"Explore FORYMO","hero.secondary":"See how it works","hero.trust1h":"FOCUS","hero.trust1b":"What deserves your attention","hero.trust2h":"RHYTHM","hero.trust2b":"What repeats and builds your flow","hero.trust3h":"MOMENTS","hero.trust3b":"What needs to happen at the right time",
-    "mock.today":"Today","mock.tasks":"Tasks","mock.routines":"Routines","mock.reminders":"Reminders","mock.date":"Wednesday","mock.heading":"Your day, at a glance.","mock.synced":"Ready","mock.stat1":"Tasks","mock.stat2":"Routines","mock.stat3":"Reminders","mock.done":"done","mock.today2":"today","mock.focus":"Focus next","mock.task1":"Review today’s priorities","mock.task2":"Prepare tomorrow’s plan","mock.task3":"Back up your workspace","mock.complete":"Complete","mock.upcoming":"Upcoming","mock.reminder":"Reminder",
+    "mock.today":"Today","mock.tasks":"Tasks","mock.routines":"Routines","mock.reminders":"Reminders","mock.date":"Wednesday","mock.heading":"Your day, at a glance.","mock.synced":"Ready","mock.stat1":"Tasks","mock.stat2":"Routines","mock.stat3":"Reminders","mock.done":"completed","mock.today2":"due today","mock.focus":"Focus next","mock.task1":"Review today’s priorities","mock.task2":"Prepare tomorrow’s plan","mock.task3":"Back up your workspace","mock.complete":"Complete","mock.upcoming":"Upcoming","mock.reminder":"Reminder",
     "product.kicker":"More than task management","product.title":"FOCUS · RHYTHM · MOMENTS","product.lead":"FORYMO is not another task manager. It organizes your day around three layers: what deserves attention, what repeats and builds your rhythm, and what must happen at the right moment.",
     "features.today.title":"MOMENTS — Today","features.today.body":"Today brings the right tasks, routines and reminders into one view so you can see what matters now.","features.tasks.title":"FOCUS — Tasks","features.tasks.body":"Tasks turn attention into action by keeping what deserves your focus clear and visible.","features.routines.title":"RHYTHM — Routines","features.routines.body":"Routines give structure to what repeats, helping consistent actions become part of your everyday flow.","features.reminders.title":"MOMENTS — Reminders","features.reminders.body":"Reminders connect an action to the moment when it needs your attention.","features.backup.title":"Backup & recovery","features.backup.body":"Create verified backups and recover confidently when you need to restore your workspace.","features.control.title":"One system, under your control","features.control.body":"Focus, Rhythm and Moments work together in one understandable workspace without changing the way your real data stays under your control.",
     "how.kicker":"How FORYMO works","how.title":"From attention to rhythm to the right moment.","how.lead":"FORYMO connects what you need to do, what you want to repeat and what must surface at the right time — without turning your day into a rigid system.","how.s1h":"Capture","how.s1b":"Add the task, routine or reminder while it is still fresh.","how.s2h":"See clearly","how.s2b":"Use Today as your working view instead of searching across disconnected lists.","how.s3h":"Act","how.s3b":"Complete what matters, update status and keep the next step visible.","how.s4h":"Protect","how.s4b":"Keep verified backups so your workspace can be recovered when needed.",
@@ -14,7 +14,7 @@ const translations = {
   el: {
     "nav.product":"Το FORYMO","nav.how":"Πώς λειτουργεί","nav.desktop":"Windows","nav.mobile":"Mobile","nav.faq":"Συχνές ερωτήσεις","nav.cta":"Δες το FORYMO",
     "hero.eyebrow":"FOCUS · RHYTHM · MOMENTS","hero.title":"Η ημέρα σου είναι κάτι περισσότερο από μια λίστα εργασιών.","hero.lead":"Το FORYMO ενώνει όσα αξίζουν την προσοχή σου, όσα χτίζουν τον καθημερινό σου ρυθμό και όσα πρέπει να συμβούν τη σωστή στιγμή.","hero.primary":"Γνώρισε το FORYMO","hero.secondary":"Δες πώς λειτουργεί","hero.trust1h":"FOCUS","hero.trust1b":"Τι αξίζει την προσοχή σου","hero.trust2h":"RHYTHM","hero.trust2b":"Τι επαναλαμβάνεται και χτίζει τη ροή σου","hero.trust3h":"MOMENTS","hero.trust3b":"Τι πρέπει να συμβεί τη σωστή στιγμή",
-    "mock.today":"Η ημέρα σου","mock.tasks":"Εργασίες","mock.routines":"Συνήθειες","mock.reminders":"Υπενθυμίσεις","mock.date":"Τετάρτη","mock.heading":"Η ημέρα σου, με μια ματιά.","mock.synced":"Έτοιμο","mock.stat1":"Εργασίες","mock.stat2":"Συνήθειες","mock.stat3":"Υπενθυμίσεις","mock.done":"ολοκληρώθηκαν","mock.today2":"σήμερα","mock.focus":"Επόμενη προτεραιότητα","mock.task1":"Έλεγξε τις σημερινές προτεραιότητες","mock.task2":"Ετοίμασε το πλάνο της αυριανής ημέρας","mock.task3":"Δημιούργησε αντίγραφο ασφαλείας","mock.complete":"Ολοκληρώθηκε","mock.upcoming":"Ακολουθεί","mock.reminder":"Υπενθύμιση",
+    "mock.today":"Η ημέρα σου","mock.tasks":"Εργασίες","mock.routines":"Συνήθειες","mock.reminders":"Υπενθυμίσεις","mock.date":"Τετάρτη","mock.heading":"Η ημέρα σου, με μια ματιά.","mock.synced":"Έτοιμο","mock.stat1":"Εργασίες","mock.stat2":"Συνήθειες","mock.stat3":"Υπενθυμίσεις","mock.done":"ολοκληρώθηκαν","mock.today2":"για σήμερα","mock.focus":"Επόμενη προτεραιότητα","mock.task1":"Έλεγξε τις σημερινές προτεραιότητες","mock.task2":"Ετοίμασε το πλάνο της αυριανής ημέρας","mock.task3":"Δημιούργησε αντίγραφο ασφαλείας","mock.complete":"Ολοκληρώθηκε","mock.upcoming":"Ακολουθεί","mock.reminder":"Υπενθύμιση",
     "product.kicker":"Περισσότερο από task management","product.title":"FOCUS · RHYTHM · MOMENTS","product.lead":"Το FORYMO δεν παρουσιάζεται ως ακόμη ένας task manager. Οργανώνει την ημέρα σου σε τρία επίπεδα: τι αξίζει την προσοχή σου, τι επαναλαμβάνεται και χτίζει τον ρυθμό σου και τι πρέπει να συμβεί τη σωστή στιγμή.",
     "features.today.title":"MOMENTS — Η ημέρα σου","features.today.body":"Η Ημέρα σου φέρνει τις σωστές εργασίες, συνήθειες και υπενθυμίσεις σε μία εικόνα, ώστε να βλέπεις τι έχει σημασία τώρα.","features.tasks.title":"FOCUS — Εργασίες","features.tasks.body":"Οι Εργασίες μετατρέπουν την προσοχή σε πράξη, κρατώντας καθαρό και ορατό ό,τι αξίζει την εστίασή σου.","features.routines.title":"RHYTHM — Συνήθειες","features.routines.body":"Οι Συνήθειες δίνουν δομή σε όσα επαναλαμβάνονται και βοηθούν τις σταθερές ενέργειες να γίνουν μέρος της καθημερινής σου ροής.","features.reminders.title":"MOMENTS — Υπενθυμίσεις","features.reminders.body":"Οι Υπενθυμίσεις συνδέουν μια ενέργεια με τη στιγμή που χρειάζεται την προσοχή σου.","features.backup.title":"Αντίγραφα ασφαλείας & επαναφορά","features.backup.body":"Δημιούργησε επαληθευμένα αντίγραφα ασφαλείας και επανάφερε τον χώρο εργασίας σου με σιγουριά όταν χρειαστεί.","features.control.title":"Ένα σύστημα, υπό τον έλεγχό σου","features.control.body":"Focus, Rhythm και Moments λειτουργούν μαζί σε έναν κατανοητό χώρο εργασίας, ενώ τα πραγματικά δεδομένα σου παραμένουν υπό τον δικό σου έλεγχο.",
     "how.kicker":"Πώς λειτουργεί το FORYMO","how.title":"Από την προσοχή, στον ρυθμό, στη σωστή στιγμή.","how.lead":"Το FORYMO συνδέει όσα πρέπει να κάνεις, όσα θέλεις να επαναλαμβάνεις και όσα πρέπει να εμφανίζονται τη σωστή στιγμή — χωρίς να μετατρέπει την ημέρα σου σε άκαμπτο σύστημα.","how.s1h":"Κατάγραψε","how.s1b":"Πρόσθεσε την εργασία, τη συνήθεια ή την υπενθύμιση όσο είναι ακόμη φρέσκια στο μυαλό σου.","how.s2h":"Δες καθαρά","how.s2b":"Χρησιμοποίησε την Ημέρα σου ως βασική οθόνη εργασίας, αντί να ψάχνεις σε ασύνδετες λίστες.","how.s3h":"Προχώρησε","how.s3b":"Ολοκλήρωσε ό,τι έχει σημασία, ενημέρωσε την κατάσταση και κράτησε ορατό το επόμενο βήμα.","how.s4h":"Προστάτεψε","how.s4b":"Διατήρησε επαληθευμένα αντίγραφα ασφαλείας ώστε να μπορείς να επαναφέρεις τον χώρο εργασίας σου όταν χρειαστεί.",
@@ -29,6 +29,33 @@ const buttons = document.querySelectorAll('.lang-btn');
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
 
+function installMetricPolish(){
+  if(document.getElementById('forymo-metric-polish')) return;
+  const style = document.createElement('style');
+  style.id = 'forymo-metric-polish';
+  style.textContent = `
+    .stat-grid{gap:12px;margin:24px 0 25px}
+    .stat{min-height:112px;padding:15px 16px 14px;display:flex;flex-direction:column;align-items:flex-start;gap:0;border-radius:15px;box-shadow:0 8px 22px rgba(20,45,85,.045)}
+    .stat>span{display:block;margin:0 0 9px;font-size:8px;line-height:1.2;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8190a5}
+    .stat>strong{display:block;margin:0 0 11px;font-size:28px;line-height:.95;letter-spacing:-.035em;font-weight:850;color:#14243d}
+    .stat>em{display:block;margin-top:auto;font-style:normal;font-size:9px;line-height:1.25;font-weight:700;color:#43836b;white-space:nowrap}
+    @media(max-width:700px){.stat-grid{gap:8px}.stat{min-height:104px;padding:13px 12px}.stat>strong{font-size:25px}.stat>em{font-size:8px}}
+  `;
+  document.head.appendChild(style);
+}
+
+function setMetricCopy(lang){
+  const stats = document.querySelectorAll('.stat-grid .stat');
+  if(stats.length < 3) return;
+  const copy = lang === 'el'
+    ? ['3 ολοκληρώθηκαν','75% ολοκλήρωση','για σήμερα']
+    : ['3 completed','75% complete','due today'];
+  stats.forEach((stat,index) => {
+    const status = stat.querySelector('em');
+    if(status && copy[index]) status.textContent = copy[index];
+  });
+}
+
 function setLanguage(lang){
   const dict = translations[lang] || translations.en;
   document.documentElement.lang = lang === 'el' ? 'el' : 'en';
@@ -36,11 +63,13 @@ function setLanguage(lang){
     const key = el.dataset.i18n;
     if(dict[key]) el.textContent = dict[key];
   });
+  setMetricCopy(lang);
   buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
   localStorage.setItem('focivo-language', lang);
   document.title = 'FORYMO — Focus. Rhythm. Moments.';
 }
 
+installMetricPolish();
 buttons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
 menuBtn.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
