@@ -97,6 +97,7 @@
 
   function renderPageCopy() {
     document.documentElement.lang = lang;
+    document.documentElement.dataset.focivoLanguage = lang;
     const skip = document.querySelector('.shell-skip');
     if (skip) skip.textContent = copy[lang].skip;
     const kicker = document.querySelector('[data-shell-kicker]');
@@ -115,9 +116,11 @@
     renderPageCopy();
     renderHeader();
     renderFooter();
+    window.dispatchEvent(new CustomEvent('focivo:languagechange', { detail: { lang } }));
   }
 
   renderPageCopy();
   renderHeader();
   renderFooter();
+  window.dispatchEvent(new CustomEvent('focivo:languagechange', { detail: { lang } }));
 })();
