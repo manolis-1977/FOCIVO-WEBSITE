@@ -1,0 +1,17 @@
+{
+  "project": "FOCIVO.COM",
+  "foundation": "WEB-001 + WEB-002 skeleton",
+  "routes": [
+    {"path":"/","key":"home","status":"visual-base-locked","indexable":true},
+    {"path":"/about/","key":"about","status":"structure-only","indexable":false},
+    {"path":"/how-it-works/","key":"how-it-works","status":"structure-only","indexable":false},
+    {"path":"/features/","key":"features","status":"structure-only","indexable":false},
+    {"path":"/learn/","key":"learn","status":"structure-only","indexable":false},
+    {"path":"/support/","key":"support","status":"structure-only","indexable":false},
+    {"path":"/ideas/","key":"ideas","status":"structure-only","indexable":false},
+    {"path":"/whats-new/","key":"whats-new","status":"structure-only-released-only","indexable":false},
+    {"path":"/security/","key":"security","status":"structure-only","indexable":false},
+    {"path":"/get-focivo/","key":"get-focivo","status":"structure-only","indexable":false},
+    {"path":"/login/","key":"login","status":"structure-only-separate-auth-phase","indexable":false}
+  ]
+}

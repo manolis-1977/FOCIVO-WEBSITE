@@ -1,0 +1,33 @@
+:root{
+  --focivo-navy-950:#06101e;
+  --focivo-navy-900:#07111f;
+  --focivo-navy-850:#081225;
+  --focivo-navy-800:#0b1830;
+  --focivo-ink:#0d1830;
+  --focivo-blue:#2388f5;
+  --focivo-cyan:#46c7f5;
+  --focivo-violet:#6655e8;
+  --focivo-white:#ffffff;
+  --focivo-soft:#f4f7fb;
+  --focivo-muted:#667085;
+  --focivo-line:#dbe3ee;
+  --focivo-success:#1d7c55;
+  --focivo-max:1180px;
+  --focivo-radius-sm:11px;
+  --focivo-radius-md:14px;
+  --focivo-radius-lg:20px;
+  --focivo-radius-xl:28px;
+  --focivo-shadow:0 24px 70px rgba(15,35,75,.14);
+  --focivo-focus:0 0 0 3px rgba(70,199,245,.38);
+  --focivo-motion-fast:160ms;
+  --focivo-motion-normal:220ms;
+}
+
+/* WEB-001: foundation extracted from the accepted Home visual direction. */
+:focus-visible{outline:2px solid var(--focivo-cyan);outline-offset:3px;box-shadow:var(--focivo-focus)}
+img{max-width:100%}
+button,a,input,select,textarea{transition-duration:var(--focivo-motion-fast)}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
