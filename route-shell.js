@@ -8,23 +8,23 @@
     en: {
       skip:'Skip to content',
       navLabel:'Primary navigation',
-      about:'About FOCIVO', how:'How it works', features:'Features', learn:'Learn', support:'Support',
-      more:'More', ideas:'Help Shape FOCIVO', whatsNew:"What's New", security:'Security', login:'LOGIN', get:'GET FOCIVO', home:'Home',
+      about:'About FORYMO', how:'How it works', features:'Features', learn:'Learn', support:'Support',
+      more:'More', ideas:'Help Shape FORYMO', whatsNew:"What's New", security:'Security', login:'LOGIN', get:'GET FORYMO', home:'Home',
       note:'This category has been structurally prepared. Final content and category-specific UX will be completed and accepted in its dedicated phase before release.',
-      structure:'FOCIVO WEB FOUNDATION', rights:'All rights reserved.',
+      structure:'FORYMO WEB FOUNDATION', rights:'All rights reserved.',
       routes:{
-        about:'About FOCIVO','how-it-works':'How FOCIVO works',features:'FOCIVO Features',learn:'FOCIVO Learn / Academy',support:'FOCIVO Support',ideas:'Help Shape FOCIVO','whats-new':"What's New",security:'Security & Protection','get-focivo':'Get FOCIVO',login:'FOCIVO LOGIN'
+        about:'About FORYMO','how-it-works':'How FORYMO works',features:'FORYMO Features',learn:'FORYMO Learn / Academy',support:'FORYMO Support',ideas:'Help Shape FORYMO','whats-new':"What's New",security:'Security & Protection','get-focivo':'Get FORYMO',login:'FORYMO LOGIN'
       }
     },
     el: {
       skip:'Μετάβαση στο περιεχόμενο',
       navLabel:'Κύρια πλοήγηση',
-      about:'Ποιοι είμαστε', how:'Πώς λειτουργεί', features:'Λειτουργίες', learn:'Μάθε το FOCIVO', support:'Υποστήριξη',
-      more:'Περισσότερα', ideas:'Βοήθησε να γίνει καλύτερο', whatsNew:'Τι νέο υπάρχει', security:'Ασφάλεια', login:'LOGIN', get:'GET FOCIVO', home:'Αρχική',
+      about:'Ποιοι είμαστε', how:'Πώς λειτουργεί', features:'Λειτουργίες', learn:'Μάθε το FORYMO', support:'Υποστήριξη',
+      more:'Περισσότερα', ideas:'Βοήθησε να γίνει καλύτερο', whatsNew:'Τι νέο υπάρχει', security:'Ασφάλεια', login:'LOGIN', get:'GET FORYMO', home:'Αρχική',
       note:'Η δομή της κατηγορίας έχει προετοιμαστεί. Το τελικό περιεχόμενο και η ειδική εμπειρία της κατηγορίας θα ολοκληρωθούν και θα ελεγχθούν στο αντίστοιχο phase πριν από την κυκλοφορία.',
-      structure:'FOCIVO WEB FOUNDATION', rights:'Με επιφύλαξη παντός δικαιώματος.',
+      structure:'FORYMO WEB FOUNDATION', rights:'Με επιφύλαξη παντός δικαιώματος.',
       routes:{
-        about:'Ποιοι είμαστε','how-it-works':'Πώς λειτουργεί το FOCIVO',features:'Λειτουργίες FOCIVO',learn:'Μάθε το FOCIVO / Academy',support:'Υποστήριξη FOCIVO',ideas:'Βοήθησε να γίνει το FOCIVO καλύτερο','whats-new':'Τι νέο υπάρχει',security:'Ασφάλεια & Προστασία','get-focivo':'Απόκτησε το FOCIVO',login:'FOCIVO LOGIN'
+        about:'Ποιοι είμαστε','how-it-works':'Πώς λειτουργεί το FORYMO',features:'Λειτουργίες FORYMO',learn:'Μάθε το FORYMO / Academy',support:'Υποστήριξη FORYMO',ideas:'Βοήθησε να γίνει το FORYMO καλύτερο','whats-new':'Τι νέο υπάρχει',security:'Ασφάλεια & Προστασία','get-focivo':'Απόκτησε το FORYMO',login:'FORYMO LOGIN'
       }
     }
   };
@@ -48,7 +48,7 @@
     if (!header) return;
     header.innerHTML = `
       <div class="shell shell-nav-row">
-        <a class="shell-brand" href="${root}" aria-label="FOCIVO ${copy[lang].home}"><img src="${root}assets/focivo-symbol.webp" alt="" /><span>FOCIVO</span></a>
+        <a class="shell-brand" href="${root}" aria-label="FORYMO ${copy[lang].home}"><img src="${root}assets/focivo-symbol.webp" alt="" /><span>FORYMO</span></a>
         <nav class="shell-desktop-nav" aria-label="${copy[lang].navLabel}">
           ${navItems.map(([r,k]) => navLink(r,k)).join('')}
           <details class="shell-more"><summary>${copy[lang].more}</summary><div class="shell-more-panel">${moreItems.map(([r,k]) => navLink(r,k,'panel-link')).join('')}</div></details>
@@ -87,11 +87,11 @@
     if (!footer) return;
     footer.innerHTML = `
       <div class="shell shell-footer-grid">
-        <div class="shell-footer-brand"><img src="${root}assets/focivo-symbol.webp" alt="" /><strong>FOCIVO</strong><span>Focus. Organize. Move forward.</span></div>
+        <div class="shell-footer-brand"><img src="${root}assets/focivo-symbol.webp" alt="" /><strong>FORYMO</strong><span>Focus. Rythmic. Moments.</span></div>
         <div class="shell-footer-group"><strong>${copy[lang].features}</strong><a href="${href('how-it-works')}">${copy[lang].how}</a><a href="${href('features')}">${copy[lang].features}</a><a href="${href('learn')}">${copy[lang].learn}</a></div>
         <div class="shell-footer-group"><strong>${copy[lang].support}</strong><a href="${href('support')}">${copy[lang].support}</a><a href="${href('security')}">${copy[lang].security}</a><a href="${href('ideas')}">${copy[lang].ideas}</a></div>
-        <div class="shell-footer-group"><strong>FOCIVO</strong><a href="${href('about')}">${copy[lang].about}</a><a href="${href('whats-new')}">${copy[lang].whatsNew}</a><a href="${href('login')}">${copy[lang].login}</a></div>
-        <div class="shell-footer-end"><span>© 2026 FOCIVO</span><span>${copy[lang].rights}</span></div>
+        <div class="shell-footer-group"><strong>FORYMO</strong><a href="${href('about')}">${copy[lang].about}</a><a href="${href('whats-new')}">${copy[lang].whatsNew}</a><a href="${href('login')}">${copy[lang].login}</a></div>
+        <div class="shell-footer-end"><span>© 2026 FORYMO</span><span>${copy[lang].rights}</span></div>
       </div>`;
   }
 
@@ -104,9 +104,9 @@
     const title = document.querySelector('[data-shell-title]');
     const note = document.querySelector('[data-shell-note]');
     if (kicker) kicker.textContent = copy[lang].structure;
-    if (title) title.textContent = copy[lang].routes[routeKey] || 'FOCIVO';
+    if (title) title.textContent = copy[lang].routes[routeKey] || 'FORYMO';
     if (note) note.textContent = copy[lang].note;
-    document.title = `${copy[lang].routes[routeKey] || 'FOCIVO'} — FOCIVO`;
+    document.title = `${copy[lang].routes[routeKey] || 'FORYMO'} — FORYMO`;
   }
 
   function setLanguage(next) {
