@@ -87,7 +87,7 @@
     if (!footer) return;
     footer.innerHTML = `
       <div class="shell shell-footer-grid">
-        <div class="shell-footer-brand"><img src="${root}assets/focivo-symbol.webp" alt="" /><strong>FORYMO</strong><span>Focus. Rythmic. Moments.</span></div>
+        <div class="shell-footer-brand"><img src="${root}assets/focivo-symbol.webp" alt="" /><strong>FORYMO</strong><span>Focus. Rhythm. Moments.</span></div>
         <div class="shell-footer-group"><strong>${copy[lang].features}</strong><a href="${href('how-it-works')}">${copy[lang].how}</a><a href="${href('features')}">${copy[lang].features}</a><a href="${href('learn')}">${copy[lang].learn}</a></div>
         <div class="shell-footer-group"><strong>${copy[lang].support}</strong><a href="${href('support')}">${copy[lang].support}</a><a href="${href('security')}">${copy[lang].security}</a><a href="${href('ideas')}">${copy[lang].ideas}</a></div>
         <div class="shell-footer-group"><strong>FORYMO</strong><a href="${href('about')}">${copy[lang].about}</a><a href="${href('whats-new')}">${copy[lang].whatsNew}</a><a href="${href('login')}">${copy[lang].login}</a></div>
