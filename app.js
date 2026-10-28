@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    "nav.product":"Product","nav.how":"How it works","nav.desktop":"Windows","nav.mobile":"Mobile","nav.sunshine":"SunShine Pro","nav.faq":"FAQ","nav.cta":"See FORYMO",
+    "nav.product":"Product","nav.how":"How it works","nav.desktop":"Windows","nav.mobile":"Mobile","nav.sunshine":"SunShine Pro","nav.faq":"FAQ","nav.cta":"See FORYMO","sunshine.nav.forymo":"FORYMO","sunshine.back":"Back to FORYMO","sunshine.page.title":"SunShine Pro — Professional clinic management",
     "hero.eyebrow":"FOCUS · RHYTHM · MOMENTS","hero.title":"Your day is more than a list of tasks.","hero.lead":"FORYMO brings together what deserves your attention, what builds your daily rhythm and what needs to happen at the right moment.","hero.primary":"Explore FORYMO","hero.secondary":"See how it works","hero.trust1h":"FOCUS","hero.trust1b":"What deserves your attention","hero.trust2h":"RHYTHM","hero.trust2b":"What repeats and builds your flow","hero.trust3h":"MOMENTS","hero.trust3b":"What needs to happen at the right time",
     "mock.today":"Today","mock.tasks":"Tasks","mock.routines":"Routines","mock.reminders":"Reminders","mock.date":"Wednesday","mock.heading":"Your day, at a glance.","mock.synced":"Ready","mock.stat1":"Tasks","mock.stat2":"Routines","mock.stat3":"Reminders","mock.done":"completed","mock.today2":"due today","mock.focus":"Focus next","mock.task1":"Review today’s priorities","mock.task2":"Prepare tomorrow’s plan","mock.task3":"Back up your workspace","mock.complete":"Complete","mock.upcoming":"Upcoming","mock.reminder":"Reminder",
     "product.kicker":"More than task management","product.title":"FOCUS · RHYTHM · MOMENTS","product.lead":"FORYMO is not another task manager. It organizes your day around three layers: what deserves attention, what repeats and builds your rhythm, and what must happen at the right moment.",
@@ -14,7 +14,7 @@ const translations = {
     "cta.kicker":"FOCUS · RHYTHM · MOMENTS","cta.title":"Give your day focus, rhythm and the right moments.","cta.body":"FORYMO brings Focus, Rhythm and Moments together in one clear personal system.","cta.button":"Back to the top","footer.tagline":"Focus. Rhythm. Moments.","footer.note":"All rights reserved."
   },
   el: {
-    "nav.product":"Το FORYMO","nav.how":"Πώς λειτουργεί","nav.desktop":"Windows","nav.mobile":"Mobile","nav.sunshine":"SunShine Pro","nav.faq":"Συχνές ερωτήσεις","nav.cta":"Δες το FORYMO",
+    "nav.product":"Το FORYMO","nav.how":"Πώς λειτουργεί","nav.desktop":"Windows","nav.mobile":"Mobile","nav.sunshine":"SunShine Pro","nav.faq":"Συχνές ερωτήσεις","nav.cta":"Δες το FORYMO","sunshine.nav.forymo":"FORYMO","sunshine.back":"Επιστροφή στο FORYMO","sunshine.page.title":"SunShine Pro — Επαγγελματική διαχείριση φυσικοθεραπευτηρίου",
     "hero.eyebrow":"FOCUS · RHYTHM · MOMENTS","hero.title":"Η ημέρα σου είναι κάτι περισσότερο από μια λίστα εργασιών.","hero.lead":"Το FORYMO ενώνει όσα αξίζουν την προσοχή σου, όσα χτίζουν τον καθημερινό σου ρυθμό και όσα πρέπει να συμβούν τη σωστή στιγμή.","hero.primary":"Γνώρισε το FORYMO","hero.secondary":"Δες πώς λειτουργεί","hero.trust1h":"FOCUS","hero.trust1b":"Τι αξίζει την προσοχή σου","hero.trust2h":"RHYTHM","hero.trust2b":"Τι επαναλαμβάνεται και χτίζει τη ροή σου","hero.trust3h":"MOMENTS","hero.trust3b":"Τι πρέπει να συμβεί τη σωστή στιγμή",
     "mock.today":"Η ημέρα σου","mock.tasks":"Εργασίες","mock.routines":"Συνήθειες","mock.reminders":"Υπενθυμίσεις","mock.date":"Τετάρτη","mock.heading":"Η ημέρα σου, με μια ματιά.","mock.synced":"Έτοιμο","mock.stat1":"Εργασίες","mock.stat2":"Συνήθειες","mock.stat3":"Υπενθυμίσεις","mock.done":"ολοκληρώθηκαν","mock.today2":"για σήμερα","mock.focus":"Επόμενη προτεραιότητα","mock.task1":"Έλεγξε τις σημερινές προτεραιότητες","mock.task2":"Ετοίμασε το πλάνο της αυριανής ημέρας","mock.task3":"Δημιούργησε αντίγραφο ασφαλείας","mock.complete":"Ολοκληρώθηκε","mock.upcoming":"Ακολουθεί","mock.reminder":"Υπενθύμιση",
     "product.kicker":"Περισσότερο από task management","product.title":"FOCUS · RHYTHM · MOMENTS","product.lead":"Το FORYMO δεν παρουσιάζεται ως ακόμη ένας task manager. Οργανώνει την ημέρα σου σε τρία επίπεδα: τι αξίζει την προσοχή σου, τι επαναλαμβάνεται και χτίζει τον ρυθμό σου και τι πρέπει να συμβεί τη σωστή στιγμή.",
@@ -70,7 +70,7 @@ function setLanguage(lang){
   setMetricCopy(lang);
   buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
   localStorage.setItem('forymo-language', lang);
-  document.title = 'FORYMO — Focus. Rhythm. Moments.';
+  document.title = document.body.dataset.page === 'sunshine' ? dict['sunshine.page.title'] : 'FORYMO — Focus. Rhythm. Moments.';
 }
 
 installMetricPolish();
