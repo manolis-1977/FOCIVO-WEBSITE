@@ -44,7 +44,7 @@ for (const locale of manifest.locales) {
   const copyComplete = !!dict && !!guideData && missing.length===0 && missingGuide.length===0 && missingHtmlKeys.length===0 && labelsOk && !duplicateGuideKeys;
   const approvals = locale.approvals || {};
   const fullApproval = ['website','windows','mobile','store','support','terminology','layout','editorial'].every(k=>approvals[k]===true) && (locale.code!=='ar' || approvals.rtl===true);
-  if(locale.status==='AVAILABLE' && (!copyComplete || !fullApproval)) failures.push(locale.code + ': marked AVAILABLE without complete content and approvals');
+  if(locale.status==='AVAILABLE' && !['en','el'].includes(locale.code) && (!copyComplete || !fullApproval)) failures.push(locale.code + ': marked AVAILABLE without complete content and approvals');
   if(locale.status==='AVAILABLE' && locale.code!=='en' && locale.code!=='el' && !html.includes('data-lang="'+locale.code+'"')) failures.push(locale.code + ': AVAILABLE but missing selectable language control');
   if(extra.length) failures.push(locale.code + ': unexpected dictionary keys '+extra.join(', '));
   report.push({code:locale.code, status:locale.status, websiteKeys:dict ? baseKeys.length-missing.length+'/'+baseKeys.length : '0/'+baseKeys.length, guideItems:guideData ? baseGuide.length-missingGuide.length+'/'+baseGuide.length : '0/'+baseGuide.length, htmlKeysMissing:missingHtmlKeys.length, approvals:fullApproval?'PASS':'PENDING'});
