@@ -268,14 +268,228 @@ const copy={
   }
 };
 const aliases={"en":["missing task|task missing|task not showing|task not appear","reminder not|reminder missing|notification not|alarm not","restore|recover|backup restore","contact|support|helpdesk|representative"],"el":["εργασία δεν|εργασια δεν|δεν εμφανίζεται εργασία|εργασία λείπει","υπενθύμιση δεν|υπενθυμιση δεν|ειδοποίηση δεν|δεν εμφανίστηκε η υπενθύμιση","επαναφορά|ανάκτηση|επαναφερω|ανακτηση","επικοινωνία|εκπρόσωπο|υποστήριξη"],"pt-BR":["tarefa não|tarefa sumiu","lembrete não|notificação não","restaurar|recuperar","atendente|contato|suporte"],"de":["aufgabe fehlt|aufgabe nicht","erinnerung nicht|erinnerung fehlt","wiederherstellen|wiederherstellung","mitarbeiter|kontakt|support"],"es":["tarea no|no aparece una tarea","recordatorio no|no apareció un recordatorio","restaurar|recuperar","representante|contactar|soporte"],"fr":["tâche manque|tâche ne|tâche absente","rappel ne|rappel absent","restaurer|restauration","conseiller|contacter|assistance"],"it":["attività non|attività manca","promemoria non|promemoria manca","ripristinare|ripristino","operatore|contatto|assistenza"],"ja":["タスクが表示されない","リマインダーが表示されない","復元","担当者|問い合わせ"],"tr":["görev görünmüyor|görev neden","hatırlatıcı görünmedi|hatırlatıcı neden","geri yükle","temsilci|iletişim|destek"],"ar":["لا تظهر مهمة|المهمة لا تظهر","لم يظهر التذكير|التذكير لا يظهر","استعادة|استعيد","ممثل|التواصل|الدعم"],"hi":["कार्य क्यों नहीं|कार्य नहीं दिख","रिमाइंडर क्यों नहीं|रिमाइंडर नहीं दिख","पुनर्स्थापित|पुनर्स्थापना","प्रतिनिधि|संपर्क"],"id":["tugas tidak muncul","pengingat tidak muncul","memulihkan|pemulihan","petugas|hubungi|dukungan"]};
+const mobileSync={
+  "en": {
+    "title": "Mobile synchronization not working",
+    "answer": "If you are testing FORYMO Mobile, check that the mobile service is enabled in FORYMO for Windows and that the phone is listed as an authorized device. For a local-network connection, check that LAN access is enabled if required and that the devices can reach each other. Do not reset the app or delete data to troubleshoot. If the problem persists, tell support which app version and connection method you use and what message appears.",
+    "sync": [
+      "sync",
+      "synchron",
+      "not updating",
+      "not updated"
+    ],
+    "mobile": [
+      "mobile",
+      "phone",
+      "android",
+      "tablet"
+    ]
+  },
+  "el": {
+    "title": "Το κινητό δεν συγχρονίζεται",
+    "answer": "Αν δοκιμάζεις το FORYMO Mobile, έλεγξε ότι είναι ενεργή η υπηρεσία κινητού στο FORYMO για Windows και ότι το κινητό εμφανίζεται ως εξουσιοδοτημένη συσκευή. Για σύνδεση μέσω τοπικού δικτύου, έλεγξε ότι η πρόσβαση LAN είναι ενεργή, αν απαιτείται, και ότι οι δύο συσκευές μπορούν να επικοινωνήσουν. Μην κάνεις επαναφορά της εφαρμογής και μη διαγράψεις δεδομένα. Αν το πρόβλημα παραμένει, ενημέρωσε την υποστήριξη για την έκδοση της εφαρμογής, τον τρόπο σύνδεσης και το μήνυμα που εμφανίζεται.",
+    "sync": [
+      "συγχρον",
+      "συγχρων",
+      "συνχρον",
+      "sync",
+      "δεν ενημερων"
+    ],
+    "mobile": [
+      "κινητ",
+      "τηλεφων",
+      "mobile",
+      "android",
+      "ταμπλετ"
+    ]
+  },
+  "pt-BR": {
+    "title": "O celular não sincroniza",
+    "answer": "Se você está testando o FORYMO Mobile, verifique se o serviço móvel está ativado no FORYMO para Windows e se o celular aparece como dispositivo autorizado. Para conexão pela rede local, confirme que o acesso LAN está habilitado, se necessário, e que os dispositivos conseguem se comunicar. Não redefina o aplicativo nem exclua dados. Se o problema persistir, informe ao suporte a versão, o tipo de conexão e a mensagem exibida.",
+    "sync": [
+      "sincron",
+      "sync",
+      "não atualiza"
+    ],
+    "mobile": [
+      "celular",
+      "telefone",
+      "mobile",
+      "android",
+      "tablet"
+    ]
+  },
+  "de": {
+    "title": "Das Mobilgerät synchronisiert nicht",
+    "answer": "Wenn Sie FORYMO Mobile testen, prüfen Sie, ob der Mobilservice in FORYMO für Windows aktiviert und das Mobilgerät autorisiert ist. Bei einer lokalen Netzwerkverbindung prüfen Sie, ob der LAN-Zugriff bei Bedarf aktiviert ist und beide Geräte sich erreichen können. Setzen Sie die App nicht zurück und löschen Sie keine Daten. Teilen Sie dem Support bei anhaltenden Problemen die App-Version, Verbindungsart und angezeigte Meldung mit.",
+    "sync": [
+      "synchron",
+      "sync",
+      "aktualisiert nicht"
+    ],
+    "mobile": [
+      "handy",
+      "mobil",
+      "smartphone",
+      "android",
+      "tablet",
+      "telefon"
+    ]
+  },
+  "es": {
+    "title": "El móvil no se sincroniza",
+    "answer": "Si estás probando FORYMO Mobile, comprueba que el servicio móvil esté activado en FORYMO para Windows y que el teléfono aparezca como dispositivo autorizado. Para una conexión por red local, comprueba que el acceso LAN esté habilitado si se requiere y que los dispositivos puedan comunicarse. No restablezcas la aplicación ni borres datos. Si el problema persiste, comunica a soporte la versión, el método de conexión y el mensaje mostrado.",
+    "sync": [
+      "sincron",
+      "sync",
+      "no se actualiza"
+    ],
+    "mobile": [
+      "movil",
+      "telefono",
+      "celular",
+      "android",
+      "tablet",
+      "mobile"
+    ]
+  },
+  "fr": {
+    "title": "Le mobile ne se synchronise pas",
+    "answer": "Si vous testez FORYMO Mobile, vérifiez que le service mobile est activé dans FORYMO pour Windows et que le téléphone figure parmi les appareils autorisés. Pour une connexion par réseau local, vérifiez que l'accès LAN est activé si nécessaire et que les appareils peuvent communiquer. Ne réinitialisez pas l'application et ne supprimez pas de données. Si le problème persiste, indiquez à l'assistance la version, le mode de connexion et le message affiché.",
+    "sync": [
+      "synchron",
+      "sync",
+      "ne se met pas a jour"
+    ],
+    "mobile": [
+      "mobile",
+      "telephone",
+      "smartphone",
+      "android",
+      "tablette"
+    ]
+  },
+  "it": {
+    "title": "Il telefono non si sincronizza",
+    "answer": "Se stai provando FORYMO Mobile, verifica che il servizio mobile sia attivo in FORYMO per Windows e che il telefono risulti autorizzato. Per una connessione tramite rete locale, controlla che l'accesso LAN sia attivo se necessario e che i dispositivi possano comunicare. Non reimpostare l'app e non eliminare dati. Se il problema persiste, indica all'assistenza versione, metodo di connessione e messaggio visualizzato.",
+    "sync": [
+      "sincron",
+      "sync",
+      "non si aggiorna"
+    ],
+    "mobile": [
+      "telefono",
+      "cellulare",
+      "mobile",
+      "android",
+      "tablet"
+    ]
+  },
+  "ja": {
+    "title": "モバイル端末が同期しない",
+    "answer": "FORYMO Mobileをテストしている場合は、Windows版FORYMOのモバイルサービスが有効で、端末が許可済みであることを確認してください。ローカルネットワーク接続の場合は、必要に応じてLANアクセスが有効で、端末間で通信できることを確認します。アプリのリセットやデータの削除は行わないでください。解決しない場合は、アプリのバージョン、接続方法、表示されたメッセージをサポートへお知らせください。",
+    "sync": [
+      "同期",
+      "sync",
+      "更新されない"
+    ],
+    "mobile": [
+      "携帯",
+      "スマホ",
+      "スマートフォン",
+      "モバイル",
+      "android",
+      "タブレット",
+      "端末"
+    ]
+  },
+  "tr": {
+    "title": "Mobil cihaz eşitlenmiyor",
+    "answer": "FORYMO Mobile'ı test ediyorsanız Windows için FORYMO'da mobil hizmetin etkin ve telefonun yetkilendirilmiş olduğunu kontrol edin. Yerel ağ bağlantısında, gerekiyorsa LAN erişiminin etkin olduğunu ve cihazların birbirine erişebildiğini doğrulayın. Uygulamayı sıfırlamayın veya verileri silmeyin. Sorun sürerse uygulama sürümünü, bağlantı yöntemini ve görüntülenen mesajı desteğe bildirin.",
+    "sync": [
+      "eşitle",
+      "senkron",
+      "sync",
+      "güncellenmiyor"
+    ],
+    "mobile": [
+      "telefon",
+      "mobil",
+      "android",
+      "tablet"
+    ]
+  },
+  "ar": {
+    "title": "الجهاز المحمول لا يتزامن",
+    "answer": "إذا كنت تختبر FORYMO Mobile، تحقق من تفعيل خدمة الأجهزة المحمولة في FORYMO لنظام Windows ومن ظهور الهاتف كجهاز مصرح له. عند الاتصال عبر الشبكة المحلية، تحقق من تفعيل وصول LAN عند الحاجة ومن إمكانية اتصال الجهازين ببعضهما. لا تُعد ضبط التطبيق ولا تحذف البيانات. إذا استمرت المشكلة، أخبر الدعم بإصدار التطبيق وطريقة الاتصال والرسالة الظاهرة.",
+    "sync": [
+      "تزامن",
+      "زامن",
+      "مزامن",
+      "sync",
+      "لا يتحدث"
+    ],
+    "mobile": [
+      "هاتف",
+      "جوال",
+      "محمول",
+      "موبايل",
+      "android",
+      "اندرويد",
+      "أندرويد",
+      "تابلت"
+    ]
+  },
+  "hi": {
+    "title": "मोबाइल सिंक नहीं हो रहा",
+    "answer": "यदि आप FORYMO Mobile का परीक्षण कर रहे हैं, तो जाँचें कि Windows के लिए FORYMO में मोबाइल सेवा सक्रिय है और फ़ोन अधिकृत डिवाइस के रूप में दिखाई देता है। स्थानीय नेटवर्क कनेक्शन के लिए ज़रूरत पर LAN पहुँच सक्रिय होने और दोनों डिवाइस के बीच संचार की जाँच करें। ऐप रीसेट न करें और डेटा न हटाएँ। समस्या बनी रहे तो सहायता को ऐप संस्करण, कनेक्शन का तरीका और दिखने वाला संदेश बताएँ।",
+    "sync": [
+      "सिंक",
+      "सिंक्रोन",
+      "sync",
+      "अपडेट नहीं"
+    ],
+    "mobile": [
+      "मोबाइल",
+      "फोन",
+      "फ़ोन",
+      "android",
+      "एंड्रॉइड",
+      "टैबलेट"
+    ]
+  },
+  "id": {
+    "title": "Perangkat seluler tidak tersinkronisasi",
+    "answer": "Jika Anda sedang menguji FORYMO Mobile, pastikan layanan seluler aktif di FORYMO untuk Windows dan ponsel terdaftar sebagai perangkat terotorisasi. Untuk koneksi jaringan lokal, pastikan akses LAN aktif jika diperlukan dan perangkat dapat saling berkomunikasi. Jangan mengatur ulang aplikasi atau menghapus data. Jika masalah berlanjut, beri tahu dukungan versi aplikasi, metode koneksi, dan pesan yang muncul.",
+    "sync": [
+      "sinkron",
+      "sync",
+      "tidak diperbarui"
+    ],
+    "mobile": [
+      "ponsel",
+      "telepon",
+      "seluler",
+      "mobile",
+      "android",
+      "tablet"
+    ]
+  }
+};
 const normalize=s=>String(s).normalize("NFKC").toLocaleLowerCase().normalize("NFD").replace(/\p{M}/gu,"").replace(/[^\p{L}\p{N}]+/gu," ").trim();
 const STOP=new Set(["the","a","an","and","how","can","i","my","to","do","is","what","why","please","μου","το","να","πως","πώς","για","και","την","τι","de","la","el","en","que","le","les","des","un","une","der","die","das","und","ich","wie"]);
-function catalog(dict,guide){
- return [...[1,2,3,4].map(n=>({id:"support"+n,title:dict["support.q"+n],answer:dict["support.a"+n]})),...[1,2,3,4].map(n=>({id:"faq"+n,title:dict["faq.q"+n],answer:dict["faq.a"+n]})),...guide.items.map(x=>({id:"guide-"+x.key,title:x.title,answer:[x.summary,x.purpose,...x.steps.map((s,i)=>(i+1)+". "+s),guide.labels.controls+": "+x.controls,x.note?guide.labels.note+": "+x.note:""].filter(Boolean).join("\n\n")}))];
+function catalog(dict,guide,lang="en"){
+ const topic=mobileSync[lang]||mobileSync.en;
+ const mobileGuide=guide.items.find(x=>x.key==="mobile");
+ const troubleshooting={id:"mobile-sync",title:topic.title,answer:[topic.answer,mobileGuide?.note].filter(Boolean).join("\n\n")};
+ return [...[1,2,3,4].map(n=>({id:"support"+n,title:dict["support.q"+n],answer:dict["support.a"+n]})),...[1,2,3,4].map(n=>({id:"faq"+n,title:dict["faq.q"+n],answer:dict["faq.a"+n]})),troubleshooting,...guide.items.map(x=>({id:"guide-"+x.key,title:x.title,answer:[x.summary,x.purpose,...x.steps.map((s,i)=>(i+1)+". "+s),guide.labels.controls+": "+x.controls,x.note?guide.labels.note+": "+x.note:""].filter(Boolean).join("\n\n")}))];
 }
 function match(query,items,lang){
  const q=normalize(query);if(q.length<2)return null;
  const exact=items.find(x=>normalize(x.title)===q);if(exact)return exact;
+ const intent=mobileSync[lang]||mobileSync.en;
+ const includesAny=terms=>terms.some(t=>q.includes(normalize(t)));
+ if(includesAny(intent.sync)&&includesAny(intent.mobile))return items.find(x=>x.id==="mobile-sync")||null;
  const group=aliases[lang]||aliases.en;
  for(let i=0;i<group.length;i++)if(group[i].split("|").some(s=>q.includes(normalize(s))))return items.find(x=>x.id==="support"+(i+1));
  const tokens=[...new Set(q.split(" ").filter(t=>t.length>=3&&!STOP.has(t)))];
@@ -289,7 +503,7 @@ const root=document.getElementById("supportAssistant");if(!root)return;
 const get=id=>document.getElementById(id);
 let locale=document.documentElement.lang||"en",turns=[],handoff=false,resolved=false,feedback=false,liveStatus="",sdkPromise=null;
 const cfg=window.FORYMO_SUPPORT_CONFIG;
-const ui=()=>copy[locale]||copy.en, items=()=>catalog(translations[locale]||translations.en,functionGuideCopy[locale]||functionGuideCopy.en);
+const ui=()=>copy[locale]||copy.en, items=()=>catalog(translations[locale]||translations.en,functionGuideCopy[locale]||functionGuideCopy.en,locale);
 const find=id=>items().find(x=>x.id===id);
 function summary(){return turns.map(t=>{const x=t.id&&find(t.id);return (t.q||x?.title||"")+"\n"+(x?.answer||ui().noMatch);}).join("\n\n").slice(0,1800);}
 function render(){

@@ -72,6 +72,7 @@ test('EN/EL switching persists; preview does not replace stored language',async(
  await expect(page.locator('h1')).toHaveText(translations.en['hero.title']);
 });
 
+const mobileSyncQuestions={"en":"My phone won't sync","el":"δεν συγχρονιζεται το κινητο","pt-BR":"meu celular não sincroniza","de":"mein Handy synchronisiert nicht","es":"mi móvil no se sincroniza","fr":"mon téléphone ne se synchronise pas","it":"il cellulare non si sincronizza","ja":"スマホが同期しない","tr":"telefon eşitlenmiyor","ar":"الهاتف لا يتزامن","hi":"मेरा फोन सिंक नहीं हो रहा","id":"ponsel saya tidak sinkron"};
 for(const locale of Object.keys(localeNames)){
  test(locale+' support assistant and honest email handoff',async({page})=>{
   await page.setViewportSize({width:375,height:900});await page.goto(base+'/');
@@ -83,6 +84,14 @@ for(const locale of Object.keys(localeNames)){
   await expect(page.locator('#supportEmail')).toHaveAttribute('href',/^mailto:forymo.support@gmail.com\?/);
   await expect(page.locator('#supportSummary')).toHaveValue(/.+/);
   await page.locator('#supportReset').click();await expect(page.locator('#supportLog .bot')).toHaveCount(0);
+  await page.locator('#supportQuestion').fill(mobileSyncQuestions[locale]);
+  await page.locator('#supportForm button').click();
+  await expect(page.locator('#supportLog .bot')).toContainText(functionGuideCopy[locale].items.find(x=>x.key==="mobile").note);
+  await expect(page.locator('#supportFeedback')).toBeVisible();
+  await expect(page.locator('#supportHandoff')).toBeHidden();
+  await page.locator('#supportNo').click();
+  await expect(page.locator('#supportSummary')).toHaveValue(new RegExp(mobileSyncQuestions[locale]));
+  await page.locator('#supportReset').click();
   await page.locator('#supportQuestion').fill('zzzzxxyyqq');await page.locator('#supportForm button').click();
   await expect(page.locator('#supportHandoff')).toBeVisible();
   await expect(page.locator('#supportLog .bot')).toHaveCount(1);
