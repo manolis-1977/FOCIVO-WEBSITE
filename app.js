@@ -1,4 +1,164 @@
 const translations = {
+  tr: {
+  "support.title": "FORYMO desteği",
+  "support.lead": "Yaygın sorunlar için pratik çözümler bulun. Daha fazla yardıma ihtiyacınız varsa FORYMO destek adresine e-posta gönderin.",
+  "support.q1": "Bir görev neden Bugün bölümünde görünmüyor?",
+  "support.a1": "Bugün bölümünde seçilen tarihi kontrol edin. Görevler bölümünü açıp görevin planlanan tarihini ve durumunu doğrulayın. Bugün bölümüne dönüp görünümü yenileyin.",
+  "support.q2": "Hatırlatıcı neden görünmedi?",
+  "support.a2": "Hatırlatıcının etkin olduğunu, yerel tarih ve saatin doğru olduğunu kontrol edin. Ayarlar bölümünde ses ve açılır bildirim tercihlerini inceleyin. Sorun sürerse desteğe başvurmadan önce Tanılama bölümünü kontrol edin.",
+  "support.q3": "Çalışma alanımı güvenli biçimde nasıl geri yüklerim?",
+  "support.a3": "Yedekleme ve geri yükleme bölümünü açın, yedeği doğrulayın ve geri yükleme önizlemesini inceleyin. Önerilen değişiklikleri onayladıktan sonra geri yüklemeyi uygulayın. İlk sorun giderme adımı olarak FORYMO'yu sıfırlamayın.",
+  "support.q4": "Yardım isterken hangi bilgileri vermeliyim?",
+  "support.a4": "Tercih ettiğiniz dili, uygulama sürümünü, işletim sistemini, etkilenen işlevi ve sorunu yeniden oluşturma adımlarını belirtin. Parolaları, kurtarma anahtarlarını, ödeme kartı bilgilerini veya kişisel çalışma alanı içeriğini asla göndermeyin.",
+  "support.contact": "E-posta ile desteğe ulaşın",
+  "support.note": "E-posta, posta uygulamanızda açılır. Her dilde insan ve yapay zekâ desteğinin sunulması, yayımlama onayına bağlıdır.",
+  "nav.product": "Ürün",
+  "nav.how": "Nasıl çalışır",
+  "nav.desktop": "Windows",
+  "nav.mobile": "Mobil",
+  "nav.sunshine": "SunShine Pro",
+  "nav.languages": "Diller",
+  "nav.faq": "Sık sorulan sorular",
+  "nav.cta": "FORYMO'yu keşfedin",
+  "sunshine.nav.forymo": "FORYMO",
+  "sunshine.back": "FORYMO'ya dön",
+  "sunshine.page.title": "SunShine Pro — Profesyonel klinik yönetimi",
+  "sunshine.tag": "Bağımsız profesyonel ürün",
+  "sunshine.lead": "Müşteri kayıtlarını, yapılandırılmış geçmişi, tedavileri, randevuları, envanteri, ödemeleri ve rol tabanlı yönetimi düzenli bir çalışma alanında birleştiren profesyonel yönetim sistemi.",
+  "sunshine.scope": "1 masaüstü bilgisayar + 1 mobil cihaz",
+  "sunshine.plan": "Aylık veya yıllık abonelik modeli.",
+  "sunshine.status": "Windows masaüstü uygulaması aktif geliştirme aşamasındadır. Android mobil uygulaması, çevrimdışı çalışma ve masaüstü ile mobil arasında eşitleme henüz geliştirilmekte olup üretim hizmeti olarak sunulmamaktadır.",
+  "sunshine.panel": "Merkezi panel · Aydınlık bakım",
+  "sunshine.exit": "Uygulamadan çık",
+  "sunshine.choose": "Bir işlev seçin",
+  "sunshine.clients": "Müşteriler",
+  "sunshine.clients.desc": "Kayıtlar ve geçmiş",
+  "sunshine.remedies": "Preparatlar",
+  "sunshine.remedies.desc": "Formüller ve miktarlar",
+  "sunshine.tinctures": "Tentürler",
+  "sunshine.tinctures.desc": "Formüller ve miktarlar",
+  "sunshine.inventory": "Envanter",
+  "sunshine.inventory.desc": "Şişeler ve malzemeler",
+  "sunshine.cashier": "Kasa",
+  "sunshine.cashier.desc": "Ödemeler ve bakiyeler",
+  "sunshine.admin": "Yönetim",
+  "sunshine.admin.desc": "Personel ve izinler",
+  "sunshine.appointments": "Randevular",
+  "sunshine.appointments.desc": "Randevu yönetimi",
+  "sunshine.calendar": "Takvim",
+  "sunshine.calendar.desc": "Salt okunur görünüm",
+  "sunshine.open": "Aç",
+  "sunshine.preview.note": "Masaüstü geliştirme önizlemesi · 8 etkin modül · Telemetri kapalı",
+  "hero.eyebrow": "FOCUS · RHYTHM · MOMENTS",
+  "hero.title": "Gününüz bir görev listesinden daha fazlasıdır.",
+  "hero.lead": "FORYMO dikkatinizi hak edenleri, günlük ritminizi oluşturanları ve doğru zamanda yapılması gerekenleri bir araya getirir.",
+  "hero.primary": "FORYMO'yu keşfedin",
+  "hero.secondary": "Nasıl çalıştığını görün",
+  "hero.trust1h": "FOCUS",
+  "hero.trust1b": "Dikkatinizi hak edenler",
+  "hero.trust2h": "RHYTHM",
+  "hero.trust2b": "Tekrarlanarak günlük ritminizi oluşturanlar",
+  "hero.trust3h": "MOMENTS",
+  "hero.trust3b": "Doğru zamanda yapılması gerekenler",
+  "mock.today": "Bugün",
+  "mock.tasks": "Görevler",
+  "mock.routines": "Rutinler",
+  "mock.reminders": "Hatırlatıcılar",
+  "mock.date": "Çarşamba",
+  "mock.heading": "Gününüz bir bakışta.",
+  "mock.synced": "Hazır",
+  "mock.stat1": "Görevler",
+  "mock.stat2": "Rutinler",
+  "mock.stat3": "Hatırlatıcılar",
+  "mock.done": "tamamlandı",
+  "mock.today2": "bugün yapılacak",
+  "mock.focus": "Sıradaki öncelik",
+  "mock.task1": "Bugünün önceliklerini gözden geçir",
+  "mock.task2": "Yarının planını hazırla",
+  "mock.task3": "Çalışma alanını yedekle",
+  "mock.complete": "Tamamlandı",
+  "mock.upcoming": "Yaklaşan",
+  "mock.reminder": "Hatırlatıcı",
+  "product.kicker": "Görev yönetiminden fazlası",
+  "product.title": "FOCUS · RHYTHM · MOMENTS",
+  "product.lead": "FORYMO sıradan bir görev yöneticisi değildir. Gününüzü üç katmanda düzenler: dikkatinizi hak edenler, tekrar ederek ritminizi oluşturanlar ve doğru zamanda yapılması gerekenler.",
+  "features.today.title": "MOMENTS — Bugün",
+  "features.today.body": "Bugün, ilgili görevleri, rutinleri ve hatırlatıcıları tek görünümde bir araya getirerek şu anda önemli olanı gösterir.",
+  "features.tasks.title": "FOCUS — Görevler",
+  "features.tasks.body": "Görevler, odaklanılması gerekenleri açık ve görünür tutarak dikkati eyleme dönüştürür.",
+  "features.routines.title": "RHYTHM — Rutinler",
+  "features.routines.body": "Rutinler tekrarlanan eylemleri yapılandırır ve tutarlı davranışların günlük hayatın parçası olmasına yardımcı olur.",
+  "features.reminders.title": "MOMENTS — Hatırlatıcılar",
+  "features.reminders.body": "Hatırlatıcılar bir eylemi, dikkatinizi gerektirdiği zamana bağlar.",
+  "features.backup.title": "Yedekleme ve geri yükleme",
+  "features.backup.body": "Doğrulanmış yedekler oluşturun ve gerektiğinde çalışma alanınızı güvenle geri yükleyin.",
+  "features.control.title": "Kontrolünüz altında tek sistem",
+  "features.control.body": "Focus, Rhythm ve Moments anlaşılır bir çalışma alanında birlikte işlerken gerçek verileriniz sizin kontrolünüzde kalır.",
+  "how.kicker": "FORYMO nasıl çalışır",
+  "how.title": "Dikkatten ritme, ritimden doğru zamana.",
+  "how.lead": "FORYMO yapmanız gerekenleri, tekrarlamak istediklerinizi ve doğru zamanda görünmesi gerekenleri gününüzü katı bir sisteme dönüştürmeden birbirine bağlar.",
+  "how.s1h": "Kaydedin",
+  "how.s1b": "Görev, rutin veya hatırlatıcıyı aklınızdayken ekleyin.",
+  "how.s2h": "Net görün",
+  "how.s2b": "Ayrı listelerde aramak yerine Bugün bölümünü çalışma görünümü olarak kullanın.",
+  "how.s3h": "Harekete geçin",
+  "how.s3b": "Önemli olanı tamamlayın, durumu güncelleyin ve sonraki adımı görünür tutun.",
+  "how.s4h": "Koruyun",
+  "how.s4b": "Gerektiğinde çalışma alanınızı geri yüklemek için doğrulanmış yedekler saklayın.",
+  "guide.kicker": "FORYMO KULLANICI KILAVUZU",
+  "guide.title": "Bir işlev seçin ve tam olarak nasıl çalıştığını öğrenin.",
+  "guide.lead": "Windows için FORYMO'nun her bölümünü keşfedin. Amacını, iş akışını ve temel denetimlerini görmek için bir işlev seçin.",
+  "desktop.tag": "Ana uygulama",
+  "desktop.title": "Windows için FORYMO",
+  "desktop.body": "Bugün, Görevler, Rutinler, Hatırlatıcılar ve doğrulanmış yedekleme ile geri yükleme sayesinde Focus, Rhythm ve Moments'ı birleştiren tam masaüstü çalışma alanı.",
+  "desktop.meta": "Windows ana uygulaması",
+  "desktop.cta": "Yayımlama haberlerini alın",
+  "mobile.tag": "Aktif geliştirme aşamasında",
+  "mobile.title": "FORYMO Mobile",
+  "mobile.body": "Android yardımcı uygulaması Windows için FORYMO'ya güvenli biçimde bağlanır ve Bugün, Görevler, Rutinler ile Hatırlatıcıları elinizin altında tutar. Yetkili değişiklikler çevrimdışı kaydedilebilir ve bilgisayar tekrar erişilebilir olduğunda otomatik eşitlenebilir.",
+  "mobile.meta": "Güvenli PC bağlantısı",
+  "mobile.scope": "1 Windows bilgisayar · 1 mobil cihaz",
+  "mobile.cta": "Henüz kuruluma açık değil. Üretim sürümü testler ve nihai kabul sonrasında yayımlanacaktır.",
+  "platforms.kicker": "FORYMO uygulamaları",
+  "platforms.title": "Windows ve mobil, tek kişisel sistem.",
+  "trust.kicker": "Güven için tasarlandı",
+  "trust.title": "Sisteminiz, sistemi yönetmek yerine gününüzü yaşamanıza yardımcı olmalıdır.",
+  "trust.p1": "Dikkati hak edenler için Focus",
+  "trust.p2": "Tutarlılık oluşturanlar için Rhythm",
+  "trust.p3": "Doğru zamanda yapılacaklar için Moments",
+  "trust.p4": "Web sitesi, Windows, mobil, mağazalar ve destekte tutarlı dil desteği",
+  "language.available": "Kullanılabilir",
+  "language.preparing": "Hazırlanıyor",
+  "language.kicker": "Dil desteği",
+  "language.title": "Diliniz ürünün bir parçasıdır.",
+  "language.lead": "Bir dil ancak web sitesi, Windows, mobil, mağaza kılavuzları ve destek aynı açık terminolojiyi kullandığında erişilebilir olur.",
+  "language.foundation1.title": "Düzen",
+  "language.foundation1.body": "İşlevler, kılavuzlar, güncellemeler ve sürümler için açık yapı.",
+  "language.foundation2.title": "Editoryal özen",
+  "language.foundation2.body": "Anlamı önceliklendiren doğal yerelleştirme; özensiz otomatik çeviri değil.",
+  "language.foundation3.title": "Tutarlılık",
+  "language.foundation3.body": "Web sitesi, Windows, mobil, mağazalar ve destekte aynı terimler.",
+  "language.foundation4.title": "Destek",
+  "language.foundation4.body": "Kullanıcının dilinde kılavuzlar, sık sorulan sorular, yapay zekâ desteği ve insan desteği.",
+  "language.roadmap.kicker": "Dil yol haritası",
+  "language.roadmap.title": "Eksiksiz destek, sorumlu yayımlama.",
+  "language.roadmap.note": "Şu anda İngilizce ve Yunanca kullanılabilir. Her yeni dil, tüm deneyim incelenene kadar hazırlık aşamasında kalır.",
+  "faq.title": "İyi sorular. Açık yanıtlar.",
+  "faq.q1": "FORYMO nedir?",
+  "faq.a1": "FORYMO; Focus, Rhythm ve Moments etrafında oluşturulmuş kişisel üretkenlik sistemidir. Görevler odaklanmayı destekler, rutinler ritim oluşturur, hatırlatıcılar ve Bugün doğru zamanda önemli olanı gösterir.",
+  "faq.q2": "FORYMO Yunanca kullanılabilir mi?",
+  "faq.a2": "Evet. FORYMO adı her dilde aynı kalır. Menüler ve açıklamalar kelimesi kelimesine makine çevirisi yerine anlama dayalı doğal Yunancaya uyarlanır.",
+  "faq.q3": "Mobil uygulama şu anda kullanılabilir mi?",
+  "faq.a3": "FORYMO Mobile aktif geliştirme aşamasındadır ve henüz kurulamaz. Yalnızca gerekli testler ve nihai kabul sonrasında yayımlanacaktır.",
+  "faq.q4": "Verilerimi geri yükleyebilir miyim?",
+  "faq.a4": "Windows uygulaması, yedek oluşturma ve doğrulama, önizleme ve onaylanmış geri yüklemeyi uygulama için doğrulanmış bir iş akışı içerir.",
+  "cta.kicker": "FOCUS · RHYTHM · MOMENTS",
+  "cta.title": "Gününüze odak, ritim ve doğru anları katın.",
+  "cta.body": "FORYMO Focus, Rhythm ve Moments'ı açık bir kişisel sistemde birleştirir.",
+  "cta.button": "Başa dön",
+  "footer.tagline": "Focus. Rhythm. Moments.",
+  "footer.note": "Tüm hakları saklıdır."
+},
   ja: {
   "support.title": "FORYMOのサポート",
   "support.lead": "よくある問題の解決方法をご案内します。さらにサポートが必要な場合は、FORYMOのサポート窓口にメールでお問い合わせください。",
@@ -1016,6 +1176,206 @@ const translations = {
 };
 
 const functionGuideCopy = {
+  tr: {
+  "labels": {
+    "purpose": "Ne işe yarar",
+    "workflow": "Nasıl kullanılır",
+    "controls": "Temel denetimler",
+    "note": "Önemli"
+  },
+  "items": [
+    {
+      "key": "today",
+      "number": "01",
+      "title": "Bugün",
+      "summary": "Seçilen günün çalışma görünümü, planlanan görevleri ve ilerlemeyi tek ekranda toplar.",
+      "purpose": "Ayrı listeler arasında geçiş yapmadan yapılacakları, tamamlananları ve dikkat gerektirenleri görün.",
+      "steps": [
+        "İncelemek istediğiniz tarihi seçin.",
+        "Günlük listeden görev seçin.",
+        "Odak bölümünde başlatın, tamamlandı olarak işaretleyin veya düzenlemek için Görevler bölümünde açın."
+      ],
+      "controls": "Tarih, Yenile, Başlat, Tamamla, Görevler'de aç."
+    },
+    {
+      "key": "focus",
+      "number": "02",
+      "title": "Odak",
+      "summary": "Seçilen tek görevi açık ve yönetilebilir adımlarla tamamlamak için odaklanmış çalışma alanı.",
+      "purpose": "Oturum bitene kadar etkin görevi ve sonraki adımlarını görünür tutarak dikkat dağınıklığını azaltın.",
+      "steps": [
+        "Bugün veya Odak bölümünden uygun bir görev başlatın.",
+        "Odak adımlarını ilerletip her birini tamamlayın.",
+        "Gerektiğinde duraklatın veya devam ettirin, ardından oturumu tamamlayın."
+      ],
+      "controls": "Odağı başlat, Duraklat, Devam et, Adımı tamamla, Oturumu tamamla.",
+      "note": "Aynı anda yalnızca bir etkin veya duraklatılmış odak oturumu olabilir."
+    },
+    {
+      "key": "tasks",
+      "number": "03",
+      "title": "Görevler",
+      "summary": "Tarih, saat, süre, not, durum ve alt görevleri içeren tam görev yönetimi.",
+      "purpose": "İşleri doğru kaydedin, küçük adımlara bölün ve tamamlanma durumunu kontrol edin.",
+      "steps": [
+        "Yeni görev oluşturup planlama bilgilerini belirleyin.",
+        "Küçük adımlar gerekiyorsa alt görevler ekleyin.",
+        "Seçilen görevi yükleyin, düzenleyin, tamamlayın veya silin."
+      ],
+      "controls": "Yeni, Görevi kaydet, Tamamla, Sil, Alt görev ekle, Alt görev durumunu değiştir."
+    },
+    {
+      "key": "routines",
+      "number": "04",
+      "title": "Rutinler",
+      "summary": "Haftanın günü, etkinlik durumu ve tekil tekrarlar üzerinden düzenlenen yinelenen eylemler.",
+      "purpose": "Her tekrarın tamamlanma durumunu korurken yinelenen eylemlere ritim kazandırın.",
+      "steps": [
+        "Rutin oluşturup tekrarlanacağı günleri seçin.",
+        "Etkin tutun veya geçici olarak devre dışı bırakın.",
+        "Tekrarları yükleyip her birini tamamlandı veya tamamlanmadı olarak işaretleyin."
+      ],
+      "controls": "Rutini kaydet, Etkinliği değiştir, Tekrarları yükle, Tekrar durumunu değiştir."
+    },
+    {
+      "key": "reminders",
+      "number": "05",
+      "title": "Hatırlatıcılar",
+      "summary": "FORYMO görev veya rutinlerine bağlı, sesi ve açılır bildirim davranışı ayarlanabilen zamanlanmış uyarılar.",
+      "purpose": "Mevcut öğeyi seçtiğiniz yerel tarih ve saatte dikkatinize sunun.",
+      "steps": [
+        "Hatırlatıcının bağlı olduğu görev veya rutini seçin.",
+        "Yerel zamanlamayı, sesi ve açılır bildirim davranışını ayarlayın.",
+        "Gerektiğinde oluşturun, etkinleştirin, devre dışı bırakın, erteleyin veya silin."
+      ],
+      "controls": "Hatırlatıcı oluştur, Etkinliği değiştir, Hatırlatıcıyı sil, Zamanlayıcıyı çalıştır, Ertele.",
+      "note": "Kalıcı ve kritik bildirim davranışı Ayarlar'dan da denetlenebilir."
+    },
+    {
+      "key": "search",
+      "number": "06",
+      "title": "Arama",
+      "summary": "FORYMO çalışma alanındaki bilgileri bulmak için ortak arama alanı.",
+      "purpose": "Her modülü ayrı açmadan gereken öğeyi bulun.",
+      "steps": [
+        "Aranacak sözcüğü veya ifadeyi girin.",
+        "Eşleşen sonuçları ve kaynaklarını inceleyin.",
+        "Sonucu seçip uygun FORYMO bölümünde açın."
+      ],
+      "controls": "Ara, Yenile, Seçileni aç."
+    },
+    {
+      "key": "calendar",
+      "number": "07",
+      "title": "Takvim",
+      "summary": "Görevler, rutin tekrarları ve hatırlatıcılar için gün, hafta ve ay görünümleri.",
+      "purpose": "Zaman içindeki planınızı anlayın ve plan değiştiğinde görevleri uygun tarihe taşıyın.",
+      "steps": [
+        "Gün, hafta ve ay görünümleri arasında geçin.",
+        "Önceki ve Sonraki ile takvimde ilerleyin.",
+        "Seçili öğeyi açın veya görevi doğrudan yeniden planlayın."
+      ],
+      "controls": "Gün, Hafta, Ay, Önceki, Sonraki, Seçileni aç, Görevi yeniden planla.",
+      "note": "Rutin ve hatırlatıcı ayrıntıları kendi kaynak modüllerinde yönetilmeye devam eder."
+    },
+    {
+      "key": "analytics",
+      "number": "08",
+      "title": "Analizler",
+      "summary": "Gerçek görevleriniz, rutinleriniz ve tamamlanma geçmişinizden oluşturulan üretkenlik özeti.",
+      "purpose": "Temel verileri değiştirmeden ilerlemeyi ve etkinlik örüntülerini görün.",
+      "steps": [
+        "İncelemek istediğiniz dönemi veya görünümü seçin.",
+        "Toplamları, tamamlanan öğeleri ve kalan etkinlikleri inceleyin.",
+        "Çalışmalarınız değiştiğinde özeti yenileyin."
+      ],
+      "controls": "Tarih veya dönem seçimi, Yenile, Özet göstergeleri."
+    },
+    {
+      "key": "organize",
+      "number": "09",
+      "title": "Düzenleme",
+      "summary": "Çalışma alanınızı yapılandıran kategoriler, renkler ve etiketler için merkezi alan.",
+      "purpose": "İlişkili işleri FORYMO genelinde tanımayı, gruplamayı ve bulmayı kolaylaştırın.",
+      "steps": [
+        "Açık adla kategori oluşturun.",
+        "Renk ve gerekli etiketleri atayın.",
+        "İş akışınız değiştiğinde düzenleme verilerini güncelleyin veya kaldırın."
+      ],
+      "controls": "Kategori, Renk, Etiket, Kategoriyi kaydet, Sil."
+    },
+    {
+      "key": "backup",
+      "number": "10",
+      "title": "Yedekleme ve geri yükleme",
+      "summary": "Doğrulanmış yerel yedekler, profesyonel dışa aktarımlar ve onaya dayalı geri yükleme iş akışı.",
+      "purpose": "Verileri geri yüklemeden önce doğrulama ve önizleme yaparak çalışma alanınızı koruyun ve kontrollü biçimde geri yükleyin.",
+      "steps": [
+        "Doğrulanmış yedek oluşturup doğrulama durumunu kontrol edin.",
+        "Bilgilerinizi gereken biçimde dışa aktarın.",
+        "Geri yükleme planını önizleyin, onaylayın ve ardından uygulayın."
+      ],
+      "controls": "Doğrulanmış yedek oluştur, Doğrula, Eski yedekleri temizle, JSON/CSV ZIP/PDF/Excel/Markdown dışa aktar, Geri yükleme önizlemesi, Onaylı geri yüklemeyi uygula, Reddet.",
+      "note": "Geri yükleme sessizce uygulanmaz; önizleme ve açık onay gerektirir."
+    },
+    {
+      "key": "sync",
+      "number": "11",
+      "title": "Eşitleme",
+      "summary": "FORYMO verilerinin kontrollü aktarımı için çakışmalara karşı güvenli klasör eşitlemesi.",
+      "purpose": "Onaylı değişiklikleri seçili eşitleme konumundan aktarın ve veriler üzerine yazılmadan önce çakışmaları saptayın.",
+      "steps": [
+        "Eşitleme klasörünü seçip açın.",
+        "Onaylı mevcut verileri hazırlamak için Gönder'i kullanın.",
+        "Almayı hazırlayın, isteği inceleyin ve devam etmemesi gerekiyorsa iptal edin."
+      ],
+      "controls": "Hedef seç, Aç, Gönder, Almayı hazırla, Bekleyen almayı iptal et, İstekleri yenile.",
+      "note": "Bulut ve BYOC özellikleri yayımlama ve kabul durumlarına bağlıdır."
+    },
+    {
+      "key": "mobile",
+      "number": "12",
+      "title": "Mobil cihazlar",
+      "summary": "FORYMO Mobile yardımcı uygulamasının güvenli kurulumu ve yönetimi.",
+      "purpose": "Yetkili mobil cihazı seçtiğiniz erişim düzeyiyle Windows uygulamasına bağlayın.",
+      "steps": [
+        "Mobil hizmeti ve gerekirse yerel ağ erişimini etkinleştirin.",
+        "Salt görüntüleme veya tam erişim için geçici eşleştirme kodu oluşturun.",
+        "Bağlı cihazları inceleyin, gerekirse erişimi iptal edin."
+      ],
+      "controls": "Mobil hizmeti etkinleştir, LAN erişimi, Eşleştirme kodları, Salt görüntüleme, Tam erişim, Erişimi iptal et.",
+      "note": "FORYMO Mobile aktif geliştirme aşamasındadır ve üretim kurulumu olarak sunulmamaktadır."
+    },
+    {
+      "key": "settings",
+      "number": "13",
+      "title": "Ayarlar",
+      "summary": "Dil, görünüm, başlangıç davranışı ve bildirimlere ilişkin uygulama tercihleri.",
+      "purpose": "Önemli güvenlik seçimlerini açık tutarak FORYMO'yu Windows çalışma biçiminize uyarlayın.",
+      "steps": [
+        "Dil, tema, başlangıç bölümü ve görüntü ölçeğini seçin.",
+        "Bildirim davranışını, hatırlatıcı sesini ve varsayılan erteleme süresini yapılandırın.",
+        "Tercihleri kaydedin veya varsayılanları geri yükleyin."
+      ],
+      "controls": "Kaydet, Varsayılanları geri yükle, Windows ile başlat, FORYMO'yu sıfırla, FORYMO'dan çık.",
+      "note": "FORYMO'yu sıfırlamak yerel üretkenlik verilerini siler; mevcut yedek ve dışa aktarım dosyaları korunur."
+    },
+    {
+      "key": "diagnostics",
+      "number": "14",
+      "title": "Tanılama",
+      "summary": "Uygulama ve yerel hizmetlerinin durumunu gösteren profesyonel salt okunur görünüm.",
+      "purpose": "Uygulama, veritabanı ve yardımcı hizmetlerin sağlıklı olduğunu doğrulayın ve desteğe yararlı bilgi sağlayın.",
+      "steps": [
+        "Tanılama kontrolünü çalıştırın veya yenileyin.",
+        "Uygulama, veritabanı ve platform durumunu inceleyin.",
+        "Teknik ayrıntıları yalnızca sorun giderirken veya destekle çalışırken açın."
+      ],
+      "controls": "Tanılamayı yenile, Sistem durumu, Sağlık kontrolleri, Teknik ayrıntılar.",
+      "note": "Tanılama sağlık bilgisi bildirir; görevlerinizi veya kişisel içeriğinizi düzenlemez."
+    }
+  ]
+},
   ja: {
   "labels": {
     "purpose": "機能の目的",
@@ -2260,7 +2620,7 @@ let activeGuideKey = "today";
 
 // A public locale must be explicitly released here AND pass the release manifest check.
 const publicLocales = Object.freeze(["en", "el"]);
-const stagedLocales = Object.freeze(["pt-BR", "de", "es", "fr", "it", "ja"]);
+const stagedLocales = Object.freeze(["pt-BR", "de", "es", "fr", "it", "ja", "tr"]);
 
 // PT-BR is staged; public language selection still depends on enabled controls.
 const ptBRExtra = {
@@ -2283,7 +2643,7 @@ const ptBRExtra = {
     "SunShine Pro Desktop dashboard preview": "Prévia do painel do SunShine Pro para computador"
   }
 };
-const localeExtras = {"pt-BR": ptBRExtra, ja: {"title":"FORYMO — 集中・リズム・タイミング","description":"FORYMOは注意を向けるべきこと、日々のリズム、適切なタイミングを軸に一日を整理します。","sunshineDescription":"SunShine Pro — WindowsとAndroid向けの理学療法クリニック管理。","metrics":["3件完了","75%完了","今日が期限"],"skip":"本文へ移動","faq":"よくある質問","aria":{"FORYMO home":"FORYMOホーム","SunShine Pro home":"SunShine Proホーム","Primary navigation":"メインナビゲーション","Language":"言語","Language selection":"言語選択","Open menu":"メニューを開く","FORYMO interface preview":"FORYMO画面プレビュー","FORYMO functions":"FORYMOの機能","FORYMO language quality foundations":"FORYMOの言語品質の基本方針","SunShine Pro Desktop dashboard preview":"SunShine Proデスクトップ画面プレビュー"}}, it: {"title":"FORYMO — Concentrazione. Ritmo. Momenti.","description":"FORYMO organizza la tua giornata attorno a Focus, Rhythm e Moments: ciò che merita attenzione, ciò che crea ritmo e ciò che deve accadere al momento giusto.","sunshineDescription":"SunShine Pro — gestione professionale di studi di fisioterapia per Windows e Android.","metrics":["3 completate","75% completato","in scadenza oggi"],"skip":"Vai al contenuto","faq":"Domande frequenti","aria":{"FORYMO home":"Home FORYMO","SunShine Pro home":"Home SunShine Pro","Primary navigation":"Navigazione principale","Language":"Lingua","Language selection":"Selezione lingua","Open menu":"Apri menu","FORYMO interface preview":"Anteprima interfaccia FORYMO","FORYMO functions":"Funzioni FORYMO","FORYMO language quality foundations":"Principi di qualità linguistica FORYMO","SunShine Pro Desktop dashboard preview":"Anteprima del pannello desktop SunShine Pro"}}, fr: {"title":"FORYMO — Concentration. Rythme. Moments.","description":"FORYMO organise votre journée autour de Focus, Rhythm et Moments : ce qui mérite votre attention, ce qui donne du rythme et ce qui doit arriver au bon moment.","sunshineDescription":"SunShine Pro — gestion professionnelle de cabinets de kinésithérapie pour Windows et Android.","metrics":["3 terminées","75 % terminé","prévus aujourd'hui"],"skip":"Aller au contenu","faq":"Questions fréquentes","aria":{"FORYMO home":"Accueil FORYMO","SunShine Pro home":"Accueil SunShine Pro","Primary navigation":"Navigation principale","Language":"Langue","Language selection":"Sélection de la langue","Open menu":"Ouvrir le menu","FORYMO interface preview":"Aperçu de l'interface FORYMO","FORYMO functions":"Fonctions FORYMO","FORYMO language quality foundations":"Principes de qualité linguistique FORYMO","SunShine Pro Desktop dashboard preview":"Aperçu du tableau de bord SunShine Pro sur ordinateur"}}, ...{
+const localeExtras = {"pt-BR": ptBRExtra, tr: {"title":"FORYMO — Odak. Ritim. Anlar.","description":"FORYMO gününüzü dikkat, günlük ritim ve doğru zaman etrafında düzenler.","sunshineDescription":"SunShine Pro — Windows ve Android için profesyonel fizyoterapi kliniği yönetimi.","metrics":["3 tamamlandı","%75 tamamlandı","bugün yapılacak"],"skip":"İçeriğe geç","faq":"Sık sorulan sorular","aria":{"FORYMO home":"FORYMO ana sayfası","SunShine Pro home":"SunShine Pro ana sayfası","Primary navigation":"Ana gezinme","Language":"Dil","Language selection":"Dil seçimi","Open menu":"Menüyü aç","FORYMO interface preview":"FORYMO arayüz önizlemesi","FORYMO functions":"FORYMO işlevleri","FORYMO language quality foundations":"FORYMO dil kalitesi temelleri","SunShine Pro Desktop dashboard preview":"SunShine Pro masaüstü panel önizlemesi"}}, ja: {"title":"FORYMO — 集中・リズム・タイミング","description":"FORYMOは注意を向けるべきこと、日々のリズム、適切なタイミングを軸に一日を整理します。","sunshineDescription":"SunShine Pro — WindowsとAndroid向けの理学療法クリニック管理。","metrics":["3件完了","75%完了","今日が期限"],"skip":"本文へ移動","faq":"よくある質問","aria":{"FORYMO home":"FORYMOホーム","SunShine Pro home":"SunShine Proホーム","Primary navigation":"メインナビゲーション","Language":"言語","Language selection":"言語選択","Open menu":"メニューを開く","FORYMO interface preview":"FORYMO画面プレビュー","FORYMO functions":"FORYMOの機能","FORYMO language quality foundations":"FORYMOの言語品質の基本方針","SunShine Pro Desktop dashboard preview":"SunShine Proデスクトップ画面プレビュー"}}, it: {"title":"FORYMO — Concentrazione. Ritmo. Momenti.","description":"FORYMO organizza la tua giornata attorno a Focus, Rhythm e Moments: ciò che merita attenzione, ciò che crea ritmo e ciò che deve accadere al momento giusto.","sunshineDescription":"SunShine Pro — gestione professionale di studi di fisioterapia per Windows e Android.","metrics":["3 completate","75% completato","in scadenza oggi"],"skip":"Vai al contenuto","faq":"Domande frequenti","aria":{"FORYMO home":"Home FORYMO","SunShine Pro home":"Home SunShine Pro","Primary navigation":"Navigazione principale","Language":"Lingua","Language selection":"Selezione lingua","Open menu":"Apri menu","FORYMO interface preview":"Anteprima interfaccia FORYMO","FORYMO functions":"Funzioni FORYMO","FORYMO language quality foundations":"Principi di qualità linguistica FORYMO","SunShine Pro Desktop dashboard preview":"Anteprima del pannello desktop SunShine Pro"}}, fr: {"title":"FORYMO — Concentration. Rythme. Moments.","description":"FORYMO organise votre journée autour de Focus, Rhythm et Moments : ce qui mérite votre attention, ce qui donne du rythme et ce qui doit arriver au bon moment.","sunshineDescription":"SunShine Pro — gestion professionnelle de cabinets de kinésithérapie pour Windows et Android.","metrics":["3 terminées","75 % terminé","prévus aujourd'hui"],"skip":"Aller au contenu","faq":"Questions fréquentes","aria":{"FORYMO home":"Accueil FORYMO","SunShine Pro home":"Accueil SunShine Pro","Primary navigation":"Navigation principale","Language":"Langue","Language selection":"Sélection de la langue","Open menu":"Ouvrir le menu","FORYMO interface preview":"Aperçu de l'interface FORYMO","FORYMO functions":"Fonctions FORYMO","FORYMO language quality foundations":"Principes de qualité linguistique FORYMO","SunShine Pro Desktop dashboard preview":"Aperçu du tableau de bord SunShine Pro sur ordinateur"}}, ...{
   "de": {
     "title": "FORYMO — Fokus. Rhythmus. Momente.",
     "description": "FORYMO organisiert Ihren Tag rund um Focus, Rhythm und Moments: was Aufmerksamkeit verdient, was Ihren Rhythmus prägt und was zum richtigen Zeitpunkt geschehen muss.",
