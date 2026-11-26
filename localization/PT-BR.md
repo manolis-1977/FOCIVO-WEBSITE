@@ -2,7 +2,7 @@
 Status: IN PREPARATION — not a public product language.
 
 ## Implemented
-- Website dictionary: 146/146 existing keys.
+- Website dictionary: 158/158 keys (146 original + 12 troubleshooting/support keys).
 - Function guide: 14/14 items, all source steps and notes.
 - PT-BR metric strings, page titles/descriptions, skip link, footer FAQ and accessible names.
 - Local browser preview only on localhost, 127.0.0.1 or [::1].
@@ -49,3 +49,6 @@ py -3 -m http.server 8788 --bind 127.0.0.1
 Open http://127.0.0.1:8788/?preview-language=pt-BR or http://127.0.0.1:8788/sunshine-pro/?preview-language=pt-BR.
 Preview is not persistent and is ignored on public hosts.
 Check all 14 tabs, layout at all breakpoints, remaining unkeyed visible/accessible copy, product terminology, EN/EL switching, and actual platform parity. No approval flag should be set solely from these automated tests.
+
+## Additional implementation
+Public locale allowlist, manifest and roadmap consistency validation. Loopback preview survives navigation between the two site pages. Four troubleshooting topics and email contact are available in the website copy. Real-browser GitHub Actions checks are configured; do not mark browser or support approvals PASS until results and operational evidence are reviewed.
