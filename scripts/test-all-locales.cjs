@@ -22,7 +22,7 @@ function testAllLocales(source,pages,manifest,Params){
  }
  function boot(host,search,stored,page,rogueLocale){
   const node=(text="",attrs={})=>({textContent:text,dataset:{},disabled:false,classList:{toggle(){},remove(){}},setAttribute(k,v){attrs[k]=v},getAttribute(k){return attrs[k]??null},addEventListener(){},querySelectorAll(){return []}});
-  const buttons=["en","el",...(rogueLocale?[rogueLocale]:[])].map((lang,i)=>{const n=node();n.dataset={lang,code:i===1?"GR":lang.toUpperCase()};return n});
+  const buttons=locales.map((lang,i)=>{const n=node();n.dataset={lang,code:lang==="el"?"GR":lang.toUpperCase()};return n});
   const keyed=used.map(k=>{const n=node();n.dataset.i18n=k;return n});
   const skip=node("Skip to content"),faq=node("FAQ"),aria=node("",{"aria-label":"Primary navigation"}),code=node("EN"),meta=node("",{content:"Original description"});
   const link=node("",{href:page?"../#top":"sunshine-pro/"});
@@ -43,9 +43,18 @@ function testAllLocales(source,pages,manifest,Params){
    local.api.setLanguage("el");
    assert(local.document.documentElement.lang==="el"&&local.document.documentElement.dir==="ltr"&&local.link.getAttribute("href")===(page?"../#top":"sunshine-pro/")&&local.keyed.every(n=>n.textContent===translations.el[n.dataset.i18n]),lang+": "+(page?"SunShine":"FORYMO")+" restores Greek");
   }
-  const pub=boot("forymo.com",query,lang,false,lang);
-  assert(pub.document.documentElement.lang==="en"&&pub.storage.value==="en"&&pub.document.documentElement.dir==="ltr",lang+": public rejects even an accidentally enabled HTML button");
+  const pub=boot("forymo.com","",lang,false);
+  const fromEnglish=boot("forymo.com","","en",false);
+  fromEnglish.api.setLanguage(lang);
+  assert(fromEnglish.document.documentElement.lang===lang&&fromEnglish.storage.value===lang&&fromEnglish.code.textContent===lang.toUpperCase(),lang+": public selector persists choice");
+  const across=boot("forymo.com","",lang,true);
+  assert(across.document.documentElement.lang===lang&&across.document.title===translations[lang]["sunshine.page.title"],lang+": public language retained on second page");
+  assert(pub.document.documentElement.lang===lang&&pub.storage.value===lang&&pub.document.documentElement.dir===expectedDir&&pub.keyed.every(n=>n.textContent===translations[lang][n.dataset.i18n]),lang+": public persisted language renders correctly");
  }
+ const invalid=boot("forymo.com","","xx-invalid",false);
+ assert(invalid.document.documentElement.lang==="en"&&invalid.storage.value==="en","Invalid locale falls back to English");
+ const publicPreview=boot("forymo.com","?preview-language=ar","el",false);
+ assert(publicPreview.document.documentElement.lang==="el"&&publicPreview.storage.value==="el","Public preview query cannot override stored language");
  return results;
 }
 const read=p=>fs.readFileSync(path.join(root,p),'utf8');

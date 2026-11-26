@@ -341,3 +341,14 @@ html:not([lang="en"]):not([lang="el"]) .task-row>div,html:not([lang="en"]):not([
 html:not([lang="en"]):not([lang="el"]) .language-foundations article,html:not([lang="en"]):not([lang="el"]) .language-status,html:not([lang="en"]):not([lang="el"]) .feature-card{min-width:0;overflow-wrap:anywhere}
 @media(max-width:1120px){html[dir="rtl"] .menu-btn,html[dir="rtl"] .nav-actions{margin-left:0;margin-right:auto}}
 @media(max-width:700px){html[dir="rtl"] .language-menu{left:14px;right:14px}html[dir="rtl"] .function-guide-heading{text-align:start}}
+
+/* Website language menu and RTL: keep labels readable and preserve layout. */
+html[dir="rtl"] summary{padding:22px 0 22px 36px}
+.language-option>span{min-width:0;overflow-wrap:anywhere}
+.language-option>small{flex-shrink:0;max-width:48%;text-align:end;overflow-wrap:anywhere}
+.language-menu{overscroll-behavior:contain}
+html[dir="rtl"] .stat{align-items:flex-start}
+html:not([lang="en"]):not([lang="el"]) .side-item{min-width:0;overflow-wrap:anywhere}
+html:not([lang="en"]):not([lang="el"]) .hero-copy,html:not([lang="en"]):not([lang="el"]) .hero-visual{min-width:0;overflow-wrap:anywhere}
+html[dir="rtl"] .footer-brand img{object-position:right center!important}
+@media(max-width:1200px){html:not([lang="en"]):not([lang="el"]) .nav-wrap{gap:14px}html:not([lang="en"]):not([lang="el"]) .nav{gap:12px}}

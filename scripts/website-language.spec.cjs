@@ -4,19 +4,21 @@ const source=fs.readFileSync(path.join(__dirname,'..','app.js'),'utf8');
 const {translations,functionGuideCopy}=Function(source.slice(0,source.indexOf('\nlet activeGuideKey'))+';return {translations,functionGuideCopy}')();
 const base='http://127.0.0.1:8788';
 const widths=[320,375,768,1280,1920];
-const localeNames={"pt-BR":"Português — Brasil",de:"Deutsch",es:"Español",fr:"Français",it:"Italiano",ja:"日本語",tr:"Türkçe",ar:"العربية",hi:"हिन्दी",id:"Bahasa Indonesia"};
+const localeNames={en:"English",el:"Ελληνικά","pt-BR":"Português — Brasil",de:"Deutsch",es:"Español",fr:"Français",it:"Italiano",ja:"日本語",tr:"Türkçe",ar:"العربية",hi:"हिन्दी",id:"Bahasa Indonesia"};
 for(const [locale,name] of Object.entries(localeNames)){
- const dict=translations[locale],guide=functionGuideCopy[locale],query='?preview-language='+locale;
+ const dict=translations[locale],guide=functionGuideCopy[locale],query='';
  for(const width of widths){
   test(locale+' browser at '+width+'px',async({page},testInfo)=>{
     const errors=[];
     page.on('pageerror',e=>errors.push(e.message));
     await page.setViewportSize({width,height:900});
-    await page.goto(base+'/'+query);
+    await page.goto(base+'/');
+    await page.locator('#languageTrigger').click();
+    await page.locator('button[data-lang="'+locale+'"]').click();
     await expect(page.locator('html')).toHaveAttribute('lang',locale);
     await expect(page.locator('html')).toHaveAttribute('dir',locale==='ar'?'rtl':'ltr');
     await expect(page.locator('h1')).toHaveText(dict['hero.title']);
-    await expect(page.locator('#languageCode')).toHaveText(locale.toUpperCase());
+    await expect(page.locator('#languageCode')).toHaveText(locale==='el'?'GR':locale.toUpperCase());
     await expect(page.locator('#functionGuideList [role=tab]')).toHaveCount(14);
     for(const item of guide.items){
       await page.locator('[data-guide-key="'+item.key+'"]').click();
@@ -34,7 +36,7 @@ for(const [locale,name] of Object.entries(localeNames)){
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
     await page.locator('#languageTrigger').click();
     await expect(page.locator('#languageMenu')).toBeVisible();
-    await expect(page.locator('#languageMenu button').filter({hasText:name})).toBeDisabled();
+    await expect(page.locator('#languageMenu button').filter({hasText:name})).toBeEnabled();
     await page.keyboard.press('Escape');
     await expect(page.locator('#languageMenu')).toBeHidden();
     if(locale==='ar') expect(await page.locator('.function-guide-detail aside').evaluate(el=>getComputedStyle(el).borderRightWidth)).toBe('3px');
@@ -44,7 +46,9 @@ for(const [locale,name] of Object.entries(localeNames)){
     await expect(page.locator('[data-i18n="sunshine.choose"]')).toHaveText(dict['sunshine.choose']);
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
     await page.screenshot({path:testInfo.outputPath('sunshine.png'),fullPage:true});
-    await page.locator('a[href^="../?preview-language"]').last().click();
+    await page.locator('a[href="../#top"]').last().click();
+    await expect(page.locator('html')).toHaveAttribute('lang',locale);
+    await page.reload();
     await expect(page.locator('html')).toHaveAttribute('lang',locale);
     expect(errors).toEqual([]);
   });

@@ -25,6 +25,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v6
 
+      - name: Validate public website language release
+        run: |
+          node --check app.js
+          node scripts/check-language-readiness.cjs
+          node scripts/test-pt-br.cjs
+          node scripts/test-all-locales.cjs
+
       - name: Configure and enable GitHub Pages
         uses: actions/configure-pages@v5
         with:

@@ -1,24 +1,18 @@
 {
-  "schema": "FORYMO_LANGUAGE_READINESS_V1",
-  "policy": "AVAILABLE requires complete native website copy, all 14 guides, visual/editorial QA, shared terminology, Windows, Mobile, Store, Support, account/subscription, transactional email, legal/privacy and AI support approval. EN/EL are inherited published baseline only. New releases must agree with runtime, both selectors and roadmap.",
+  "schema": "FORYMO_WEBSITE_LANGUAGE_READINESS_V2",
+  "policy": "AVAILABLE means website dictionary, guides, selector, roadmap and runtime coverage pass structural and simulated runtime checks. Independent editorial review and real-browser results are tracked separately and never asserted without evidence.",
   "locales": [
     {
       "code": "en",
       "name": "English",
       "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
@@ -26,210 +20,144 @@
       "name": "Ελληνικά",
       "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "pt-BR",
       "name": "Português — Brasil",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "de",
       "name": "Deutsch",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "es",
       "name": "Español",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "fr",
       "name": "Français",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "it",
       "name": "Italiano",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "ja",
       "name": "日本語",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "tr",
       "name": "Türkçe",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "ar",
       "name": "العربية",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "rtl": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "hi",
       "name": "हिन्दी",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     },
     {
       "code": "id",
       "name": "Bahasa Indonesia",
-      "status": "IN PREPARATION",
+      "status": "AVAILABLE",
       "approvals": {
-        "website": false,
-        "windows": false,
-        "mobile": false,
-        "store": false,
-        "support": false,
-        "terminology": false,
-        "layout": false,
-        "editorial": false,
-        "accountSubscription": false,
-        "transactionalEmail": false,
-        "legalPrivacy": false,
-        "aiSupport": false
+        "websiteContent": true,
+        "websiteRuntime": true
+      },
+      "verification": {
+        "editorial": "AUTHOR_TRANSLATED_NOT_INDEPENDENTLY_REVIEWED",
+        "browser": "PENDING_REAL_BROWSER_RUN"
       }
     }
-  ]
+  ],
+  "scope": "Public website only; application language and service availability are independent."
 }

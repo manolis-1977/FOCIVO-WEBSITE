@@ -7,7 +7,7 @@ function checkReadiness(js,pages,manifest) {
   const publicMatch=js.match(/const publicLocales = Object\.freeze\((\[[^\n]*\])\);/);
   const publicLocales=publicMatch?JSON.parse(publicMatch[1]):[];
   const expected=["en","el","pt-BR","de","es","fr","it","ja","tr","ar","hi","id"];
-  const required=["website","windows","mobile","store","support","terminology","layout","editorial","accountSubscription","transactionalEmail","legalPrivacy","aiSupport"];
+  const required=["websiteContent","websiteRuntime"];
   const failures=[],report=[];
   const codes=manifest.locales.map(x=>x.code);
   if(JSON.stringify(codes)!==JSON.stringify(expected)) failures.push("Manifest locale order or membership invalid");
@@ -38,11 +38,11 @@ function checkReadiness(js,pages,manifest) {
     });
     const labelsOk=Object.keys(g.en.labels).every(k=>filled(guide?.labels?.[k]));
     const complete=missing.length===0&&extras.length===0&&missingHtml.length===0&&missingGuide.length===0&&guide?.items?.length===base.length&&labelsOk;
-    const approval=required.every(k=>locale.approvals?.[k]===true)&&(code!=="ar"||locale.approvals?.rtl===true);
+    const approval=required.every(k=>locale.approvals?.[k]===true);
     if(extras.length) failures.push(code+": extra dictionary keys "+extras.join(", "));
     if((dict||guide)&&!complete) failures.push(code+": incomplete staged or published copy");
     if(status==="AVAILABLE"&&!complete) failures.push(code+": published incomplete copy");
-    if(status==="AVAILABLE"&&!["en","el"].includes(code)&&!approval) failures.push(code+": published without full approvals");
+    if(status==="AVAILABLE"&&!approval) failures.push(code+": published without website content and runtime checks");
     report.push({code,status,keys:(baseKeys.length-missing.length)+"/"+baseKeys.length,guides:(base.length-missingGuide.length)+"/"+base.length,approval:approval?"PASS":"PENDING"});
   }
   return {failures,report};

@@ -7,7 +7,7 @@
   <meta name="description" content="SunShine Pro — professional physiotherapy practice management for Windows Desktop and Android Mobile." />
   <title>SunShine Pro — Professional clinic management</title>
   <link rel="icon" href="../assets/favicon.webp" type="image/webp" />
-  <link rel="stylesheet" href="../styles.css?v=20261126-all-locales" />
+  <link rel="stylesheet" href="../styles.css?v=20261126-website-public12" />
   <link rel="stylesheet" href="../design-system.css" />
 </head>
 <body data-page="sunshine">
@@ -20,7 +20,23 @@
         <a href="#top" data-i18n="nav.sunshine">SunShine Pro</a>
       </nav>
       <div class="nav-actions">
-        <div class="language" role="group" aria-label="Language"><button class="lang-btn active" data-lang="en" type="button">EN</button><span>/</span><button class="lang-btn" data-lang="el" type="button">ΕΛ</button></div>
+        <div class="language-selector">
+          <button class="language-trigger" id="languageTrigger" aria-label="Language selection" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="languageMenu"><span aria-hidden="true">🌐</span><strong id="languageCode">EN</strong><span class="language-chevron" aria-hidden="true">⌄</span></button>
+          <div class="language-menu" id="languageMenu" role="listbox" aria-label="Language" hidden>
+            <button class="language-option lang-btn active" data-lang="en" data-code="EN" role="option" aria-selected="true" type="button"><span lang="en" dir="ltr">English</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="el" data-code="GR" role="option" aria-selected="false" type="button"><span lang="el" dir="ltr">Ελληνικά</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="pt-BR" data-code="PT-BR" role="option" aria-selected="false" type="button"><span lang="pt-BR" dir="ltr">Português — Brasil</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="de" data-code="DE" role="option" aria-selected="false" type="button"><span lang="de" dir="ltr">Deutsch</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="es" data-code="ES" role="option" aria-selected="false" type="button"><span lang="es" dir="ltr">Español</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="fr" data-code="FR" role="option" aria-selected="false" type="button"><span lang="fr" dir="ltr">Français</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="it" data-code="IT" role="option" aria-selected="false" type="button"><span lang="it" dir="ltr">Italiano</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="ja" data-code="JA" role="option" aria-selected="false" type="button"><span lang="ja" dir="ltr">日本語</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="tr" data-code="TR" role="option" aria-selected="false" type="button"><span lang="tr" dir="ltr">Türkçe</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="ar" data-code="AR" role="option" aria-selected="false" type="button"><span lang="ar" dir="rtl">العربية</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="hi" data-code="HI" role="option" aria-selected="false" type="button"><span lang="hi" dir="ltr">हिन्दी</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="id" data-code="ID" role="option" aria-selected="false" type="button"><span lang="id" dir="ltr">Bahasa Indonesia</span><small data-i18n="language.available">Available</small></button>
+          </div>
+        </div>
         <a class="button button-small" href="../#top" data-i18n="sunshine.back">Back to FORYMO</a>
       </div>
       <button class="menu-btn" aria-label="Open menu" aria-expanded="false" type="button"><span></span><span></span><span></span></button>
@@ -63,6 +79,6 @@
     </section>
   </main>
   <footer class="footer"><div class="shell footer-grid"><div class="footer-brand"><strong style="color:#e3bd62;font-size:22px;">SunShine Pro</strong><p data-i18n="sunshine.tag">Separate professional product</p></div><div class="footer-links"><a href="../#top" data-i18n="sunshine.back">Back to FORYMO</a></div><div class="footer-end"><span>© 2026 SunShine Pro</span><span data-i18n="footer.note">All rights reserved.</span></div></div></footer>
-  <script src="../app.js?v=20261126-all-locales"></script>
+  <script src="../app.js?v=20261126-website-public12"></script>
 </body>
 </html>

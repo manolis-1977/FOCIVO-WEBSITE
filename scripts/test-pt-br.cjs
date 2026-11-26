@@ -9,11 +9,11 @@ function run(source,pages,manifest,Params){
  check(guide.items.length===14&&base.items.every((x,i)=>{const y=guide.items[i];return x.key===y.key&&x.number===y.number&&["title","summary","purpose","controls"].every(k=>y[k]?.trim())&&y.steps.length===x.steps.length&&y.steps.every(v=>v.trim())&&(!x.note||y.note?.trim())}),"14/14 guides, all steps and notes");
  check(Object.keys(base.labels).every(k=>guide.labels[k]?.trim()),"Guide labels");
  check(pages.every(h=>[...h.matchAll(/data-i18n="([^"]+)"/g)].every(x=>pt[x[1]])),"Both website pages: translated keyed content");
- check(pages.every(h=>![...h.matchAll(/<button\b[^>]*>/g)].some(x=>/data-lang="pt-BR"/.test(x[0])&&!/\bdisabled\b/.test(x[0]))),"PT-BR public selection disabled");
- check(manifest.locales.find(x=>x.code==="pt-BR").status==="IN PREPARATION","Manifest remains unreleased");
+ check(pages.every(h=>[...h.matchAll(/<button\b[^>]*>/g)].some(x=>/data-lang="pt-BR"/.test(x[0])&&!/\bdisabled\b/.test(x[0]))),"PT-BR public selection enabled");
+ check(manifest.locales.find(x=>x.code==="pt-BR").status==="AVAILABLE","Website manifest released");
  function boot(host,search,stored,sunshine=false){
   const node=(text="",attrs={})=>({textContent:text,dataset:{},disabled:false,classList:{toggle(){},remove(){}},setAttribute(k,v){attrs[k]=v},getAttribute(k){return attrs[k]??null},addEventListener(){},querySelectorAll(){return []}});
-  const buttons=["en","el"].map((lang,i)=>{const b=node();b.dataset={lang,code:i?"GR":"EN"};return b});
+  const buttons=["en","el","pt-BR"].map((lang,i)=>{const b=node();b.dataset={lang,code:lang==="el"?"GR":lang.toUpperCase()};return b});
   const token=node();token.dataset.i18n="hero.title";const skip=node("Skip to content"),code=node("EN"),meta=node("",{content:"Original description"});
   const d={documentElement:{lang:"en"},body:{dataset:sunshine?{page:"sunshine"}:{}},head:{appendChild(){}},title:"",
    querySelectorAll(q){return q===".lang-btn"?buttons:q==="[data-i18n]"?[token]:q===".skip"?[skip]:[]},querySelector(q){return q==='meta[name="description"]'?meta:null},getElementById(id){return id==="languageCode"?code:null},createElement(){return node()},addEventListener(){}};
@@ -22,11 +22,11 @@ function run(source,pages,manifest,Params){
   return {d,storage,token,skip,code,meta,api};
  }
  const pub=boot("forymo.com","?preview-language=pt-BR","pt-BR");
- check(pub.d.documentElement.lang==="en"&&pub.storage.value==="en","Public hostname rejects unreleased locale");
+ check(pub.d.documentElement.lang==="pt-BR"&&pub.storage.value==="pt-BR","Public website renders stored Portuguese");
  const local=boot("127.0.0.1","?preview-language=pt-BR","el");
  check(local.d.documentElement.lang==="pt-BR"&&local.storage.value==="el"&&local.token.textContent===pt["hero.title"]&&local.skip.textContent==="Ir para o conteúdo"&&local.code.textContent==="PT-BR","Loopback preview without persistence");
  local.api.setLanguage("el");
- check(local.d.documentElement.lang==="el"&&local.token.textContent===t.el["hero.title"]&&local.skip.textContent==="Skip to content","Greek restored after preview");
+ check(local.d.documentElement.lang==="el"&&local.token.textContent===t.el["hero.title"]&&local.skip.textContent==="Μετάβαση στο περιεχόμενο","Greek restored after preview");
  check(boot("forymo.com","","en").token.textContent===en["hero.title"]&&boot("forymo.com","","el").token.textContent===t.el["hero.title"],"EN/EL original rendering");
  const sun=boot("localhost","?preview-language=pt-BR","en",true);
  check(sun.d.title===pt["sunshine.page.title"]&&sun.meta.getAttribute("content").startsWith("SunShine Pro"),"SunShine preview metadata");
