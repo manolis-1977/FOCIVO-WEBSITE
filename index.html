@@ -7,7 +7,7 @@
   <meta name="description" content="FORYMO organizes your day around Focus, Rhythm and Moments — what deserves attention, what builds your daily flow and what needs to happen at the right time." />
   <title>FORYMO — Focus. Rhythm. Moments.</title>
   <link rel="icon" href="assets/favicon.webp" type="image/webp" />
-  <link rel="stylesheet" href="styles.css?v=20261126-website-public12" />
+  <link rel="stylesheet" href="styles.css?v=20261126-support-bot" />
   <link rel="stylesheet" href="design-system.css" />
 </head>
 <body>
@@ -17,7 +17,7 @@
     <div class="shell nav-wrap">
       <a class="brand" href="#top" aria-label="FORYMO home"><img src="assets/focivo-symbol.webp" alt="FORYMO" style="width:46px;height:46px;object-fit:contain;object-position:center;filter:none;" /></a>
       <nav class="nav" aria-label="Primary navigation">
-        <a href="#product" data-i18n="nav.product">Product</a><a href="#how" data-i18n="nav.how">How it works</a><a href="#desktop" data-i18n="nav.desktop">Windows</a><a href="#mobile" data-i18n="nav.mobile">Mobile</a><a href="sunshine-pro/" data-i18n="nav.sunshine">SunShine Pro</a><a href="#languages" data-i18n="nav.languages">Languages</a><a href="#faq" data-i18n="nav.faq">FAQ</a>
+        <a href="#product" data-i18n="nav.product">Product</a><a href="#how" data-i18n="nav.how">How it works</a><a href="#desktop" data-i18n="nav.desktop">Windows</a><a href="#mobile" data-i18n="nav.mobile">Mobile</a><a href="sunshine-pro/" data-i18n="nav.sunshine">SunShine Pro</a><a href="#languages" data-i18n="nav.languages">Languages</a><a href="#faq" data-i18n="nav.faq">FAQ</a><a href="#support" data-i18n="language.foundation4.title">Support</a>
       </nav>
       <div class="nav-actions">
         <div class="language-selector">
@@ -141,7 +141,17 @@
           <p>forymo.support@gmail.com</p>
           <p data-i18n="support.note">Email opens in your mail application. The website guides are translated; availability of individual support services may vary.</p>
         </div>
-        <div class="accordion">
+        <div class="support-assistant" id="supportAssistant">
+          <div class="support-assistant-head"><span class="support-symbol" aria-hidden="true">F</span><div><h3 data-support-copy="title">FORYMO Support Assistant</h3><p data-support-copy="intro">Ask a question or select a topic.</p></div></div>
+          <p class="support-privacy" data-support-copy="privacy"></p>
+          <div id="supportLog" class="support-log" role="log" aria-live="polite" aria-relevant="additions text"></div>
+          <form id="supportForm" class="support-form"><label for="supportQuestion" data-support-copy="question">Type your question</label><div class="support-input-row"><input id="supportQuestion" maxlength="400" autocomplete="off" required /><button type="submit" class="button" data-support-copy="ask">Ask</button></div></form>
+          <div class="support-form"><label for="supportTopics" data-support-copy="topics">Choose a topic</label><div class="support-input-row"><select id="supportTopics"></select><button id="supportChoose" type="button" class="button" data-support-copy="ask">Ask</button></div></div>
+          <div id="supportFeedback" class="support-feedback" hidden><strong data-support-copy="helpful"></strong><div class="support-actions"><button type="button" id="supportYes" data-support-copy="yes">Yes</button><button type="button" id="supportNo" data-support-copy="no">No</button></div></div>
+          <div class="support-actions"><button type="button" id="supportHuman" data-support-copy="human">Contact a representative</button><button type="button" id="supportReset" data-support-copy="reset">Clear conversation</button></div>
+          <div id="supportHandoff" class="support-handoff" hidden><p data-support-copy="handoff"></p><label for="supportSummary" data-support-copy="context"></label><textarea id="supportSummary" maxlength="1800" rows="5"></textarea><div class="support-actions"><a class="button" id="supportEmail" href="mailto:forymo.support@gmail.com" data-support-copy="email">Open email with summary</a><button type="button" id="supportLive" hidden data-support-copy="live">Open live support</button></div><p id="supportLiveUnavailable" data-support-copy="liveUnavailable"></p><p id="supportLiveStatus" role="status"></p></div>
+        </div>
+        <div class="accordion support-faq">
           <details><summary data-i18n="support.q1">Why is a task missing from Today?</summary><p data-i18n="support.a1">Check the selected date in Today. Open Tasks and confirm the task’s scheduled date and status. Return to Today and refresh the view.</p></details>
           <details><summary data-i18n="support.q2">Why did a reminder not appear?</summary><p data-i18n="support.a2">Check that the reminder is enabled and has the correct local date and time. Review sound and popup preferences in Settings. If the issue persists, check Diagnostics before contacting support.</p></details>
           <details><summary data-i18n="support.q3">How can I restore my workspace safely?</summary><p data-i18n="support.a3">Open Backup &amp; Recovery, verify the backup and review the recovery preview. Apply recovery only after confirming the proposed changes. Do not reset FORYMO as a first troubleshooting step.</p></details>
@@ -155,5 +165,7 @@
 
   <footer class="footer"><div class="shell footer-grid"><div class="footer-brand"><img src="assets/focivo-symbol.webp" alt="FORYMO" style="width:46px;height:46px;object-fit:contain;object-position:left center;filter:none;" /><p data-i18n="footer.tagline">Focus. Rhythm. Moments.</p></div><div class="footer-links"><a href="#product" data-i18n="nav.product">Product</a><a href="#desktop" data-i18n="nav.desktop">Windows</a><a href="#mobile" data-i18n="nav.mobile">Mobile</a><a href="sunshine-pro/" data-i18n="nav.sunshine">SunShine Pro</a><a href="#backup" data-i18n="features.backup.title">Backup & recovery</a><a href="#faq" data-i18n="nav.faq">FAQ</a><a href="#support" data-i18n="language.foundation4.title">Support</a></div><div class="footer-end"><span>© 2026 FORYMO</span><span data-i18n="footer.note">All rights reserved.</span></div></div></footer>
   <script src="app.js?v=20261126-website-public12"></script>
+  <script src="support-config.js?v=1"></script>
+  <script src="support-bot.js?v=1"></script>
 </body>
 </html>

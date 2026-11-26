@@ -22,6 +22,7 @@ jobs:
           node scripts/check-language-readiness.cjs
           node scripts/test-pt-br.cjs
           node scripts/test-all-locales.cjs
+          node scripts/test-support-bot.cjs
       - name: Install browser test runner
         run: |
           npm install --no-save --package-lock=false @playwright/test@1.51.1

@@ -30,7 +30,7 @@ for(const [locale,name] of Object.entries(localeNames)){
     }
     await expect(page.locator('#support h2')).toHaveText(dict['support.title']);
     await expect(page.locator('#support details')).toHaveCount(4);
-    await expect(page.locator('#support a')).toHaveAttribute('href','mailto:forymo.support@gmail.com');
+    await expect(page.locator('#support .section-heading a')).toHaveAttribute('href','mailto:forymo.support@gmail.com');
     await page.locator('#support details summary').first().click();
     await expect(page.locator('#support details').first()).toHaveAttribute('open','');
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
@@ -71,3 +71,21 @@ test('EN/EL switching persists; preview does not replace stored language',async(
  await page.locator('button[data-lang="en"]').click();
  await expect(page.locator('h1')).toHaveText(translations.en['hero.title']);
 });
+
+for(const locale of Object.keys(localeNames)){
+ test(locale+' support assistant and honest email handoff',async({page})=>{
+  await page.setViewportSize({width:375,height:900});await page.goto(base+'/');
+  await page.locator('#languageTrigger').click();await page.locator('button[data-lang="'+locale+'"]').click();
+  await page.locator('#supportTopics').selectOption('support3');await page.locator('#supportChoose').click();
+  await expect(page.locator('#supportLog .bot')).toContainText(translations[locale]['support.a3']);
+  await page.locator('#supportNo').click();await expect(page.locator('#supportHandoff')).toBeVisible();
+  await expect(page.locator('#supportLive')).toBeHidden();
+  await expect(page.locator('#supportEmail')).toHaveAttribute('href',/^mailto:forymo.support@gmail.com\?/);
+  await expect(page.locator('#supportSummary')).toHaveValue(/.+/);
+  await page.locator('#supportReset').click();await expect(page.locator('#supportLog .bot')).toHaveCount(0);
+  await page.locator('#supportQuestion').fill('zzzzxxyyqq');await page.locator('#supportForm button').click();
+  await expect(page.locator('#supportHandoff')).toBeVisible();
+  await expect(page.locator('#supportLog .bot')).toHaveCount(1);
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
+ });
+}
