@@ -420,6 +420,49 @@ const functionGuideCopy = {
   }
 };
 
+// PT-BR is staged; public language selection still depends on enabled controls.
+const ptBRExtra = {
+  title: "FORYMO — Foco. Ritmo. Momentos.",
+  description: "O FORYMO organiza seu dia em torno de Focus, Rhythm e Moments: o que merece atenção, o que dá ritmo à rotina e o que precisa acontecer no momento certo.",
+  sunshineDescription: "SunShine Pro — gestão profissional de clínicas de fisioterapia para Windows e Android.",
+  metrics: ["3 concluídas", "75% concluído", "para hoje"],
+  skip: "Ir para o conteúdo",
+  faq: "Perguntas frequentes",
+  aria: {
+    "FORYMO home": "Página inicial do FORYMO",
+    "SunShine Pro home": "Página inicial do SunShine Pro",
+    "Primary navigation": "Navegação principal",
+    "Language": "Idioma",
+    "Open menu": "Abrir menu",
+    "FORYMO interface preview": "Prévia da interface do FORYMO",
+    "FORYMO functions": "Funções do FORYMO",
+    "FORYMO language quality foundations": "Princípios de qualidade linguística do FORYMO",
+    "SunShine Pro Desktop dashboard preview": "Prévia do painel do SunShine Pro para computador"
+  }
+};
+const localPreviewAllowed = ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname);
+const localPreviewLanguage = localPreviewAllowed && new URLSearchParams(location.search).get("preview-language") === "pt-BR" ? "pt-BR" : null;
+const originalExtraText = new Map();
+const originalExtraAria = new Map();
+const originalDescription = document.querySelector('meta[name="description"]')?.getAttribute("content");
+function applyExtraCopy(lang){
+  const isPT = lang === "pt-BR";
+  const extraTargets = [['.skip', ptBRExtra.skip], ['.footer-links a[href="#faq"]', ptBRExtra.faq]];
+  extraTargets.forEach(([selector,value])=>{
+    document.querySelectorAll(selector).forEach(node=>{
+      if(!originalExtraText.has(node)) originalExtraText.set(node,node.textContent);
+      node.textContent = isPT ? value : originalExtraText.get(node);
+    });
+  });
+  document.querySelectorAll("[aria-label]").forEach(node=>{
+    if(!originalExtraAria.has(node)) originalExtraAria.set(node,node.getAttribute("aria-label"));
+    const original = originalExtraAria.get(node);
+    if(Object.hasOwn(ptBRExtra.aria,original)) node.setAttribute("aria-label",isPT ? ptBRExtra.aria[original] : original);
+  });
+  const description = document.querySelector('meta[name="description"]');
+  if(description && originalDescription!==undefined && originalDescription!==null) description.setAttribute("content",isPT ? (document.body.dataset.page==="sunshine" ? ptBRExtra.sunshineDescription : ptBRExtra.description) : originalDescription);
+}
+
 let activeGuideKey = "today";
 
 function renderFunctionGuide(lang){
@@ -436,7 +479,7 @@ function renderFunctionGuide(lang){
     button.id = `guide-tab-${button.dataset.guideKey}`;
     button.addEventListener("click", () => {
       activeGuideKey = button.dataset.guideKey;
-      renderFunctionGuide(document.documentElement.lang === "el" ? "el" : "en");
+      renderFunctionGuide(document.documentElement.lang);
     });
   });
 }
@@ -473,7 +516,7 @@ function installMetricPolish(){
 function setMetricCopy(lang){
   const stats = document.querySelectorAll('.stat-grid .stat');
   if(stats.length < 3) return;
-  const copy = lang === 'el'
+  const copy = lang === 'pt-BR' ? ptBRExtra.metrics : lang === 'el'
     ? ['3 ολοκληρώθηκαν','75% ολοκλήρωση','για σήμερα']
     : ['3 completed','75% complete','due today'];
   stats.forEach((stat,index) => {
@@ -482,9 +525,14 @@ function setMetricCopy(lang){
   });
 }
 
-function setLanguage(lang){
-  const dict = translations[lang] || translations.en;
-  document.documentElement.lang = lang === 'el' ? 'el' : 'en';
+function setLanguage(lang, preview = false){
+  const publicLanguage = Array.from(buttons).some(btn => btn.dataset.lang === lang && !btn.disabled);
+  const localPreview = preview && lang === localPreviewLanguage;
+  if(!Object.hasOwn(translations,lang) || (!publicLanguage && !localPreview)) lang = 'en';
+  const dict = translations[lang];
+  document.documentElement.lang = lang;
+  if(lang==='pt-BR' && languageCode) languageCode.textContent = 'PT-BR';
+  applyExtraCopy(lang);
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if(dict[key]) el.textContent = dict[key];
@@ -497,8 +545,8 @@ function setLanguage(lang){
     btn.setAttribute('aria-selected', String(active));
     if(active && languageCode) languageCode.textContent = btn.dataset.code;
   });
-  localStorage.setItem('forymo-language', lang);
-  document.title = document.body.dataset.page === 'sunshine' ? dict['sunshine.page.title'] : 'FORYMO — Focus. Rhythm. Moments.';
+  if(!localPreview) localStorage.setItem('forymo-language', lang);
+  document.title = document.body.dataset.page === 'sunshine' ? dict['sunshine.page.title'] : (lang==='pt-BR' ? ptBRExtra.title : 'FORYMO — Focus. Rhythm. Moments.');
 }
 
 installMetricPolish();
@@ -525,4 +573,4 @@ nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   nav.classList.remove('open');
   menuBtn.setAttribute('aria-expanded','false');
 }));
-setLanguage(localStorage.getItem('forymo-language') || localStorage.getItem('focivo-language') || 'en');
+setLanguage(localPreviewLanguage || localStorage.getItem('forymo-language') || localStorage.getItem('focivo-language') || 'en', Boolean(localPreviewLanguage));
