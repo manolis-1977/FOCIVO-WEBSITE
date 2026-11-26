@@ -91,12 +91,12 @@ for(const locale of Object.keys(localeNames)){
 }
 
 for(const locale of Object.keys(localeNames)){
- test(locale+' header: one line, no overlap, responsive menu',async({page})=>{
+ test(locale+' header: centered, symmetric, single-line and responsive',async({page},testInfo)=>{
   await page.setViewportSize({width:1920,height:900});
   await page.goto(base+'/');
   await page.locator('#languageTrigger').click();
   await page.locator('button[data-lang="'+locale+'"]').click();
-  for(const width of [1920,1440,1366]){
+  for(const width of [1920,1816,1600,1440,1366]){
    await page.setViewportSize({width,height:900});
    await expect(page.locator('.site-header .nav')).toBeVisible();
    await expect(page.locator('.site-header .nav a')).toHaveCount(8);
@@ -111,11 +111,21 @@ for(const locale of Object.keys(localeNames)){
      const range=document.createRange();range.selectNodeContents(target);
      return new Set(Array.from(range.getClientRects()).filter(r=>r.width>0&&r.height>0).map(r=>Math.round(r.top))).size;
     });
-    return {lines,inside:rects.every(r=>r.left>=box.left-1&&r.right<=box.right+1&&r.top>=box.top-1&&r.bottom<=box.bottom+1),noOverlap:rects.every((a,i)=>rects.every((b,j)=>i===j||a.right<=b.left+1||b.right<=a.left+1)),navCenters:[...nav.querySelectorAll('a')].map(n=>{const r=n.getBoundingClientRect();return r.top+r.height/2;})};
+    const navBox=nav.getBoundingClientRect(), logo=rects[0], actions=wrap.querySelector('.nav-actions').getBoundingClientRect();
+    const rtl=document.documentElement.dir==='rtl';
+    const centerError=Math.abs((navBox.left+navBox.right)/2-(box.left+box.right)/2);
+    const startInset=rtl?box.right-logo.right:logo.left-box.left;
+    const endInset=rtl?actions.left-box.left:box.right-actions.right;
+    const correctOrder=rtl?logo.left>=navBox.right&&actions.right<=navBox.left:logo.right<=navBox.left&&actions.left>=navBox.right;
+    return {centerError,startInset,endInset,correctOrder,lines,inside:rects.every(r=>r.left>=box.left-1&&r.right<=box.right+1&&r.top>=box.top-1&&r.bottom<=box.bottom+1),noOverlap:rects.every((a,i)=>rects.every((b,j)=>i===j||a.right<=b.left+1||b.right<=a.left+1)),navCenters:[...nav.querySelectorAll('a')].map(n=>{const r=n.getBoundingClientRect();return r.top+r.height/2;})};
    });
    expect(metrics.lines.every(n=>n===1)).toBe(true);
    expect(metrics.inside).toBe(true);expect(metrics.noOverlap).toBe(true);
+   expect(metrics.centerError).toBeLessThan(1);
+   expect(Math.abs(metrics.startInset-metrics.endInset)).toBeLessThan(1);
+   expect(metrics.correctOrder).toBe(true);
    expect(Math.max(...metrics.navCenters)-Math.min(...metrics.navCenters)).toBeLessThan(1);
+   if(width===1816||width===1366) await page.locator('.site-header').screenshot({path:testInfo.outputPath('header-'+width+'.png')});
   }
   for(const width of [1350,1280,768,375,320]){
    await page.setViewportSize({width,height:900});
