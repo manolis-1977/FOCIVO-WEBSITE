@@ -5,7 +5,7 @@ function run(source,pages,manifest,Params){
  const result=[];function check(v,label){if(!v)throw Error(label);result.push(label)}
  const {translations:t,functionGuideCopy:g}=Function(source.slice(0,source.indexOf("\nlet activeGuideKey"))+";return {translations,functionGuideCopy}")();
  const pt=t["pt-BR"],en=t.en,guide=g["pt-BR"],base=g.en;
- check(Object.keys(en).length===146&&Object.keys(pt).length===146&&Object.keys(en).every(k=>pt[k]?.trim()),"146/146 dictionary keys");
+ check(Object.keys(en).length>=146&&Object.keys(pt).length===Object.keys(en).length&&Object.keys(en).every(k=>pt[k]?.trim()),"All English source dictionary keys translated (at least 146)");
  check(guide.items.length===14&&base.items.every((x,i)=>{const y=guide.items[i];return x.key===y.key&&x.number===y.number&&["title","summary","purpose","controls"].every(k=>y[k]?.trim())&&y.steps.length===x.steps.length&&y.steps.every(v=>v.trim())&&(!x.note||y.note?.trim())}),"14/14 guides, all steps and notes");
  check(Object.keys(base.labels).every(k=>guide.labels[k]?.trim()),"Guide labels");
  check(pages.every(h=>[...h.matchAll(/data-i18n="([^"]+)"/g)].every(x=>pt[x[1]])),"Both website pages: translated keyed content");
