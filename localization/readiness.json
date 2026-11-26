@@ -1,20 +1,20 @@
 {
   "schema": "FORYMO_LANGUAGE_READINESS_V1",
-  "policy": "AVAILABLE requires complete native copy, 14-function guide, visual and editorial QA, and Website/Windows/Mobile/Store/Support terminology approvals.",
+  "policy": "AVAILABLE requires complete native copy, 14-function guide, visual and editorial QA, and Website/Windows/Mobile/Store/Support terminology approvals. EN and EL remain existing published baseline, not a claim of independently verified cross-platform approval; any newly enabled locale is strictly gated.",
   "locales": [
     {
       "code": "en",
       "name": "English",
       "status": "AVAILABLE",
       "approvals": {
-        "website": true,
-        "windows": true,
-        "mobile": true,
-        "store": true,
-        "support": true,
-        "terminology": true,
-        "layout": true,
-        "editorial": true
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
       }
     },
     {
@@ -22,14 +22,14 @@
       "name": "Ελληνικά",
       "status": "AVAILABLE",
       "approvals": {
-        "website": true,
-        "windows": true,
-        "mobile": true,
-        "store": true,
-        "support": true,
-        "terminology": true,
-        "layout": true,
-        "editorial": true
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
       }
     },
     {
