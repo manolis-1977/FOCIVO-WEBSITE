@@ -7,7 +7,7 @@
   <meta name="description" content="FORYMO organizes your day around Focus, Rhythm and Moments — what deserves attention, what builds your daily flow and what needs to happen at the right time." />
   <title>FORYMO — Focus. Rhythm. Moments.</title>
   <link rel="icon" href="assets/favicon.webp" type="image/webp" />
-  <link rel="stylesheet" href="styles.css?v=20261126-language-system" />
+  <link rel="stylesheet" href="styles.css?v=20261126-all-locales" />
   <link rel="stylesheet" href="design-system.css" />
 </head>
 <body>
@@ -23,20 +23,20 @@
         <div class="language-selector">
           <button class="language-trigger" id="languageTrigger" aria-label="Language selection" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="languageMenu"><span aria-hidden="true">🌐</span><strong id="languageCode">EN</strong><span class="language-chevron" aria-hidden="true">⌄</span></button>
           <div class="language-menu" id="languageMenu" role="listbox" aria-label="Language" hidden>
-            <button class="language-option lang-btn active" data-lang="en" data-code="EN" role="option" aria-selected="true" type="button"><span>English</span><small data-i18n="language.available">Available</small></button>
-            <button class="language-option lang-btn" data-lang="el" data-code="GR" role="option" aria-selected="false" type="button"><span>Ελληνικά</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn active" data-lang="en" data-code="EN" role="option" aria-selected="true" type="button"><span lang="en" dir="ltr">English</span><small data-i18n="language.available">Available</small></button>
+            <button class="language-option lang-btn" data-lang="el" data-code="GR" role="option" aria-selected="false" type="button"><span lang="el" dir="ltr">Ελληνικά</span><small data-i18n="language.available">Available</small></button>
             <div class="language-menu-divider" role="separator"></div>
             <p class="language-menu-label" data-i18n="language.preparing">In preparation</p>
-            <button class="language-option" type="button" disabled><span>Português — Brasil</span><small>PT-BR</small></button>
-            <button class="language-option" type="button" disabled><span>Deutsch</span><small>DE</small></button>
-            <button class="language-option" type="button" disabled><span>Español</span><small>ES</small></button>
-            <button class="language-option" type="button" disabled><span>Français</span><small>FR</small></button>
-            <button class="language-option" type="button" disabled><span>Italiano</span><small>IT</small></button>
-            <button class="language-option" type="button" disabled><span>日本語</span><small>JA</small></button>
-            <button class="language-option" type="button" disabled><span>Türkçe</span><small>TR</small></button>
-            <button class="language-option" type="button" disabled dir="rtl"><span>العربية</span><small>AR</small></button>
-            <button class="language-option" type="button" disabled><span>हिन्दी</span><small>HI</small></button>
-            <button class="language-option" type="button" disabled><span>Bahasa Indonesia</span><small>ID</small></button>
+            <button class="language-option" type="button" disabled><span lang="pt-BR" dir="ltr">Português — Brasil</span><small>PT-BR</small></button>
+            <button class="language-option" type="button" disabled><span lang="de" dir="ltr">Deutsch</span><small>DE</small></button>
+            <button class="language-option" type="button" disabled><span lang="es" dir="ltr">Español</span><small>ES</small></button>
+            <button class="language-option" type="button" disabled><span lang="fr" dir="ltr">Français</span><small>FR</small></button>
+            <button class="language-option" type="button" disabled><span lang="it" dir="ltr">Italiano</span><small>IT</small></button>
+            <button class="language-option" type="button" disabled><span lang="ja" dir="ltr">日本語</span><small>JA</small></button>
+            <button class="language-option" type="button" disabled><span lang="tr" dir="ltr">Türkçe</span><small>TR</small></button>
+            <button class="language-option" type="button" disabled dir="rtl"><span lang="ar" dir="rtl">العربية</span><small>AR</small></button>
+            <button class="language-option" type="button" disabled><span lang="hi" dir="ltr">हिन्दी</span><small>HI</small></button>
+            <button class="language-option" type="button" disabled><span lang="id" dir="ltr">Bahasa Indonesia</span><small>ID</small></button>
           </div>
         </div>
         <a class="button button-small" href="#desktop" data-i18n="nav.cta">See FORYMO</a>
@@ -156,6 +156,6 @@
   </main>
 
   <footer class="footer"><div class="shell footer-grid"><div class="footer-brand"><img src="assets/focivo-symbol.webp" alt="FORYMO" style="width:46px;height:46px;object-fit:contain;object-position:left center;filter:none;" /><p data-i18n="footer.tagline">Focus. Rhythm. Moments.</p></div><div class="footer-links"><a href="#product" data-i18n="nav.product">Product</a><a href="#desktop" data-i18n="nav.desktop">Windows</a><a href="#mobile" data-i18n="nav.mobile">Mobile</a><a href="sunshine-pro/" data-i18n="nav.sunshine">SunShine Pro</a><a href="#backup" data-i18n="features.backup.title">Backup & recovery</a><a href="#faq">FAQ</a><a href="#support" data-i18n="language.foundation4.title">Support</a></div><div class="footer-end"><span>© 2026 FORYMO</span><span data-i18n="footer.note">All rights reserved.</span></div></div></footer>
-  <script src="app.js?v=20261126-support-acceptance"></script>
+  <script src="app.js?v=20261126-all-locales"></script>
 </body>
 </html>
