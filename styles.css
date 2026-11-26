@@ -428,7 +428,7 @@ html[dir="rtl"] .footer-brand img{object-position:right center!important}
     column-gap:16px;
     align-items:center;
   }
-  .site-header:not(.sunshine-page-header) .brand{grid-column:1;grid-row:1;justify-self:start}
+  .site-header:not(.sunshine-page-header) .brand{grid-column:1;grid-row:1;justify-self:start;margin-inline-start:clamp(0px,57%,calc(100% - 62px))}
   .site-header:not(.sunshine-page-header) .nav{
     grid-column:2;grid-row:1;justify-self:center;margin:0;
     gap:clamp(12px,1.15vw,22px);flex-wrap:nowrap;
