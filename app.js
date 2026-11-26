@@ -1203,6 +1203,56 @@ const ptBRExtra = {
     "SunShine Pro Desktop dashboard preview": "Prévia do painel do SunShine Pro para computador"
   }
 };
+const localeExtras = {"pt-BR": ptBRExtra, ...{
+  "de": {
+    "title": "FORYMO — Fokus. Rhythmus. Momente.",
+    "description": "FORYMO organisiert Ihren Tag rund um Focus, Rhythm und Moments: was Aufmerksamkeit verdient, was Ihren Rhythmus prägt und was zum richtigen Zeitpunkt geschehen muss.",
+    "sunshineDescription": "SunShine Pro — professionelle Praxisverwaltung für Physiotherapie unter Windows und Android.",
+    "metrics": [
+      "3 erledigt",
+      "75 % erledigt",
+      "heute fällig"
+    ],
+    "skip": "Zum Inhalt springen",
+    "faq": "Häufige Fragen",
+    "aria": {
+      "FORYMO home": "FORYMO-Startseite",
+      "SunShine Pro home": "SunShine-Pro-Startseite",
+      "Primary navigation": "Hauptnavigation",
+      "Language": "Sprache",
+      "Language selection": "Sprachauswahl",
+      "Open menu": "Menü öffnen",
+      "FORYMO interface preview": "Vorschau der FORYMO-Oberfläche",
+      "FORYMO functions": "FORYMO-Funktionen",
+      "FORYMO language quality foundations": "Grundlagen der FORYMO-Sprachqualität",
+      "SunShine Pro Desktop dashboard preview": "Vorschau der SunShine-Pro-Desktop-Übersicht"
+    }
+  },
+  "es": {
+    "title": "FORYMO — Concentración. Ritmo. Momentos.",
+    "description": "FORYMO organiza tu día en torno a Focus, Rhythm y Moments: lo que merece atención, lo que construye tu ritmo diario y lo que debe suceder en el momento adecuado.",
+    "sunshineDescription": "SunShine Pro — gestión profesional de clínicas de fisioterapia para Windows y Android.",
+    "metrics": [
+      "3 completadas",
+      "75 % completado",
+      "para hoy"
+    ],
+    "skip": "Ir al contenido",
+    "faq": "Preguntas frecuentes",
+    "aria": {
+      "FORYMO home": "Inicio de FORYMO",
+      "SunShine Pro home": "Inicio de SunShine Pro",
+      "Primary navigation": "Navegación principal",
+      "Language": "Idioma",
+      "Language selection": "Selección de idioma",
+      "Open menu": "Abrir menú",
+      "FORYMO interface preview": "Vista previa de la interfaz de FORYMO",
+      "FORYMO functions": "Funciones de FORYMO",
+      "FORYMO language quality foundations": "Principios de calidad lingüística de FORYMO",
+      "SunShine Pro Desktop dashboard preview": "Vista previa del panel de escritorio de SunShine Pro"
+    }
+  }
+}};
 const localPreviewAllowed = ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname);
 const requestedPreview = new URLSearchParams(location.search).get("preview-language");
 const localPreviewLanguage = localPreviewAllowed && stagedLocales.includes(requestedPreview) ? requestedPreview : null;
@@ -1221,21 +1271,21 @@ const originalExtraText = new Map();
 const originalExtraAria = new Map();
 const originalDescription = document.querySelector('meta[name="description"]')?.getAttribute("content");
 function applyExtraCopy(lang){
-  const isPT = lang === "pt-BR";
-  const extraTargets = [['.skip', ptBRExtra.skip], ['.footer-links a[href="#faq"]', ptBRExtra.faq]];
+  const extra = localeExtras[lang];
+  const extraTargets = [['.skip', extra?.skip], ['.footer-links a[href="#faq"]', extra?.faq]];
   extraTargets.forEach(([selector,value])=>{
     document.querySelectorAll(selector).forEach(node=>{
       if(!originalExtraText.has(node)) originalExtraText.set(node,node.textContent);
-      node.textContent = isPT ? value : originalExtraText.get(node);
+      node.textContent = value ?? originalExtraText.get(node);
     });
   });
   document.querySelectorAll("[aria-label]").forEach(node=>{
     if(!originalExtraAria.has(node)) originalExtraAria.set(node,node.getAttribute("aria-label"));
     const original = originalExtraAria.get(node);
-    if(Object.hasOwn(ptBRExtra.aria,original)) node.setAttribute("aria-label",isPT ? ptBRExtra.aria[original] : original);
+    node.setAttribute("aria-label",extra?.aria?.[original] ?? original);
   });
   const description = document.querySelector('meta[name="description"]');
-  if(description && originalDescription!==undefined && originalDescription!==null) description.setAttribute("content",isPT ? (document.body.dataset.page==="sunshine" ? ptBRExtra.sunshineDescription : ptBRExtra.description) : originalDescription);
+  if(description && originalDescription!==undefined && originalDescription!==null) description.setAttribute("content",extra ? (document.body.dataset.page==="sunshine" ? extra.sunshineDescription : extra.description) : originalDescription);
 }
 
 
@@ -1291,9 +1341,9 @@ function installMetricPolish(){
 function setMetricCopy(lang){
   const stats = document.querySelectorAll('.stat-grid .stat');
   if(stats.length < 3) return;
-  const copy = lang === 'pt-BR' ? ptBRExtra.metrics : lang === 'el'
+  const copy = localeExtras[lang]?.metrics ?? (lang === 'el'
     ? ['3 ολοκληρώθηκαν','75% ολοκλήρωση','για σήμερα']
-    : ['3 completed','75% complete','due today'];
+    : ['3 completed','75% complete','due today']);
   stats.forEach((stat,index) => {
     const status = stat.querySelector('em');
     if(status && copy[index]) status.textContent = copy[index];
@@ -1306,7 +1356,7 @@ function setLanguage(lang, preview = false){
   if(!Object.hasOwn(translations,lang) || (!publicLanguage && !localPreview)) lang = 'en';
   const dict = translations[lang];
   document.documentElement.lang = lang;
-  if(lang==='pt-BR' && languageCode) languageCode.textContent = 'PT-BR';
+  if(localeExtras[lang] && languageCode) languageCode.textContent = lang.toUpperCase();
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   applyExtraCopy(lang);
   updatePreviewLinks(lang);
@@ -1323,7 +1373,7 @@ function setLanguage(lang, preview = false){
     if(active && languageCode) languageCode.textContent = btn.dataset.code;
   });
   if(!localPreview) localStorage.setItem('forymo-language', lang);
-  document.title = document.body.dataset.page === 'sunshine' ? dict['sunshine.page.title'] : (lang==='pt-BR' ? ptBRExtra.title : 'FORYMO — Focus. Rhythm. Moments.');
+  document.title = document.body.dataset.page === 'sunshine' ? dict['sunshine.page.title'] : (localeExtras[lang]?.title ?? 'FORYMO — Focus. Rhythm. Moments.');
 }
 
 installMetricPolish();
