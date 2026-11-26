@@ -35,6 +35,7 @@ jobs:
           node scripts/test-product-alignment.cjs
           node scripts/test-customer-copy.cjs
           node scripts/build-public.cjs
+          node scripts/test-social-preview.cjs
 
       - name: Configure and enable GitHub Pages
         uses: actions/configure-pages@v5
