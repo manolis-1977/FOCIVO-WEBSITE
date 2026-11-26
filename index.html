@@ -21,7 +21,7 @@
       </nav>
       <div class="nav-actions">
         <div class="language-selector">
-          <button class="language-trigger" id="languageTrigger" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="languageMenu"><span aria-hidden="true">🌐</span><strong id="languageCode">EN</strong><span class="language-chevron" aria-hidden="true">⌄</span></button>
+          <button class="language-trigger" id="languageTrigger" aria-label="Language selection" type="button" aria-haspopup="listbox" aria-expanded="false" aria-controls="languageMenu"><span aria-hidden="true">🌐</span><strong id="languageCode">EN</strong><span class="language-chevron" aria-hidden="true">⌄</span></button>
           <div class="language-menu" id="languageMenu" role="listbox" aria-label="Language" hidden>
             <button class="language-option lang-btn active" data-lang="en" data-code="EN" role="option" aria-selected="true" type="button"><span>English</span><small data-i18n="language.available">Available</small></button>
             <button class="language-option lang-btn" data-lang="el" data-code="GR" role="option" aria-selected="false" type="button"><span>Ελληνικά</span><small data-i18n="language.available">Available</small></button>
@@ -134,10 +134,28 @@
 
     <section class="section faq" id="faq"><div class="shell faq-grid"><div class="section-heading"><span class="kicker">FAQ</span><h2 data-i18n="faq.title">Good questions. Clear answers.</h2></div><div class="accordion"><details open><summary data-i18n="faq.q1">What is FORYMO?</summary><p data-i18n="faq.a1">FORYMO is a personal productivity system built around Focus, Rhythm and Moments: Tasks support Focus, Routines build Rhythm, and Reminders with Today bring the right things into the right Moments.</p></details><details><summary data-i18n="faq.q2">Is FORYMO available in Greek?</summary><p data-i18n="faq.a2">Yes. FORYMO stays FORYMO in every language, while menus and explanations are localized into natural Greek based on meaning, not word-for-word machine translation.</p></details><details><summary data-i18n="faq.q3">Is the mobile app available now?</summary><p data-i18n="faq.a3">FORYMO Mobile is in active development and is not yet available for installation. It will be released only after the required testing and final acceptance.</p></details><details><summary data-i18n="faq.q4">Can I recover my data?</summary><p data-i18n="faq.a4">The Windows application includes a verified Backup & Recovery workflow designed to create, verify, preview and apply approved recovery backups.</p></details></div></div></section>
 
+    <section class="section faq" id="support" aria-labelledby="supportTitle">
+      <div class="shell faq-grid">
+        <div class="section-heading">
+          <h2 id="supportTitle" data-i18n="support.title">Help with FORYMO</h2>
+          <p data-i18n="support.lead">Find practical help for common issues. If you still need assistance, send a message to the FORYMO support address.</p>
+          <a class="button" href="mailto:forymo.support@gmail.com" data-i18n="support.contact">Contact support by email</a>
+          <p>forymo.support@gmail.com</p>
+          <p data-i18n="support.note">Email opens in your mail application. Language-specific human and AI support availability is subject to release approval.</p>
+        </div>
+        <div class="accordion">
+          <details><summary data-i18n="support.q1">Why is a task missing from Today?</summary><p data-i18n="support.a1">Check the selected date in Today. Open Tasks and confirm the task’s scheduled date and status. Return to Today and refresh the view.</p></details>
+          <details><summary data-i18n="support.q2">Why did a reminder not appear?</summary><p data-i18n="support.a2">Check that the reminder is enabled and has the correct local date and time. Review sound and popup preferences in Settings. If the issue persists, check Diagnostics before contacting support.</p></details>
+          <details><summary data-i18n="support.q3">How can I restore my workspace safely?</summary><p data-i18n="support.a3">Open Backup &amp; Recovery, verify the backup and review the recovery preview. Apply recovery only after confirming the proposed changes. Do not reset FORYMO as a first troubleshooting step.</p></details>
+          <details><summary data-i18n="support.q4">What should I include when asking for help?</summary><p data-i18n="support.a4">Include your preferred language, app version, operating system, the affected function and steps to reproduce the issue. Never send passwords, recovery keys, payment-card details or personal workspace content.</p></details>
+        </div>
+      </div>
+    </section>
+
     <section class="cta-section" id="contact"><div class="shell cta-box"><img src="assets/focivo-symbol.webp" alt="" /><span class="kicker" data-i18n="cta.kicker">FOCUS · RHYTHM · MOMENTS</span><h2 data-i18n="cta.title">Give your day focus, rhythm and the right moments.</h2><p data-i18n="features.control.body">Focus, Rhythm and Moments work together in one understandable workspace without changing the way your real data stays under your control.</p><a class="button light" href="#top" data-i18n="cta.button">Back to the top</a></div></section>
   </main>
 
-  <footer class="footer"><div class="shell footer-grid"><div class="footer-brand"><img src="assets/focivo-symbol.webp" alt="FORYMO" style="width:46px;height:46px;object-fit:contain;object-position:left center;filter:none;" /><p data-i18n="footer.tagline">Focus. Rhythm. Moments.</p></div><div class="footer-links"><a href="#product" data-i18n="nav.product">Product</a><a href="#desktop" data-i18n="nav.desktop">Windows</a><a href="#mobile" data-i18n="nav.mobile">Mobile</a><a href="sunshine-pro/" data-i18n="nav.sunshine">SunShine Pro</a><a href="#backup" data-i18n="features.backup.title">Backup & recovery</a><a href="#faq">FAQ</a></div><div class="footer-end"><span>© 2026 FORYMO</span><span data-i18n="footer.note">All rights reserved.</span></div></div></footer>
-  <script src="app.js?v=20261126-language-system"></script>
+  <footer class="footer"><div class="shell footer-grid"><div class="footer-brand"><img src="assets/focivo-symbol.webp" alt="FORYMO" style="width:46px;height:46px;object-fit:contain;object-position:left center;filter:none;" /><p data-i18n="footer.tagline">Focus. Rhythm. Moments.</p></div><div class="footer-links"><a href="#product" data-i18n="nav.product">Product</a><a href="#desktop" data-i18n="nav.desktop">Windows</a><a href="#mobile" data-i18n="nav.mobile">Mobile</a><a href="sunshine-pro/" data-i18n="nav.sunshine">SunShine Pro</a><a href="#backup" data-i18n="features.backup.title">Backup & recovery</a><a href="#faq">FAQ</a><a href="#support" data-i18n="language.foundation4.title">Support</a></div><div class="footer-end"><span>© 2026 FORYMO</span><span data-i18n="footer.note">All rights reserved.</span></div></div></footer>
+  <script src="app.js?v=20261126-support-acceptance"></script>
 </body>
 </html>
