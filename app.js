@@ -1,4 +1,164 @@
 const translations = {
+  es: {
+  "support.title": "Ayuda con FORYMO",
+  "support.lead": "Encuentra soluciones prácticas a problemas frecuentes. Si necesitas más ayuda, escribe a la dirección de soporte de FORYMO.",
+  "support.q1": "¿Por qué no aparece una tarea en Hoy?",
+  "support.a1": "Comprueba la fecha seleccionada en Hoy. Abre Tareas y confirma la fecha programada y el estado de la tarea. Vuelve a Hoy y actualiza la vista.",
+  "support.q2": "¿Por qué no apareció un recordatorio?",
+  "support.a2": "Comprueba que el recordatorio esté activado y que la fecha y hora locales sean correctas. Revisa el sonido y las ventanas emergentes en Configuración. Si el problema persiste, consulta Diagnóstico antes de contactar con soporte.",
+  "support.q3": "¿Cómo restauro mi espacio de trabajo de forma segura?",
+  "support.a3": "Abre Copias de seguridad y recuperación, verifica la copia y revisa la vista previa de recuperación. Aplica la recuperación solo después de confirmar los cambios propuestos. No restablezcas FORYMO como primera medida para resolver un problema.",
+  "support.q4": "¿Qué información debo incluir al pedir ayuda?",
+  "support.a4": "Indica tu idioma preferido, la versión de la aplicación, el sistema operativo, la función afectada y los pasos para reproducir el problema. Nunca envíes contraseñas, claves de recuperación, datos de tarjetas de pago ni contenido personal del espacio de trabajo.",
+  "support.contact": "Contactar con soporte por correo electrónico",
+  "support.note": "El correo se abre en tu aplicación de correo electrónico. La disponibilidad de soporte humano y mediante IA en cada idioma está sujeta a la aprobación de lanzamiento.",
+  "nav.product": "Producto",
+  "nav.how": "Cómo funciona",
+  "nav.desktop": "Windows",
+  "nav.mobile": "Mobile",
+  "nav.sunshine": "SunShine Pro",
+  "nav.languages": "Idiomas",
+  "nav.faq": "Preguntas frecuentes",
+  "nav.cta": "Descubre FORYMO",
+  "sunshine.nav.forymo": "FORYMO",
+  "sunshine.back": "Volver a FORYMO",
+  "sunshine.page.title": "SunShine Pro — Gestión profesional de clínicas",
+  "sunshine.tag": "Producto profesional independiente",
+  "sunshine.lead": "Un sistema de gestión profesional que reúne fichas de clientes, historiales estructurados, tratamientos, citas, inventario, pagos y administración basada en roles en un espacio de trabajo organizado.",
+  "sunshine.scope": "1 ordenador + 1 dispositivo móvil",
+  "sunshine.plan": "Modelo de suscripción mensual o anual.",
+  "sunshine.status": "La aplicación de escritorio para Windows está en desarrollo activo. La versión para Android, el funcionamiento sin conexión y la sincronización entre escritorio y móvil siguen en desarrollo y aún no están disponibles como servicio en producción.",
+  "sunshine.panel": "Panel central · Cuidado que ilumina",
+  "sunshine.exit": "Salir de la aplicación",
+  "sunshine.choose": "Elige una función",
+  "sunshine.clients": "Clientes",
+  "sunshine.clients.desc": "Fichas e historial",
+  "sunshine.remedies": "Remedios",
+  "sunshine.remedies.desc": "Fórmulas y cantidades",
+  "sunshine.tinctures": "Tinturas",
+  "sunshine.tinctures.desc": "Fórmulas y cantidades",
+  "sunshine.inventory": "Inventario",
+  "sunshine.inventory.desc": "Frascos y materiales",
+  "sunshine.cashier": "Caja",
+  "sunshine.cashier.desc": "Pagos y saldos",
+  "sunshine.admin": "Administración",
+  "sunshine.admin.desc": "Personal y permisos",
+  "sunshine.appointments": "Citas",
+  "sunshine.appointments.desc": "Gestión de citas",
+  "sunshine.calendar": "Calendario",
+  "sunshine.calendar.desc": "Vista de solo lectura",
+  "sunshine.open": "Abrir",
+  "sunshine.preview.note": "Vista previa de escritorio en desarrollo · 8 módulos activos · Telemetría desactivada",
+  "hero.eyebrow": "FOCUS · RHYTHM · MOMENTS",
+  "hero.title": "Tu día es más que una lista de tareas.",
+  "hero.lead": "FORYMO reúne lo que merece tu atención, lo que construye tu ritmo diario y lo que debe suceder en el momento adecuado.",
+  "hero.primary": "Explora FORYMO",
+  "hero.secondary": "Descubre cómo funciona",
+  "hero.trust1h": "FOCUS",
+  "hero.trust1b": "Lo que merece tu atención",
+  "hero.trust2h": "RHYTHM",
+  "hero.trust2b": "Lo que se repite y da ritmo a tu día",
+  "hero.trust3h": "MOMENTS",
+  "hero.trust3b": "Lo que debe suceder en el momento adecuado",
+  "mock.today": "Hoy",
+  "mock.tasks": "Tareas",
+  "mock.routines": "Rutinas",
+  "mock.reminders": "Recordatorios",
+  "mock.date": "Miércoles",
+  "mock.heading": "Tu día, de un vistazo.",
+  "mock.synced": "Listo",
+  "mock.stat1": "Tareas",
+  "mock.stat2": "Rutinas",
+  "mock.stat3": "Recordatorios",
+  "mock.done": "completadas",
+  "mock.today2": "para hoy",
+  "mock.focus": "Próxima prioridad",
+  "mock.task1": "Revisar las prioridades de hoy",
+  "mock.task2": "Preparar el plan de mañana",
+  "mock.task3": "Hacer una copia del espacio de trabajo",
+  "mock.complete": "Completada",
+  "mock.upcoming": "Próxima",
+  "mock.reminder": "Recordatorio",
+  "product.kicker": "Más que gestión de tareas",
+  "product.title": "FOCUS · RHYTHM · MOMENTS",
+  "product.lead": "FORYMO no es otro gestor de tareas más. Organiza tu día en tres niveles: lo que merece atención, lo que se repite y construye tu ritmo, y lo que debe suceder en el momento adecuado.",
+  "features.today.title": "MOMENTS — Hoy",
+  "features.today.body": "Hoy reúne las tareas, rutinas y recordatorios pertinentes en una sola vista para que veas lo que importa ahora.",
+  "features.tasks.title": "FOCUS — Tareas",
+  "features.tasks.body": "Las tareas convierten la atención en acción al mantener claro y visible lo que merece tu concentración.",
+  "features.routines.title": "RHYTHM — Rutinas",
+  "features.routines.body": "Las rutinas estructuran las acciones recurrentes y ayudan a integrar hábitos constantes en tu día a día.",
+  "features.reminders.title": "MOMENTS — Recordatorios",
+  "features.reminders.body": "Los recordatorios vinculan una acción con el momento en el que necesita tu atención.",
+  "features.backup.title": "Copias de seguridad y recuperación",
+  "features.backup.body": "Crea copias de seguridad verificadas y recupera tu espacio de trabajo con confianza cuando necesites restaurarlo.",
+  "features.control.title": "Un sistema bajo tu control",
+  "features.control.body": "Focus, Rhythm y Moments funcionan juntos en un espacio de trabajo comprensible, sin cambiar el hecho de que tus datos reales siguen bajo tu control.",
+  "how.kicker": "Cómo funciona FORYMO",
+  "how.title": "De la atención al ritmo, hasta el momento adecuado.",
+  "how.lead": "FORYMO conecta lo que necesitas hacer, lo que deseas repetir y lo que debe aparecer en el momento adecuado, sin convertir tu día en un sistema rígido.",
+  "how.s1h": "Registra",
+  "how.s1b": "Añade la tarea, rutina o recordatorio mientras lo tengas presente.",
+  "how.s2h": "Ten claridad",
+  "how.s2b": "Utiliza Hoy como vista de trabajo en lugar de buscar entre listas separadas.",
+  "how.s3h": "Actúa",
+  "how.s3b": "Completa lo que importa, actualiza el estado y mantén visible el siguiente paso.",
+  "how.s4h": "Protege",
+  "how.s4b": "Conserva copias de seguridad verificadas para recuperar tu espacio de trabajo cuando sea necesario.",
+  "guide.kicker": "GUÍA DE USUARIO DE FORYMO",
+  "guide.title": "Elige una función y aprende exactamente cómo funciona.",
+  "guide.lead": "Explora cada parte de FORYMO para Windows. Selecciona una función para conocer su propósito, su flujo de trabajo y sus controles principales.",
+  "desktop.tag": "Aplicación principal",
+  "desktop.title": "FORYMO para Windows",
+  "desktop.body": "El espacio de trabajo completo donde Focus, Rhythm y Moments se unen mediante Hoy, Tareas, Rutinas, Recordatorios y copias de seguridad verificadas con recuperación.",
+  "desktop.meta": "Aplicación principal para Windows",
+  "desktop.cta": "Recibe novedades del lanzamiento",
+  "mobile.tag": "En desarrollo activo",
+  "mobile.title": "FORYMO Mobile",
+  "mobile.body": "La aplicación complementaria para Android se conecta de forma segura a FORYMO para Windows y mantiene Hoy, Tareas, Rutinas y Recordatorios a tu alcance. Los cambios autorizados pueden guardarse sin conexión y sincronizarse automáticamente cuando el ordenador vuelva a estar disponible.",
+  "mobile.meta": "Conexión segura con el ordenador",
+  "mobile.scope": "1 ordenador Windows · 1 dispositivo móvil",
+  "mobile.cta": "Aún no disponible para instalación. La versión de producción se publicará después de las pruebas y la aceptación final.",
+  "platforms.kicker": "Aplicaciones FORYMO",
+  "platforms.title": "Windows y Mobile, un solo sistema personal.",
+  "trust.kicker": "Diseñado para inspirar confianza",
+  "trust.title": "Tu sistema debe ayudarte a vivir el día, no a gestionar el propio sistema.",
+  "trust.p1": "Focus para lo que merece atención",
+  "trust.p2": "Rhythm para lo que construye constancia",
+  "trust.p3": "Moments para lo que corresponde al momento adecuado",
+  "trust.p4": "Soporte lingüístico coherente en el sitio web, Windows, Mobile, tiendas y soporte",
+  "language.available": "Disponible",
+  "language.preparing": "En preparación",
+  "language.kicker": "Soporte de idiomas",
+  "language.title": "Tu idioma forma parte del producto.",
+  "language.lead": "Un idioma solo estará disponible cuando el sitio web, Windows, Mobile, las guías de las tiendas y el soporte utilicen la misma terminología clara.",
+  "language.foundation1.title": "Organización",
+  "language.foundation1.body": "Una estructura clara para funciones, guías, actualizaciones y versiones.",
+  "language.foundation2.title": "Cuidado editorial",
+  "language.foundation2.body": "Localización natural centrada en el significado, sin traducciones automáticas descuidadas.",
+  "language.foundation3.title": "Coherencia",
+  "language.foundation3.body": "Los mismos términos en el sitio web, Windows, Mobile, tiendas y soporte.",
+  "language.foundation4.title": "Soporte",
+  "language.foundation4.body": "Guías, preguntas frecuentes, soporte mediante IA y contacto humano en el idioma del usuario.",
+  "language.roadmap.kicker": "Plan de idiomas",
+  "language.roadmap.title": "Soporte completo, publicado con responsabilidad.",
+  "language.roadmap.note": "El inglés y el griego están disponibles actualmente. Cada nuevo idioma permanece en preparación hasta que se revise toda la experiencia.",
+  "faq.title": "Buenas preguntas. Respuestas claras.",
+  "faq.q1": "¿Qué es FORYMO?",
+  "faq.a1": "FORYMO es un sistema de productividad personal basado en Focus, Rhythm y Moments: las tareas apoyan la concentración, las rutinas construyen el ritmo y los recordatorios, junto con Hoy, presentan lo importante en el momento adecuado.",
+  "faq.q2": "¿Está FORYMO disponible en griego?",
+  "faq.a2": "Sí. FORYMO conserva su nombre en todos los idiomas, mientras los menús y explicaciones se adaptan a un griego natural basado en el significado, no en una traducción automática palabra por palabra.",
+  "faq.q3": "¿Ya está disponible la aplicación móvil?",
+  "faq.a3": "FORYMO Mobile está en desarrollo activo y aún no está disponible para instalación. Se publicará únicamente después de las pruebas necesarias y la aceptación final.",
+  "faq.q4": "¿Puedo recuperar mis datos?",
+  "faq.a4": "La aplicación para Windows incluye un proceso verificado de copias de seguridad y recuperación que permite crear y verificar copias, revisar la vista previa y aplicar una recuperación aprobada.",
+  "cta.kicker": "FOCUS · RHYTHM · MOMENTS",
+  "cta.title": "Dale a tu día concentración, ritmo y los momentos adecuados.",
+  "cta.body": "FORYMO reúne Focus, Rhythm y Moments en un sistema personal claro.",
+  "cta.button": "Volver arriba",
+  "footer.tagline": "Focus. Rhythm. Moments.",
+  "footer.note": "Todos los derechos reservados."
+},
   de: {
   "support.title": "Hilfe zu FORYMO",
   "support.lead": "Hier finden Sie praktische Hilfe bei häufigen Problemen. Wenn Sie weitere Unterstützung benötigen, schreiben Sie an die Support-Adresse von FORYMO.",
@@ -376,6 +536,206 @@ const translations = {
 };
 
 const functionGuideCopy = {
+  es: {
+  "labels": {
+    "purpose": "Qué hace",
+    "workflow": "Cómo usarlo",
+    "controls": "Controles principales",
+    "note": "Importante"
+  },
+  "items": [
+    {
+      "key": "today",
+      "number": "01",
+      "title": "Hoy",
+      "summary": "La vista de trabajo del día elegido reúne las tareas programadas y su progreso en una sola pantalla clara.",
+      "purpose": "Consulta lo que vence, lo que está completado y lo que aún necesita atención sin cambiar entre listas.",
+      "steps": [
+        "Elige la fecha que quieres revisar.",
+        "Selecciona una tarea de la lista diaria.",
+        "Iníciala en Concentración, márcala como completada o ábrela en Tareas para editarla por completo."
+      ],
+      "controls": "Fecha, Actualizar, Iniciar, Completar, Abrir en Tareas."
+    },
+    {
+      "key": "focus",
+      "number": "02",
+      "title": "Concentración",
+      "summary": "Un espacio de trabajo centrado en completar una tarea seleccionada mediante pasos claros y manejables.",
+      "purpose": "Reduce las distracciones manteniendo visibles una tarea activa y sus próximos pasos hasta terminar la sesión.",
+      "steps": [
+        "Inicia una tarea disponible desde Hoy o Concentración.",
+        "Avanza por los pasos de concentración y completa cada uno.",
+        "Pausa o reanuda la sesión cuando sea necesario y después complétala."
+      ],
+      "controls": "Iniciar concentración, Pausar, Reanudar, Completar paso, Completar sesión.",
+      "note": "Solo puede haber una sesión de concentración activa o pausada a la vez."
+    },
+    {
+      "key": "tasks",
+      "number": "03",
+      "title": "Tareas",
+      "summary": "Gestión completa de tareas con fechas, horas, duración, notas, estado y subtareas.",
+      "purpose": "Registra el trabajo con precisión, divídelo en acciones más pequeñas y controla su estado de finalización.",
+      "steps": [
+        "Crea una tarea nueva y establece sus datos de programación.",
+        "Añade subtareas cuando la tarea necesite pasos menores.",
+        "Carga, edita, completa o elimina la tarea seleccionada."
+      ],
+      "controls": "Nueva, Guardar tarea, Completar, Eliminar, Añadir subtarea, Cambiar estado de subtarea."
+    },
+    {
+      "key": "routines",
+      "number": "04",
+      "title": "Rutinas",
+      "summary": "Acciones recurrentes organizadas por día de la semana, estado de activación y ocurrencias individuales.",
+      "purpose": "Construye un ritmo en torno a acciones recurrentes sin perder el estado de finalización de cada ocurrencia.",
+      "steps": [
+        "Crea una rutina y elige los días de la semana en que se repite.",
+        "Mantenla activa o desactívala temporalmente.",
+        "Carga sus ocurrencias y marca cada una como completada o pendiente."
+      ],
+      "controls": "Guardar rutina, Activar/desactivar, Cargar ocurrencias, Cambiar estado de ocurrencia."
+    },
+    {
+      "key": "reminders",
+      "number": "05",
+      "title": "Recordatorios",
+      "summary": "Alertas programadas vinculadas a tareas o rutinas de FORYMO, con sonido y ventanas emergentes configurables.",
+      "purpose": "Haz que un elemento existente reclame tu atención en la fecha y hora locales exactas que elijas.",
+      "steps": [
+        "Selecciona la tarea o rutina a la que pertenece el recordatorio.",
+        "Configura la programación local, el sonido y las ventanas emergentes.",
+        "Crea, activa, desactiva, pospón o elimina el recordatorio según sea necesario."
+      ],
+      "controls": "Crear recordatorio, Activar/desactivar, Eliminar recordatorio, Ejecutar programador, Posponer.",
+      "note": "El comportamiento de las notificaciones persistentes y críticas también se controla desde Configuración."
+    },
+    {
+      "key": "search",
+      "number": "06",
+      "title": "Búsqueda",
+      "summary": "Un espacio de búsqueda único para localizar información en todo tu espacio de trabajo FORYMO.",
+      "purpose": "Encuentra el elemento que necesitas sin abrir y revisar cada módulo por separado.",
+      "steps": [
+        "Introduce la palabra o frase que deseas encontrar.",
+        "Revisa los resultados coincidentes y su origen.",
+        "Selecciona un resultado y ábrelo en la sección correspondiente de FORYMO."
+      ],
+      "controls": "Buscar, Actualizar, Abrir selección."
+    },
+    {
+      "key": "calendar",
+      "number": "07",
+      "title": "Calendario",
+      "summary": "Vistas diaria, semanal y mensual para planificar tareas, ocurrencias de rutinas y recordatorios.",
+      "purpose": "Comprende tu agenda a lo largo del tiempo y traslada las tareas a una fecha más adecuada cuando cambien los planes.",
+      "steps": [
+        "Cambia entre las vistas de día, semana y mes.",
+        "Usa Anterior y Siguiente para desplazarte por el calendario.",
+        "Abre un elemento seleccionado o reprograma una tarea directamente."
+      ],
+      "controls": "Día, Semana, Mes, Anterior, Siguiente, Abrir selección, Reprogramar tarea.",
+      "note": "Los detalles de rutinas y recordatorios se siguen gestionando en sus propios módulos."
+    },
+    {
+      "key": "analytics",
+      "number": "08",
+      "title": "Análisis",
+      "summary": "Una visión general de productividad basada en tus tareas, rutinas e historial real de finalización.",
+      "purpose": "Consulta el progreso y los patrones de actividad sin modificar los datos subyacentes.",
+      "steps": [
+        "Elige el periodo o la vista que quieres consultar.",
+        "Revisa los totales, los elementos completados y las actividades pendientes.",
+        "Actualiza el resumen cuando cambie tu trabajo."
+      ],
+      "controls": "Selección de fecha o periodo, Actualizar, indicadores de resumen."
+    },
+    {
+      "key": "organize",
+      "number": "09",
+      "title": "Organización",
+      "summary": "Un lugar central para las categorías, colores y etiquetas que estructuran tu espacio de trabajo.",
+      "purpose": "Facilita reconocer, agrupar y encontrar trabajos relacionados en FORYMO.",
+      "steps": [
+        "Crea una categoría con un nombre claro.",
+        "Asigna un color y las etiquetas necesarias.",
+        "Actualiza o elimina los datos de organización cuando cambie tu flujo de trabajo."
+      ],
+      "controls": "Categoría, Color, Etiqueta, Guardar categoría, Eliminar."
+    },
+    {
+      "key": "backup",
+      "number": "10",
+      "title": "Copias de seguridad y recuperación",
+      "summary": "Copias locales verificadas, exportaciones profesionales y un proceso de recuperación sujeto a aprobación.",
+      "purpose": "Protege tu espacio de trabajo y recupéralo de forma deliberada, con verificación y vista previa antes de restaurar los datos.",
+      "steps": [
+        "Crea una copia verificada y confirma su estado de verificación.",
+        "Exporta tu información en el formato que necesites.",
+        "Revisa la vista previa del plan de recuperación, apruébalo y solo entonces aplica la recuperación."
+      ],
+      "controls": "Crear copia verificada, Verificar, Depurar copias antiguas, Exportar JSON, CSV ZIP, PDF, Excel y Markdown, Vista previa de recuperación, Aplicar recuperación aprobada, Rechazar.",
+      "note": "La recuperación nunca se aplica de forma silenciosa: requiere vista previa y aprobación explícita."
+    },
+    {
+      "key": "sync",
+      "number": "11",
+      "title": "Sincronización",
+      "summary": "Sincronización de carpetas con protección frente a conflictos para transferir datos de FORYMO de forma controlada.",
+      "purpose": "Transfiere cambios aprobados mediante una ubicación de sincronización seleccionada y detecta conflictos antes de sobrescribir datos.",
+      "steps": [
+        "Elige y abre la carpeta de sincronización.",
+        "Usa Enviar para preparar tus datos actuales aprobados.",
+        "Prepara la recepción, revisa la solicitud y cancélala si no debe continuar."
+      ],
+      "controls": "Elegir destino, Abrir, Enviar, Preparar recepción, Cancelar recepción pendiente, Actualizar solicitudes.",
+      "note": "Las funciones de nube y BYOC siguen sujetas a su estado de publicación y aceptación."
+    },
+    {
+      "key": "mobile",
+      "number": "12",
+      "title": "Dispositivos móviles",
+      "summary": "Configuración y gestión seguras de la aplicación complementaria FORYMO Mobile.",
+      "purpose": "Conecta un dispositivo móvil autorizado a la aplicación Windows con el nivel de acceso que elijas.",
+      "steps": [
+        "Activa el servicio móvil y, si es necesario, el acceso a la red local.",
+        "Genera un código de vinculación temporal para solo lectura o acceso completo.",
+        "Revisa los dispositivos conectados y revoca el acceso cuando un dispositivo ya no deba conectarse."
+      ],
+      "controls": "Activar servicio móvil, Acceso LAN, Códigos de vinculación, Solo lectura, Acceso completo, Revocar acceso.",
+      "note": "FORYMO Mobile sigue en desarrollo activo y todavía no se ofrece como instalación de producción."
+    },
+    {
+      "key": "settings",
+      "number": "13",
+      "title": "Configuración",
+      "summary": "Preferencias de la aplicación para idioma, apariencia, inicio y notificaciones.",
+      "purpose": "Adapta FORYMO a tu forma de trabajar en Windows manteniendo explícitas las decisiones de seguridad importantes.",
+      "steps": [
+        "Elige idioma, tema, sección de inicio y escala de visualización.",
+        "Configura el comportamiento de las notificaciones, el sonido y el tiempo predeterminado de aplazamiento.",
+        "Guarda las preferencias o restaura los valores predeterminados."
+      ],
+      "controls": "Guardar, Restaurar valores predeterminados, Iniciar con Windows, Restablecer FORYMO, Salir de FORYMO.",
+      "note": "Restablecer FORYMO elimina los datos locales de productividad; se conservan los archivos existentes de copia de seguridad y exportación."
+    },
+    {
+      "key": "diagnostics",
+      "number": "14",
+      "title": "Diagnóstico",
+      "summary": "Una visión profesional de solo lectura del estado de la aplicación y sus servicios locales.",
+      "purpose": "Confirma que la aplicación, la base de datos y los servicios auxiliares funcionen correctamente y ofrece información útil al soporte.",
+      "steps": [
+        "Ejecuta o actualiza la comprobación de diagnóstico.",
+        "Revisa el estado de la aplicación, la base de datos y la plataforma.",
+        "Abre los detalles técnicos solo al resolver problemas o colaborar con el soporte."
+      ],
+      "controls": "Actualizar diagnóstico, Estado del sistema, Comprobaciones de estado, Detalles técnicos.",
+      "note": "Diagnóstico informa sobre el estado del sistema; no modifica tus tareas ni contenido personal."
+    }
+  ]
+},
   de: {
   "labels": {
     "purpose": "Was die Funktion macht",
@@ -820,7 +1180,7 @@ let activeGuideKey = "today";
 
 // A public locale must be explicitly released here AND pass the release manifest check.
 const publicLocales = Object.freeze(["en", "el"]);
-const stagedLocales = Object.freeze(["pt-BR", "de"]);
+const stagedLocales = Object.freeze(["pt-BR", "de", "es"]);
 
 // PT-BR is staged; public language selection still depends on enabled controls.
 const ptBRExtra = {
