@@ -1,6 +1,6 @@
 {
   "schema": "FORYMO_LANGUAGE_READINESS_V1",
-  "policy": "AVAILABLE requires complete native copy, 14-function guide, visual and editorial QA, and Website/Windows/Mobile/Store/Support terminology approvals. EN and EL remain existing published baseline, not a claim of independently verified cross-platform approval; any newly enabled locale is strictly gated.",
+  "policy": "AVAILABLE requires complete native website copy, all 14 guides, visual/editorial QA, shared terminology, Windows, Mobile, Store, Support, account/subscription, transactional email, legal/privacy and AI support approval. EN/EL are inherited published baseline only. New releases must agree with runtime, both selectors and roadmap.",
   "locales": [
     {
       "code": "en",
@@ -14,7 +14,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -29,7 +33,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -44,7 +52,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -59,7 +71,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -74,7 +90,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -89,7 +109,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -104,7 +128,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -119,7 +147,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -134,7 +166,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -150,7 +186,11 @@
         "terminology": false,
         "layout": false,
         "editorial": false,
-        "rtl": false
+        "rtl": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -165,7 +205,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     },
     {
@@ -180,7 +224,11 @@
         "support": false,
         "terminology": false,
         "layout": false,
-        "editorial": false
+        "editorial": false,
+        "accountSubscription": false,
+        "transactionalEmail": false,
+        "legalPrivacy": false,
+        "aiSupport": false
       }
     }
   ]
