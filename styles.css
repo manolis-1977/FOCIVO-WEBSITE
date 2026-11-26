@@ -15,9 +15,22 @@ button{font:inherit}
 .nav{display:flex;gap:26px;margin:auto;font-size:14px;color:#cbd8eb}
 .nav a:hover{color:#fff}
 .nav-actions{display:flex;align-items:center;gap:18px}
-.language{display:flex;align-items:center;gap:5px;color:#8da1bd;font-size:13px}
-.lang-btn{border:0;background:transparent;color:#8da1bd;padding:4px;cursor:pointer;font-weight:700}
-.lang-btn.active{color:#fff}
+.language-selector{position:relative}
+.language-trigger{min-width:92px;height:42px;display:flex;align-items:center;justify-content:center;gap:8px;border:1px solid rgba(255,255,255,.16);border-radius:11px;background:rgba(255,255,255,.06);color:#fff;padding:0 11px;cursor:pointer;transition:.2s background,.2s border-color}
+.language-trigger:hover,.language-trigger[aria-expanded="true"]{background:rgba(255,255,255,.12);border-color:rgba(105,190,255,.55)}
+.language-trigger strong{font-size:13px;letter-spacing:.04em}
+.language-chevron{font-size:13px;color:#9eb0c9;transition:.2s transform}
+.language-trigger[aria-expanded="true"] .language-chevron{transform:rotate(180deg)}
+.language-menu{position:absolute;right:0;top:calc(100% + 10px);width:286px;max-height:min(70vh,620px);overflow:auto;padding:10px;background:#fff;border:1px solid #dfe7f2;border-radius:16px;box-shadow:0 24px 70px rgba(4,17,38,.28);color:#17243a;z-index:300}
+.language-menu[hidden]{display:none}
+.language-option{width:100%;display:flex;align-items:center;justify-content:space-between;gap:14px;border:0;border-radius:10px;background:transparent;color:#1c2a40;text-align:left;padding:10px 11px;cursor:pointer}
+.language-option:not(:disabled):hover,.language-option.active{background:#edf6ff;color:#0a66bb}
+.language-option:disabled{cursor:not-allowed;color:#738197;opacity:.76}
+.language-option span{font-weight:720;font-size:13px}
+.language-option small{font-size:10px;font-weight:800;letter-spacing:.04em;color:#74839a;text-transform:uppercase}
+.language-option.active small{color:#1478db}
+.language-menu-divider{height:1px;background:#e7edf5;margin:8px 3px}
+.language-menu-label{margin:8px 11px 5px;color:#8a96a8;font-size:10px;font-weight:850;letter-spacing:.11em;text-transform:uppercase}
 .button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 24px;border-radius:14px;background:linear-gradient(135deg,var(--blue),#4f6bea);color:#fff;font-weight:760;box-shadow:0 12px 28px rgba(35,136,245,.24);transition:.2s transform,.2s box-shadow}
 .button:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(35,136,245,.32)}
 .button-small{min-height:40px;padding:0 16px;border-radius:11px;font-size:13px}
@@ -206,6 +219,25 @@ details p{color:#6d7a8e;max-width:660px;margin:-4px 0 24px;line-height:1.75;font
 .function-guide-detail aside strong{display:block;color:#176fc5;font-size:12px;text-transform:uppercase;letter-spacing:.08em;margin-bottom:5px}
 .function-guide-detail aside p{font-size:13px;color:#53677f}
 
+.language-commitment{background:linear-gradient(180deg,#f7faff 0%,#fff 100%)}
+.language-heading{text-align:center;margin:0 auto 48px}
+.language-foundations{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.language-foundations article{min-height:255px;padding:25px;background:#fff;border:1px solid #dce5f0;border-radius:19px;box-shadow:0 14px 42px rgba(22,54,96,.07)}
+.language-foundations article>span{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:#eaf4ff;color:#1478db;font-size:12px;font-weight:850;margin-bottom:30px}
+.language-foundations h3{font-size:19px;margin:0 0 10px;letter-spacing:-.02em}
+.language-foundations p{margin:0;color:#66758b;font-size:14px;line-height:1.75}
+.language-roadmap{margin-top:20px;background:#0b1c35;border-radius:26px;padding:34px;color:#fff;box-shadow:0 24px 65px rgba(12,39,78,.19)}
+.language-roadmap-head{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end;padding-bottom:25px;border-bottom:1px solid rgba(255,255,255,.12)}
+.language-roadmap-head h3{font-size:29px;line-height:1.2;margin:8px 0 0;letter-spacing:-.035em}
+.language-roadmap-head p{margin:0;color:#aebdd1;font-size:14px;line-height:1.75}
+.language-status-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:25px}
+.language-status{position:relative;min-height:92px;display:grid;grid-template-columns:1fr auto;align-content:center;gap:3px 10px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:15px}
+.language-status strong{font-size:13px;line-height:1.35}
+.language-status>span{font-size:10px;font-weight:850;color:#8396af;letter-spacing:.06em}
+.language-status small{grid-column:1/-1;color:#8798ad;font-size:9px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.language-status.is-ready{background:linear-gradient(135deg,rgba(31,135,242,.24),rgba(67,99,229,.15));border-color:rgba(71,177,255,.42)}
+.language-status.is-ready>span,.language-status.is-ready small{color:#68c9ff}
+
 @media(max-width:1120px){.nav{display:none}
 .nav-actions .button-small{display:none}
 .menu-btn{display:block;margin-left:auto}
@@ -219,6 +251,8 @@ details p{color:#6d7a8e;max-width:660px;margin:-4px 0 24px;line-height:1.75;font
 .sticky-copy{position:static}
 .function-guide-workspace{grid-template-columns:270px 1fr}
 .trust-box{grid-template-columns:1fr;gap:35px}
+.language-foundations{grid-template-columns:repeat(2,1fr)}
+.language-status-grid{grid-template-columns:repeat(3,1fr)}
 .sunshine-intro{grid-template-columns:1fr;gap:34px}
 .sunshine-logo-card{min-height:240px}
 .sunshine-dashboard-grid{grid-template-columns:repeat(2,1fr)}
@@ -228,6 +262,9 @@ details p{color:#6d7a8e;max-width:660px;margin:-4px 0 24px;line-height:1.75;font
 @media(max-width:700px){.shell{width:min(calc(100% - 28px),var(--max))}
 .nav-wrap{height:68px}
 .brand img{width:120px}
+.language-trigger{min-width:78px;height:38px;padding:0 9px}
+.language-trigger>span:first-child{display:none}
+.language-menu{position:fixed;top:76px;left:14px;right:14px;width:auto;max-height:calc(100vh - 96px)}
 .hero{min-height:auto;padding:125px 0 95px}
 .sunshine-page{padding-top:118px}
 .sunshine-page-header .brand{min-width:120px}
@@ -265,6 +302,12 @@ details p{color:#6d7a8e;max-width:660px;margin:-4px 0 24px;line-height:1.75;font
 .function-guide-detail p,.function-guide-detail li{font-size:14px}
 .platform-card{padding:30px;min-height:480px}
 .trust-box{padding:32px 24px}
+.language-foundations{grid-template-columns:1fr}
+.language-foundations article{min-height:auto}
+.language-roadmap{padding:24px 18px;border-radius:20px}
+.language-roadmap-head{grid-template-columns:1fr;gap:16px}
+.language-roadmap-head h3{font-size:25px}
+.language-status-grid{grid-template-columns:repeat(2,1fr)}
 .faq-grid{gap:26px}
 .cta-box{padding:58px 22px}
 .footer-grid{grid-template-columns:1fr}

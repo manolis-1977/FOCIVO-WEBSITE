@@ -1,6 +1,6 @@
 const translations = {
   en: {
-    "nav.product":"Product","nav.how":"How it works","nav.desktop":"Windows","nav.mobile":"Mobile","nav.sunshine":"SunShine Pro","nav.faq":"FAQ","nav.cta":"See FORYMO","sunshine.nav.forymo":"FORYMO","sunshine.back":"Back to FORYMO","sunshine.page.title":"SunShine Pro — Professional clinic management",
+    "nav.product":"Product","nav.how":"How it works","nav.desktop":"Windows","nav.mobile":"Mobile","nav.sunshine":"SunShine Pro","nav.languages":"Languages","nav.faq":"FAQ","nav.cta":"See FORYMO","sunshine.nav.forymo":"FORYMO","sunshine.back":"Back to FORYMO","sunshine.page.title":"SunShine Pro — Professional clinic management",
     "hero.eyebrow":"FOCUS · RHYTHM · MOMENTS","hero.title":"Your day is more than a list of tasks.","hero.lead":"FORYMO brings together what deserves your attention, what builds your daily rhythm and what needs to happen at the right moment.","hero.primary":"Explore FORYMO","hero.secondary":"See how it works","hero.trust1h":"FOCUS","hero.trust1b":"What deserves your attention","hero.trust2h":"RHYTHM","hero.trust2b":"What repeats and builds your flow","hero.trust3h":"MOMENTS","hero.trust3b":"What needs to happen at the right time",
     "mock.today":"Today","mock.tasks":"Tasks","mock.routines":"Routines","mock.reminders":"Reminders","mock.date":"Wednesday","mock.heading":"Your day, at a glance.","mock.synced":"Ready","mock.stat1":"Tasks","mock.stat2":"Routines","mock.stat3":"Reminders","mock.done":"completed","mock.today2":"due today","mock.focus":"Focus next","mock.task1":"Review today’s priorities","mock.task2":"Prepare tomorrow’s plan","mock.task3":"Back up your workspace","mock.complete":"Complete","mock.upcoming":"Upcoming","mock.reminder":"Reminder",
     "product.kicker":"More than task management","product.title":"FOCUS · RHYTHM · MOMENTS","product.lead":"FORYMO is not another task manager. It organizes your day around three layers: what deserves attention, what repeats and builds your rhythm, and what must happen at the right moment.",
@@ -9,12 +9,13 @@ const translations = {
     "desktop.tag":"Main application","desktop.title":"FORYMO for Windows","desktop.body":"The full desktop workspace where Focus, Rhythm and Moments come together through Today, Tasks, Routines, Reminders and verified Backup & Recovery.","desktop.meta":"Main Windows application","desktop.cta":"Get release updates","mobile.tag":"In active development","mobile.title":"FORYMO Mobile","mobile.body":"The Android companion app connects securely to FORYMO for Windows and keeps Today, Tasks, Routines and Reminders within reach. Authorized changes can be saved offline and synchronized automatically when the PC is available again.","mobile.meta":"Secure PC companion","mobile.scope":"1 Windows PC · 1 mobile device","mobile.cta":"Not yet available for installation. Production release follows testing and final acceptance.",
     "platforms.kicker":"FORYMO applications","platforms.title":"Windows and Mobile, one personal system.",
     "sunshine.tag":"Separate professional product","sunshine.lead":"A professional management system bringing client records, structured histories, treatments, appointments, inventory, payments and role-based administration into one organized workspace.","sunshine.scope":"1 Desktop + 1 Mobile","sunshine.plan":"Monthly or annual subscription model.","sunshine.status":"Windows Desktop is in active development. Android Mobile, offline operation and Desktop ↔ Mobile synchronization remain under development and are not yet available as a production service.","sunshine.panel":"Central Panel · Bright care","sunshine.exit":"Exit application","sunshine.choose":"Choose a function","sunshine.clients":"Clients","sunshine.clients.desc":"Records and history","sunshine.remedies":"Remedies","sunshine.remedies.desc":"Formulas and quantities","sunshine.tinctures":"Tinctures","sunshine.tinctures.desc":"Formulas and quantities","sunshine.inventory":"Inventory","sunshine.inventory.desc":"Bottles and materials","sunshine.cashier":"Cashier","sunshine.cashier.desc":"Payments and balances","sunshine.admin":"Administration","sunshine.admin.desc":"Staff and permissions","sunshine.appointments":"Appointments","sunshine.appointments.desc":"Appointment management","sunshine.calendar":"Calendar","sunshine.calendar.desc":"Read-only view","sunshine.open":"Open","sunshine.preview.note":"Desktop development preview · 8 active modules · Telemetry disabled",
-    "trust.kicker":"Built for confidence","trust.title":"Your system should help you live the day, not manage the system.","trust.p1":"Focus for what deserves attention","trust.p2":"Rhythm for what builds consistency","trust.p3":"Moments for what belongs at the right time","trust.p4":"English and Greek with meaning-first localization",
+    "trust.kicker":"Built for confidence","trust.title":"Your system should help you live the day, not manage the system.","trust.p1":"Focus for what deserves attention","trust.p2":"Rhythm for what builds consistency","trust.p3":"Moments for what belongs at the right time","trust.p4":"Consistent language support across Website, Windows, Mobile, Store and Support",
+    "language.available":"Available","language.preparing":"In preparation","language.kicker":"Language support","language.title":"Your language is part of the product.","language.lead":"A language becomes available only when the Website, Windows, Mobile, Store guidance and Support use the same clear terminology.","language.foundation1.title":"Organization","language.foundation1.body":"A clear structure for functions, guides, updates and releases.","language.foundation2.title":"Editorial care","language.foundation2.body":"Natural, meaning-first localization — never careless automatic copy.","language.foundation3.title":"Consistency","language.foundation3.body":"The same terms across Website, Windows, Mobile, Store and Support.","language.foundation4.title":"Support","language.foundation4.body":"Guides, FAQ, AI Support and human contact in the user's language.","language.roadmap.kicker":"Language roadmap","language.roadmap.title":"Complete support, released responsibly.","language.roadmap.note":"EN and GR are available now. Every next language remains in preparation until its complete experience passes review.",
     "faq.title":"Good questions. Clear answers.","faq.q1":"What is FORYMO?","faq.a1":"FORYMO is a personal productivity system built around Focus, Rhythm and Moments: Tasks support Focus, Routines build Rhythm, and Reminders with Today bring the right things into the right Moments.","faq.q2":"Is FORYMO available in Greek?","faq.a2":"Yes. FORYMO stays FORYMO in every language, while menus and explanations are localized into natural Greek based on meaning, not word-for-word machine translation.","faq.q3":"Is the mobile app available now?","faq.a3":"FORYMO Mobile is in active development and is not yet available for installation. It will be released only after the required testing and final acceptance.","faq.q4":"Can I recover my data?","faq.a4":"The Windows application includes a verified Backup & Recovery workflow designed to create, verify, preview and apply approved recovery backups.",
     "cta.kicker":"FOCUS · RHYTHM · MOMENTS","cta.title":"Give your day focus, rhythm and the right moments.","cta.body":"FORYMO brings Focus, Rhythm and Moments together in one clear personal system.","cta.button":"Back to the top","footer.tagline":"Focus. Rhythm. Moments.","footer.note":"All rights reserved."
   },
   el: {
-    "nav.product":"Το FORYMO","nav.how":"Πώς λειτουργεί","nav.desktop":"Windows","nav.mobile":"Mobile","nav.sunshine":"SunShine Pro","nav.faq":"Συχνές ερωτήσεις","nav.cta":"Δες το FORYMO","sunshine.nav.forymo":"FORYMO","sunshine.back":"Επιστροφή στο FORYMO","sunshine.page.title":"SunShine Pro — Επαγγελματική διαχείριση φυσικοθεραπευτηρίου",
+    "nav.product":"Το FORYMO","nav.how":"Πώς λειτουργεί","nav.desktop":"Windows","nav.mobile":"Mobile","nav.sunshine":"SunShine Pro","nav.languages":"Γλώσσες","nav.faq":"Συχνές ερωτήσεις","nav.cta":"Δες το FORYMO","sunshine.nav.forymo":"FORYMO","sunshine.back":"Επιστροφή στο FORYMO","sunshine.page.title":"SunShine Pro — Επαγγελματική διαχείριση",
     "hero.eyebrow":"FOCUS · RHYTHM · MOMENTS","hero.title":"Η ημέρα σου είναι κάτι περισσότερο από μια λίστα εργασιών.","hero.lead":"Το FORYMO ενώνει όσα αξίζουν την προσοχή σου, όσα χτίζουν τον καθημερινό σου ρυθμό και όσα πρέπει να συμβούν τη σωστή στιγμή.","hero.primary":"Γνώρισε το FORYMO","hero.secondary":"Δες πώς λειτουργεί","hero.trust1h":"FOCUS","hero.trust1b":"Τι αξίζει την προσοχή σου","hero.trust2h":"RHYTHM","hero.trust2b":"Τι επαναλαμβάνεται και χτίζει τη ροή σου","hero.trust3h":"MOMENTS","hero.trust3b":"Τι πρέπει να συμβεί τη σωστή στιγμή",
     "mock.today":"Η ημέρα σου","mock.tasks":"Εργασίες","mock.routines":"Συνήθειες","mock.reminders":"Υπενθυμίσεις","mock.date":"Τετάρτη","mock.heading":"Η ημέρα σου, με μια ματιά.","mock.synced":"Έτοιμο","mock.stat1":"Εργασίες","mock.stat2":"Συνήθειες","mock.stat3":"Υπενθυμίσεις","mock.done":"ολοκληρώθηκαν","mock.today2":"για σήμερα","mock.focus":"Επόμενη προτεραιότητα","mock.task1":"Έλεγξε τις σημερινές προτεραιότητες","mock.task2":"Ετοίμασε το πλάνο της αυριανής ημέρας","mock.task3":"Δημιούργησε αντίγραφο ασφαλείας","mock.complete":"Ολοκληρώθηκε","mock.upcoming":"Ακολουθεί","mock.reminder":"Υπενθύμιση",
     "product.kicker":"Περισσότερο από task management","product.title":"FOCUS · RHYTHM · MOMENTS","product.lead":"Το FORYMO δεν παρουσιάζεται ως ακόμη ένας task manager. Οργανώνει την ημέρα σου σε τρία επίπεδα: τι αξίζει την προσοχή σου, τι επαναλαμβάνεται και χτίζει τον ρυθμό σου και τι πρέπει να συμβεί τη σωστή στιγμή.",
@@ -23,7 +24,8 @@ const translations = {
     "desktop.tag":"Κύρια εφαρμογή","desktop.title":"FORYMO για Windows","desktop.body":"Ο πλήρης χώρος εργασίας όπου Focus, Rhythm και Moments ενώνονται μέσα από την Ημέρα σου, τις Εργασίες, τις Συνήθειες, τις Υπενθυμίσεις και την επαληθευμένη δημιουργία αντιγράφων ασφαλείας και επαναφορά.","desktop.meta":"Κύρια εφαρμογή Windows","desktop.cta":"Ενημερώσου για την έκδοση","mobile.tag":"Σε ενεργή ανάπτυξη","mobile.title":"FORYMO Mobile","mobile.body":"Η συνοδευτική εφαρμογή Android συνδέεται με ασφάλεια με το FORYMO για Windows και σου δίνει πρόσβαση στην Ημέρα σου, στις Εργασίες, στις Συνήθειες και στις Υπενθυμίσεις. Οι επιτρεπόμενες αλλαγές μπορούν να αποθηκεύονται offline και να συγχρονίζονται αυτόματα μόλις το PC γίνει ξανά διαθέσιμο.","mobile.meta":"Ασφαλής σύνδεση με το PC","mobile.scope":"1 Windows PC · 1 κινητό","mobile.cta":"Δεν είναι ακόμη διαθέσιμη για εγκατάσταση. Η τελική έκδοση θα ακολουθήσει μετά τις δοκιμές και την τελική αποδοχή.",
     "platforms.kicker":"Εφαρμογές FORYMO","platforms.title":"Windows και Mobile, ένα προσωπικό σύστημα.",
     "sunshine.tag":"Ξεχωριστό επαγγελματικό προϊόν","sunshine.lead":"Ένα επαγγελματικό σύστημα διαχείρισης που συγκεντρώνει καρτέλες πελατών, δομημένο ιστορικό, θεραπείες, ραντεβού, αποθήκη, πληρωμές και διαχείριση δικαιωμάτων σε έναν οργανωμένο χώρο εργασίας.","sunshine.scope":"1 Desktop + 1 Mobile","sunshine.plan":"Μοντέλο μηνιαίας ή ετήσιας συνδρομής.","sunshine.status":"Η εφαρμογή Windows Desktop βρίσκεται σε ενεργή ανάπτυξη. Το Android Mobile, η offline λειτουργία και ο συγχρονισμός Desktop ↔ Mobile παραμένουν υπό ανάπτυξη και δεν διατίθενται ακόμη ως παραγωγική υπηρεσία.","sunshine.panel":"Κεντρικό Panel · Φωτεινή φροντίδα","sunshine.exit":"Έξοδος από το πρόγραμμα","sunshine.choose":"Επιλογή λειτουργίας","sunshine.clients":"Πελάτες","sunshine.clients.desc":"Καρτέλες και ιστορικό","sunshine.remedies":"Ιάματα","sunshine.remedies.desc":"Συνταγές και ποσότητες","sunshine.tinctures":"Βάματα","sunshine.tinctures.desc":"Συνταγές και ποσότητες","sunshine.inventory":"Αποθήκη","sunshine.inventory.desc":"Μπουκάλια και υλικά","sunshine.cashier":"Ταμείο","sunshine.cashier.desc":"Πληρωμές και οφειλές","sunshine.admin":"Διαχείριση","sunshine.admin.desc":"Προσωπικό και δικαιώματα","sunshine.appointments":"Ραντεβού","sunshine.appointments.desc":"Διαχείριση ραντεβού","sunshine.calendar":"Ημερολόγιο","sunshine.calendar.desc":"Προβολή μόνο ανάγνωσης","sunshine.open":"Άνοιγμα","sunshine.preview.note":"Προεπισκόπηση Desktop υπό ανάπτυξη · 8 ενεργές λειτουργίες · Τηλεμετρία ανενεργή",
-    "trust.kicker":"Σχεδιασμένο για σιγουριά","trust.title":"Το σύστημά σου πρέπει να σε βοηθά να ζεις την ημέρα, όχι να διαχειρίζεσαι το ίδιο το σύστημα.","trust.p1":"Focus για όσα αξίζουν προσοχή","trust.p2":"Rhythm για όσα χτίζουν συνέπεια","trust.p3":"Moments για όσα ανήκουν στη σωστή στιγμή","trust.p4":"Αγγλικά και Ελληνικά με απόδοση της πραγματικής έννοιας",
+    "trust.kicker":"Σχεδιασμένο για σιγουριά","trust.title":"Το σύστημά σου πρέπει να σε βοηθά να ζεις την ημέρα, όχι να διαχειρίζεσαι το ίδιο το σύστημα.","trust.p1":"Focus για όσα αξίζουν προσοχή","trust.p2":"Rhythm για όσα χτίζουν συνέπεια","trust.p3":"Moments για όσα ανήκουν στη σωστή στιγμή","trust.p4":"Συνεπής γλωσσική υποστήριξη σε Website, Windows, Mobile, Store και Support",
+    "language.available":"Διαθέσιμη","language.preparing":"Σε προετοιμασία","language.kicker":"Υποστήριξη γλωσσών","language.title":"Η γλώσσα σου είναι μέρος του προϊόντος.","language.lead":"Μια γλώσσα γίνεται διαθέσιμη μόνο όταν Website, Windows, Mobile, Store και Support χρησιμοποιούν την ίδια καθαρή ορολογία.","language.foundation1.title":"Οργανωτικότητα","language.foundation1.body":"Καθαρή δομή λειτουργιών, οδηγιών, ενημερώσεων και εκδόσεων.","language.foundation2.title":"Επιμέλεια","language.foundation2.body":"Φυσική απόδοση με βάση το νόημα — ποτέ πρόχειρη αυτόματη μετάφραση.","language.foundation3.title":"Συνέπεια","language.foundation3.body":"Ίδιοι όροι σε Website, Windows, Mobile, Store και Support.","language.foundation4.title":"Υποστήριξη","language.foundation4.body":"Οδηγίες, FAQ, AI Support και ανθρώπινη επικοινωνία στη γλώσσα του χρήστη.","language.roadmap.kicker":"Πλάνο γλωσσών","language.roadmap.title":"Πλήρης υποστήριξη, με υπεύθυνη διάθεση.","language.roadmap.note":"EN και GR είναι διαθέσιμες τώρα. Κάθε επόμενη γλώσσα παραμένει σε προετοιμασία μέχρι να ελεγχθεί ολόκληρη η εμπειρία της.",
     "faq.title":"Σωστές ερωτήσεις. Καθαρές απαντήσεις.","faq.q1":"Τι είναι το FORYMO;","faq.a1":"Το FORYMO είναι ένα προσωπικό σύστημα οργάνωσης βασισμένο στα Focus, Rhythm και Moments: οι Εργασίες υπηρετούν το Focus, οι Συνήθειες χτίζουν το Rhythm και οι Υπενθυμίσεις μαζί με την Ημέρα σου φέρνουν τα σωστά πράγματα στα σωστά Moments.","faq.q2":"Υπάρχει το FORYMO στα Ελληνικά;","faq.a2":"Ναι. Το όνομα FORYMO παραμένει πάντα FORYMO. Τα μενού και τα επεξηγηματικά κείμενα αποδίδονται σε φυσικά Ελληνικά με βάση το πραγματικό νόημα και όχι με μηχανική μετάφραση λέξη προς λέξη.","faq.q3":"Είναι διαθέσιμη τώρα η εφαρμογή για κινητό;","faq.a3":"Το FORYMO Mobile βρίσκεται σε ενεργή ανάπτυξη και δεν είναι ακόμη διαθέσιμο για εγκατάσταση. Θα κυκλοφορήσει μόνο αφού ολοκληρωθούν οι απαιτούμενες δοκιμές και η τελική αποδοχή.","faq.q4":"Μπορώ να επαναφέρω τα δεδομένα μου;","faq.a4":"Η εφαρμογή Windows περιλαμβάνει επαληθευμένη διαδικασία Backup & Recovery για δημιουργία, έλεγχο, προεπισκόπηση και εφαρμογή εγκεκριμένου αντιγράφου επαναφοράς.",
     "cta.kicker":"FOCUS · RHYTHM · MOMENTS","cta.title":"Δώσε στην ημέρα σου εστίαση, ρυθμό και τις σωστές στιγμές.","cta.body":"Το FORYMO ενώνει Focus, Rhythm και Moments σε ένα καθαρό προσωπικό σύστημα.","cta.button":"Επιστροφή στην αρχή","footer.tagline":"Focus. Rhythm. Moments.","footer.note":"Με επιφύλαξη παντός δικαιώματος."
   }
@@ -94,6 +96,16 @@ function renderFunctionGuide(lang){
 const buttons = document.querySelectorAll('.lang-btn');
 const menuBtn = document.querySelector('.menu-btn');
 const nav = document.querySelector('.nav');
+const languageSelector = document.querySelector('.language-selector');
+const languageTrigger = document.getElementById('languageTrigger');
+const languageMenu = document.getElementById('languageMenu');
+const languageCode = document.getElementById('languageCode');
+
+function closeLanguageMenu(){
+  if(!languageMenu || !languageTrigger) return;
+  languageMenu.hidden = true;
+  languageTrigger.setAttribute('aria-expanded','false');
+}
 
 function installMetricPolish(){
   if(document.getElementById('forymo-metric-polish')) return;
@@ -131,18 +143,37 @@ function setLanguage(lang){
   });
   setMetricCopy(lang);
   renderFunctionGuide(lang);
-  buttons.forEach(btn => btn.classList.toggle('active', btn.dataset.lang === lang));
+  buttons.forEach(btn => {
+    const active = btn.dataset.lang === lang;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-selected', String(active));
+    if(active && languageCode) languageCode.textContent = btn.dataset.code;
+  });
   localStorage.setItem('forymo-language', lang);
   document.title = document.body.dataset.page === 'sunshine' ? dict['sunshine.page.title'] : 'FORYMO — Focus. Rhythm. Moments.';
 }
 
 installMetricPolish();
-buttons.forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
-menuBtn.addEventListener('click', () => {
+buttons.forEach(btn => btn.addEventListener('click', () => {
+  setLanguage(btn.dataset.lang);
+  closeLanguageMenu();
+}));
+languageTrigger?.addEventListener('click', () => {
+  const open = languageMenu.hidden;
+  languageMenu.hidden = !open;
+  languageTrigger.setAttribute('aria-expanded', String(open));
+});
+document.addEventListener('click', event => {
+  if(languageSelector && !languageSelector.contains(event.target)) closeLanguageMenu();
+});
+document.addEventListener('keydown', event => {
+  if(event.key === 'Escape') closeLanguageMenu();
+});
+menuBtn?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
   menuBtn.setAttribute('aria-expanded', String(open));
 });
-nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+nav?.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   nav.classList.remove('open');
   menuBtn.setAttribute('aria-expanded','false');
 }));
