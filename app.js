@@ -420,6 +420,8 @@ const functionGuideCopy = {
   }
 };
 
+let activeGuideKey = "today";
+
 // PT-BR is staged; public language selection still depends on enabled controls.
 const ptBRExtra = {
   title: "FORYMO — Foco. Ritmo. Momentos.",
@@ -463,7 +465,7 @@ function applyExtraCopy(lang){
   if(description && originalDescription!==undefined && originalDescription!==null) description.setAttribute("content",isPT ? (document.body.dataset.page==="sunshine" ? ptBRExtra.sunshineDescription : ptBRExtra.description) : originalDescription);
 }
 
-let activeGuideKey = "today";
+
 
 function renderFunctionGuide(lang){
   const list = document.getElementById("functionGuideList");
