@@ -1,4 +1,164 @@
 const translations = {
+  id: {
+  "support.title": "Bantuan FORYMO",
+  "support.lead": "Temukan solusi praktis untuk masalah umum. Jika masih memerlukan bantuan, kirim pesan ke alamat email dukungan FORYMO.",
+  "support.q1": "Mengapa tugas tidak muncul di Hari Ini?",
+  "support.a1": "Periksa tanggal yang dipilih di Hari Ini. Buka Tugas dan pastikan tanggal terjadwal serta status tugas benar. Kembali ke Hari Ini dan perbarui tampilan.",
+  "support.q2": "Mengapa pengingat tidak muncul?",
+  "support.a2": "Pastikan pengingat aktif dan tanggal serta waktu lokalnya benar. Periksa pengaturan suara dan pop-up di Pengaturan. Jika masalah berlanjut, periksa Diagnostik sebelum menghubungi dukungan.",
+  "support.q3": "Bagaimana cara memulihkan ruang kerja dengan aman?",
+  "support.a3": "Buka Pencadangan dan pemulihan, verifikasi cadangan, lalu tinjau pratinjau pemulihan. Terapkan pemulihan hanya setelah mengonfirmasi perubahan yang diusulkan. Jangan mengatur ulang FORYMO sebagai langkah pertama pemecahan masalah.",
+  "support.q4": "Informasi apa yang perlu disertakan saat meminta bantuan?",
+  "support.a4": "Sebutkan bahasa pilihan, versi aplikasi, sistem operasi, fungsi yang terdampak, dan langkah untuk mengulangi masalah. Jangan pernah mengirim kata sandi, kunci pemulihan, data kartu pembayaran, atau konten pribadi ruang kerja.",
+  "support.contact": "Hubungi dukungan melalui email",
+  "support.note": "Email akan dibuka di aplikasi email Anda. Ketersediaan dukungan manusia dan AI dalam setiap bahasa bergantung pada persetujuan rilis.",
+  "nav.product": "Produk",
+  "nav.how": "Cara kerja",
+  "nav.desktop": "Windows",
+  "nav.mobile": "Seluler",
+  "nav.sunshine": "SunShine Pro",
+  "nav.languages": "Bahasa",
+  "nav.faq": "Pertanyaan umum",
+  "nav.cta": "Kenali FORYMO",
+  "sunshine.nav.forymo": "FORYMO",
+  "sunshine.back": "Kembali ke FORYMO",
+  "sunshine.page.title": "SunShine Pro — Pengelolaan klinik profesional",
+  "sunshine.tag": "Produk profesional terpisah",
+  "sunshine.lead": "Sistem pengelolaan profesional yang menyatukan data klien, riwayat terstruktur, perawatan, janji temu, inventaris, pembayaran, dan administrasi berbasis peran dalam ruang kerja yang terorganisasi.",
+  "sunshine.scope": "1 komputer desktop + 1 perangkat seluler",
+  "sunshine.plan": "Model langganan bulanan atau tahunan.",
+  "sunshine.status": "Aplikasi desktop Windows sedang aktif dikembangkan. Android seluler, operasi offline, dan sinkronisasi desktop dengan seluler masih dalam pengembangan dan belum tersedia sebagai layanan produksi.",
+  "sunshine.panel": "Panel utama · Perawatan yang mencerahkan",
+  "sunshine.exit": "Keluar dari aplikasi",
+  "sunshine.choose": "Pilih fungsi",
+  "sunshine.clients": "Klien",
+  "sunshine.clients.desc": "Data dan riwayat",
+  "sunshine.remedies": "Ramuan",
+  "sunshine.remedies.desc": "Formula dan jumlah",
+  "sunshine.tinctures": "Tingtur",
+  "sunshine.tinctures.desc": "Formula dan jumlah",
+  "sunshine.inventory": "Inventaris",
+  "sunshine.inventory.desc": "Botol dan bahan",
+  "sunshine.cashier": "Kasir",
+  "sunshine.cashier.desc": "Pembayaran dan saldo",
+  "sunshine.admin": "Administrasi",
+  "sunshine.admin.desc": "Staf dan izin",
+  "sunshine.appointments": "Janji temu",
+  "sunshine.appointments.desc": "Pengelolaan janji temu",
+  "sunshine.calendar": "Kalender",
+  "sunshine.calendar.desc": "Tampilan hanya baca",
+  "sunshine.open": "Buka",
+  "sunshine.preview.note": "Pratinjau pengembangan desktop · 8 modul aktif · Telemetri dinonaktifkan",
+  "hero.eyebrow": "FOCUS · RHYTHM · MOMENTS",
+  "hero.title": "Hari Anda lebih dari sekadar daftar tugas.",
+  "hero.lead": "FORYMO menyatukan hal yang layak mendapat perhatian, hal yang membangun ritme harian, dan hal yang perlu dilakukan pada saat yang tepat.",
+  "hero.primary": "Jelajahi FORYMO",
+  "hero.secondary": "Lihat cara kerjanya",
+  "hero.trust1h": "FOCUS",
+  "hero.trust1b": "Hal yang layak mendapat perhatian Anda",
+  "hero.trust2h": "RHYTHM",
+  "hero.trust2b": "Hal yang berulang dan membangun ritme Anda",
+  "hero.trust3h": "MOMENTS",
+  "hero.trust3b": "Hal yang perlu dilakukan pada saat yang tepat",
+  "mock.today": "Hari Ini",
+  "mock.tasks": "Tugas",
+  "mock.routines": "Rutinitas",
+  "mock.reminders": "Pengingat",
+  "mock.date": "Rabu",
+  "mock.heading": "Hari Anda dalam sekilas pandang.",
+  "mock.synced": "Siap",
+  "mock.stat1": "Tugas",
+  "mock.stat2": "Rutinitas",
+  "mock.stat3": "Pengingat",
+  "mock.done": "selesai",
+  "mock.today2": "jatuh tempo hari ini",
+  "mock.focus": "Prioritas berikutnya",
+  "mock.task1": "Tinjau prioritas hari ini",
+  "mock.task2": "Siapkan rencana besok",
+  "mock.task3": "Cadangkan ruang kerja",
+  "mock.complete": "Selesai",
+  "mock.upcoming": "Mendatang",
+  "mock.reminder": "Pengingat",
+  "product.kicker": "Lebih dari pengelolaan tugas",
+  "product.title": "FOCUS · RHYTHM · MOMENTS",
+  "product.lead": "FORYMO bukan sekadar aplikasi pengelola tugas lainnya. FORYMO mengatur hari Anda dalam tiga lapisan: hal yang perlu diperhatikan, hal yang berulang dan membangun ritme, serta hal yang harus dilakukan pada saat yang tepat.",
+  "features.today.title": "MOMENTS — Hari Ini",
+  "features.today.body": "Hari Ini menyatukan tugas, rutinitas, dan pengingat yang relevan dalam satu tampilan agar Anda dapat melihat hal yang penting sekarang.",
+  "features.tasks.title": "FOCUS — Tugas",
+  "features.tasks.body": "Tugas mengubah perhatian menjadi tindakan dengan membuat hal yang perlu difokuskan tetap jelas dan terlihat.",
+  "features.routines.title": "RHYTHM — Rutinitas",
+  "features.routines.body": "Rutinitas menata tindakan berulang dan membantu tindakan konsisten menjadi bagian dari kehidupan sehari-hari.",
+  "features.reminders.title": "MOMENTS — Pengingat",
+  "features.reminders.body": "Pengingat menghubungkan tindakan dengan saat tindakan itu memerlukan perhatian Anda.",
+  "features.backup.title": "Pencadangan dan pemulihan",
+  "features.backup.body": "Buat cadangan yang terverifikasi dan pulihkan ruang kerja dengan percaya diri saat diperlukan.",
+  "features.control.title": "Satu sistem dalam kendali Anda",
+  "features.control.body": "Focus, Rhythm, dan Moments bekerja bersama dalam satu ruang kerja yang mudah dipahami, sementara data Anda tetap berada dalam kendali Anda.",
+  "how.kicker": "Cara kerja FORYMO",
+  "how.title": "Dari perhatian menuju ritme, hingga saat yang tepat.",
+  "how.lead": "FORYMO menghubungkan apa yang perlu dilakukan, apa yang ingin diulangi, dan apa yang harus muncul pada waktu yang tepat, tanpa menjadikan hari Anda sebuah sistem yang kaku.",
+  "how.s1h": "Catat",
+  "how.s1b": "Tambahkan tugas, rutinitas, atau pengingat selagi masih teringat.",
+  "how.s2h": "Lihat dengan jelas",
+  "how.s2b": "Gunakan Hari Ini sebagai tampilan kerja alih-alih mencari dalam daftar yang terpisah.",
+  "how.s3h": "Bertindak",
+  "how.s3b": "Selesaikan hal penting, perbarui status, dan pastikan langkah berikutnya terlihat.",
+  "how.s4h": "Lindungi",
+  "how.s4b": "Simpan cadangan terverifikasi agar ruang kerja dapat dipulihkan jika diperlukan.",
+  "guide.kicker": "PANDUAN PENGGUNA FORYMO",
+  "guide.title": "Pilih fungsi dan pelajari cara kerjanya secara mendetail.",
+  "guide.lead": "Jelajahi setiap bagian FORYMO untuk Windows. Pilih fungsi untuk mengetahui tujuan, alur kerja, dan kontrol utamanya.",
+  "desktop.tag": "Aplikasi utama",
+  "desktop.title": "FORYMO untuk Windows",
+  "desktop.body": "Ruang kerja desktop lengkap tempat Focus, Rhythm, dan Moments menyatu melalui Hari Ini, Tugas, Rutinitas, Pengingat, serta pencadangan terverifikasi dan pemulihan.",
+  "desktop.meta": "Aplikasi utama Windows",
+  "desktop.cta": "Dapatkan kabar rilis",
+  "mobile.tag": "Aktif dikembangkan",
+  "mobile.title": "FORYMO Mobile",
+  "mobile.body": "Aplikasi pendamping Android terhubung secara aman dengan FORYMO untuk Windows dan membuat Hari Ini, Tugas, Rutinitas, serta Pengingat mudah diakses. Perubahan yang diotorisasi dapat disimpan offline dan disinkronkan otomatis ketika PC kembali tersedia.",
+  "mobile.meta": "Pendamping PC yang aman",
+  "mobile.scope": "1 PC Windows · 1 perangkat seluler",
+  "mobile.cta": "Belum tersedia untuk dipasang. Rilis produksi dilakukan setelah pengujian dan penerimaan akhir.",
+  "platforms.kicker": "Aplikasi FORYMO",
+  "platforms.title": "Windows dan seluler, satu sistem pribadi.",
+  "trust.kicker": "Dibuat untuk membangun kepercayaan",
+  "trust.title": "Sistem Anda seharusnya membantu Anda menjalani hari, bukan mengelola sistem itu sendiri.",
+  "trust.p1": "Focus untuk hal yang layak mendapat perhatian",
+  "trust.p2": "Rhythm untuk hal yang membangun konsistensi",
+  "trust.p3": "Moments untuk hal yang perlu dilakukan pada saat yang tepat",
+  "trust.p4": "Dukungan bahasa yang konsisten di situs web, Windows, seluler, toko aplikasi, dan layanan dukungan",
+  "language.available": "Tersedia",
+  "language.preparing": "Dalam persiapan",
+  "language.kicker": "Dukungan bahasa",
+  "language.title": "Bahasa Anda adalah bagian dari produk.",
+  "language.lead": "Bahasa hanya tersedia ketika situs web, Windows, seluler, panduan toko aplikasi, dan dukungan menggunakan istilah jelas yang sama.",
+  "language.foundation1.title": "Organisasi",
+  "language.foundation1.body": "Struktur yang jelas untuk fungsi, panduan, pembaruan, dan rilis.",
+  "language.foundation2.title": "Ketelitian editorial",
+  "language.foundation2.body": "Pelokalan alami yang mengutamakan makna, bukan terjemahan otomatis yang asal-asalan.",
+  "language.foundation3.title": "Konsistensi",
+  "language.foundation3.body": "Istilah yang sama di situs web, Windows, seluler, toko aplikasi, dan dukungan.",
+  "language.foundation4.title": "Dukungan",
+  "language.foundation4.body": "Panduan, pertanyaan umum, dukungan AI, dan kontak manusia dalam bahasa pengguna.",
+  "language.roadmap.kicker": "Peta jalan bahasa",
+  "language.roadmap.title": "Dukungan lengkap, dirilis secara bertanggung jawab.",
+  "language.roadmap.note": "Bahasa Inggris dan Yunani saat ini tersedia. Setiap bahasa baru tetap dalam persiapan hingga seluruh pengalaman pengguna lolos peninjauan.",
+  "faq.title": "Pertanyaan yang baik. Jawaban yang jelas.",
+  "faq.q1": "Apa itu FORYMO?",
+  "faq.a1": "FORYMO adalah sistem produktivitas pribadi berbasis Focus, Rhythm, dan Moments: tugas membantu fokus, rutinitas membangun ritme, dan pengingat bersama Hari Ini menampilkan hal yang tepat pada saat yang tepat.",
+  "faq.q2": "Apakah FORYMO tersedia dalam bahasa Yunani?",
+  "faq.a2": "Ya. Nama FORYMO tetap sama dalam setiap bahasa, sementara menu dan penjelasan dilokalkan ke bahasa Yunani yang alami berdasarkan makna, bukan terjemahan mesin kata demi kata.",
+  "faq.q3": "Apakah aplikasi seluler sudah tersedia?",
+  "faq.a3": "FORYMO Mobile aktif dikembangkan dan belum tersedia untuk dipasang. Aplikasi hanya akan dirilis setelah pengujian yang diperlukan dan penerimaan akhir.",
+  "faq.q4": "Bisakah saya memulihkan data saya?",
+  "faq.a4": "Aplikasi Windows mencakup alur pencadangan dan pemulihan terverifikasi untuk membuat dan memverifikasi cadangan, meninjau pratinjau, dan menerapkan pemulihan yang disetujui.",
+  "cta.kicker": "FOCUS · RHYTHM · MOMENTS",
+  "cta.title": "Berikan fokus, ritme, dan momen yang tepat untuk hari Anda.",
+  "cta.body": "FORYMO menyatukan Focus, Rhythm, dan Moments dalam satu sistem pribadi yang jelas.",
+  "cta.button": "Kembali ke atas",
+  "footer.tagline": "Focus. Rhythm. Moments.",
+  "footer.note": "Hak cipta dilindungi."
+},
   hi: {
   "support.title": "FORYMO सहायता",
   "support.lead": "आम समस्याओं के व्यावहारिक समाधान पाएँ। अधिक सहायता चाहिए तो FORYMO के सहायता ईमेल पते पर संदेश भेजें।",
@@ -1496,6 +1656,206 @@ const translations = {
 };
 
 const functionGuideCopy = {
+  id: {
+  "labels": {
+    "purpose": "Kegunaan",
+    "workflow": "Cara menggunakan",
+    "controls": "Kontrol utama",
+    "note": "Penting"
+  },
+  "items": [
+    {
+      "key": "today",
+      "number": "01",
+      "title": "Hari Ini",
+      "summary": "Tampilan kerja untuk hari yang dipilih, menyatukan tugas terjadwal dan progres dalam satu layar yang jelas.",
+      "purpose": "Lihat hal yang jatuh tempo, sudah selesai, dan masih perlu perhatian tanpa berpindah daftar.",
+      "steps": [
+        "Pilih tanggal yang ingin ditinjau.",
+        "Pilih tugas dari daftar harian.",
+        "Mulai di Fokus, tandai selesai, atau buka di Tugas untuk mengedit secara lengkap."
+      ],
+      "controls": "Tanggal, Perbarui, Mulai, Selesaikan, Buka di Tugas."
+    },
+    {
+      "key": "focus",
+      "number": "02",
+      "title": "Fokus",
+      "summary": "Ruang kerja terfokus untuk menyelesaikan satu tugas pilihan melalui langkah yang jelas dan mudah dikelola.",
+      "purpose": "Kurangi gangguan dengan mempertahankan satu tugas aktif beserta langkah berikutnya hingga sesi berakhir.",
+      "steps": [
+        "Mulai tugas yang tersedia dari Hari Ini atau Fokus.",
+        "Kerjakan langkah fokus dan selesaikan satu per satu.",
+        "Jeda atau lanjutkan sesi jika diperlukan, lalu selesaikan sesi."
+      ],
+      "controls": "Mulai fokus, Jeda, Lanjutkan, Selesaikan langkah, Selesaikan sesi.",
+      "note": "Hanya satu sesi fokus yang dapat aktif atau dijeda pada satu waktu."
+    },
+    {
+      "key": "tasks",
+      "number": "03",
+      "title": "Tugas",
+      "summary": "Pengelolaan tugas lengkap dengan tanggal, waktu, durasi, catatan, status, dan subtugas.",
+      "purpose": "Catat pekerjaan secara tepat, pecah menjadi tindakan kecil, dan kendalikan status penyelesaiannya.",
+      "steps": [
+        "Buat tugas baru dan tetapkan informasi penjadwalannya.",
+        "Tambahkan subtugas jika diperlukan langkah yang lebih kecil.",
+        "Muat, edit, selesaikan, atau hapus tugas yang dipilih."
+      ],
+      "controls": "Baru, Simpan tugas, Selesaikan, Hapus, Tambah subtugas, Ubah status subtugas."
+    },
+    {
+      "key": "routines",
+      "number": "04",
+      "title": "Rutinitas",
+      "summary": "Tindakan berulang yang diatur berdasarkan hari dalam minggu, status aktif, dan setiap kejadian.",
+      "purpose": "Bangun ritme tindakan berulang sambil mempertahankan status penyelesaian tiap kejadian.",
+      "steps": [
+        "Buat rutinitas dan pilih hari pengulangannya.",
+        "Biarkan aktif atau nonaktifkan sementara.",
+        "Muat kejadian dan tandai masing-masing selesai atau belum selesai."
+      ],
+      "controls": "Simpan rutinitas, Ubah status aktif, Muat kejadian, Ubah status kejadian."
+    },
+    {
+      "key": "reminders",
+      "number": "05",
+      "title": "Pengingat",
+      "summary": "Peringatan terjadwal yang terkait dengan tugas atau rutinitas FORYMO, dengan suara dan perilaku pop-up yang dapat diatur.",
+      "purpose": "Arahkan perhatian pada item yang ada pada tanggal dan waktu lokal yang Anda pilih.",
+      "steps": [
+        "Pilih tugas atau rutinitas yang terkait dengan pengingat.",
+        "Atur jadwal lokal, suara, dan perilaku pop-up.",
+        "Buat, aktifkan, nonaktifkan, tunda, atau hapus pengingat sesuai kebutuhan."
+      ],
+      "controls": "Buat pengingat, Ubah status aktif, Hapus pengingat, Jalankan penjadwal, Tunda.",
+      "note": "Perilaku notifikasi persisten dan kritis juga dapat diatur dari Pengaturan."
+    },
+    {
+      "key": "search",
+      "number": "06",
+      "title": "Pencarian",
+      "summary": "Satu area pencarian untuk menemukan informasi di seluruh ruang kerja FORYMO.",
+      "purpose": "Temukan item yang diperlukan tanpa membuka dan memeriksa setiap modul secara terpisah.",
+      "steps": [
+        "Masukkan kata atau frasa yang ingin dicari.",
+        "Tinjau hasil yang cocok beserta sumbernya.",
+        "Pilih hasil dan buka di bagian FORYMO yang sesuai."
+      ],
+      "controls": "Cari, Perbarui, Buka pilihan."
+    },
+    {
+      "key": "calendar",
+      "number": "07",
+      "title": "Kalender",
+      "summary": "Tampilan hari, minggu, dan bulan untuk tugas, kejadian rutinitas, dan pengingat.",
+      "purpose": "Pahami jadwal dari waktu ke waktu dan pindahkan tugas ke tanggal yang lebih sesuai ketika rencana berubah.",
+      "steps": [
+        "Beralih antara tampilan hari, minggu, dan bulan.",
+        "Gunakan Sebelumnya dan Berikutnya untuk menavigasi kalender.",
+        "Buka item yang dipilih atau jadwalkan ulang tugas secara langsung."
+      ],
+      "controls": "Hari, Minggu, Bulan, Sebelumnya, Berikutnya, Buka pilihan, Jadwalkan ulang tugas.",
+      "note": "Detail rutinitas dan pengingat tetap dikelola di modul asalnya."
+    },
+    {
+      "key": "analytics",
+      "number": "08",
+      "title": "Analitik",
+      "summary": "Ikhtisar produktivitas berdasarkan tugas, rutinitas, dan riwayat penyelesaian Anda yang sebenarnya.",
+      "purpose": "Lihat progres dan pola aktivitas tanpa mengubah data yang mendasarinya.",
+      "steps": [
+        "Pilih periode atau tampilan yang ingin diperiksa.",
+        "Tinjau total, item selesai, dan aktivitas yang tersisa.",
+        "Perbarui ringkasan setelah pekerjaan berubah."
+      ],
+      "controls": "Pilihan tanggal atau periode, Perbarui, Indikator ringkasan."
+    },
+    {
+      "key": "organize",
+      "number": "09",
+      "title": "Pengorganisasian",
+      "summary": "Tempat terpusat untuk kategori, warna, dan label yang menata ruang kerja.",
+      "purpose": "Mudahkan pengenalan, pengelompokan, dan pencarian pekerjaan terkait di FORYMO.",
+      "steps": [
+        "Buat kategori dengan nama yang jelas.",
+        "Tetapkan warna dan label yang diperlukan.",
+        "Perbarui atau hapus data pengorganisasian saat alur kerja berubah."
+      ],
+      "controls": "Kategori, Warna, Label, Simpan kategori, Hapus."
+    },
+    {
+      "key": "backup",
+      "number": "10",
+      "title": "Pencadangan dan pemulihan",
+      "summary": "Cadangan lokal terverifikasi, ekspor profesional, dan alur pemulihan berbasis persetujuan.",
+      "purpose": "Lindungi ruang kerja dan pulihkan secara terkendali dengan verifikasi dan pratinjau sebelum data dipulihkan.",
+      "steps": [
+        "Buat cadangan terverifikasi dan konfirmasi status verifikasinya.",
+        "Ekspor informasi dalam format yang diperlukan.",
+        "Tinjau pratinjau rencana pemulihan, setujui, lalu terapkan pemulihan."
+      ],
+      "controls": "Buat cadangan terverifikasi, Verifikasi, Bersihkan cadangan lama, Ekspor JSON/CSV ZIP/PDF/Excel/Markdown, Pratinjau pemulihan, Terapkan pemulihan yang disetujui, Tolak.",
+      "note": "Pemulihan tidak pernah diterapkan diam-diam; pratinjau dan persetujuan eksplisit diperlukan."
+    },
+    {
+      "key": "sync",
+      "number": "11",
+      "title": "Sinkronisasi",
+      "summary": "Sinkronisasi folder yang aman terhadap konflik untuk transfer data FORYMO secara terkendali.",
+      "purpose": "Pindahkan perubahan yang disetujui melalui lokasi sinkronisasi terpilih sambil mendeteksi konflik sebelum data ditimpa.",
+      "steps": [
+        "Pilih dan buka folder sinkronisasi.",
+        "Gunakan Kirim untuk menyiapkan data terkini yang disetujui.",
+        "Siapkan penerimaan, tinjau permintaan, dan batalkan bila tidak perlu dilanjutkan."
+      ],
+      "controls": "Pilih tujuan, Buka, Kirim, Siapkan penerimaan, Batalkan penerimaan tertunda, Perbarui permintaan.",
+      "note": "Kemampuan cloud dan BYOC tetap bergantung pada status rilis dan penerimaan masing-masing."
+    },
+    {
+      "key": "mobile",
+      "number": "12",
+      "title": "Perangkat seluler",
+      "summary": "Penyiapan dan pengelolaan aplikasi pendamping FORYMO Mobile secara aman.",
+      "purpose": "Hubungkan perangkat seluler terotorisasi ke aplikasi Windows dengan tingkat akses pilihan Anda.",
+      "steps": [
+        "Aktifkan layanan seluler dan, jika perlu, akses jaringan lokal.",
+        "Buat kode pemasangan sementara untuk akses lihat saja atau akses penuh.",
+        "Tinjau perangkat yang terhubung dan cabut akses jika perangkat tidak lagi boleh terhubung."
+      ],
+      "controls": "Aktifkan layanan seluler, Akses LAN, Kode pemasangan, Lihat saja, Akses penuh, Cabut akses.",
+      "note": "FORYMO Mobile masih aktif dikembangkan dan belum ditawarkan sebagai instalasi produksi."
+    },
+    {
+      "key": "settings",
+      "number": "13",
+      "title": "Pengaturan",
+      "summary": "Preferensi aplikasi untuk bahasa, tampilan, perilaku awal, dan notifikasi.",
+      "purpose": "Sesuaikan FORYMO dengan cara kerja Anda di Windows sambil menjaga pilihan keamanan penting tetap eksplisit.",
+      "steps": [
+        "Pilih bahasa, tema, bagian awal, dan skala tampilan.",
+        "Atur perilaku notifikasi, suara pengingat, dan waktu penundaan bawaan.",
+        "Simpan preferensi atau pulihkan nilai bawaan."
+      ],
+      "controls": "Simpan, Pulihkan nilai bawaan, Mulai bersama Windows, Atur ulang FORYMO, Keluar dari FORYMO.",
+      "note": "Mengatur ulang FORYMO menghapus data produktivitas lokal; berkas cadangan dan ekspor yang sudah ada tetap disimpan."
+    },
+    {
+      "key": "diagnostics",
+      "number": "14",
+      "title": "Diagnostik",
+      "summary": "Ikhtisar profesional hanya baca mengenai kesehatan aplikasi dan layanan lokalnya.",
+      "purpose": "Pastikan aplikasi, basis data, dan layanan pendukung sehat serta berikan informasi berguna kepada dukungan.",
+      "steps": [
+        "Jalankan atau perbarui pemeriksaan diagnostik.",
+        "Tinjau status aplikasi, basis data, dan platform.",
+        "Buka detail teknis hanya saat memecahkan masalah atau bekerja dengan dukungan."
+      ],
+      "controls": "Perbarui diagnostik, Status sistem, Pemeriksaan kesehatan, Detail teknis.",
+      "note": "Diagnostik melaporkan informasi kesehatan dan tidak mengedit tugas atau konten pribadi Anda."
+    }
+  ]
+},
   hi: {
   "labels": {
     "purpose": "यह क्या करता है",
@@ -3340,7 +3700,7 @@ let activeGuideKey = "today";
 
 // A public locale must be explicitly released here AND pass the release manifest check.
 const publicLocales = Object.freeze(["en", "el"]);
-const stagedLocales = Object.freeze(["pt-BR", "de", "es", "fr", "it", "ja", "tr", "ar", "hi"]);
+const stagedLocales = Object.freeze(["pt-BR", "de", "es", "fr", "it", "ja", "tr", "ar", "hi", "id"]);
 
 // PT-BR is staged; public language selection still depends on enabled controls.
 const ptBRExtra = {
@@ -3363,7 +3723,7 @@ const ptBRExtra = {
     "SunShine Pro Desktop dashboard preview": "Prévia do painel do SunShine Pro para computador"
   }
 };
-const localeExtras = {"pt-BR": ptBRExtra, hi: {"title":"FORYMO — ध्यान। लय। क्षण।","description":"FORYMO आपका दिन ध्यान, दैनिक लय और सही समय के आसपास व्यवस्थित करता है।","sunshineDescription":"SunShine Pro — Windows और Android के लिए पेशेवर फ़िज़ियोथेरेपी क्लिनिक प्रबंधन।","metrics":["3 पूर्ण","75% पूर्ण","आज देय"],"skip":"सामग्री पर जाएँ","faq":"अक्सर पूछे जाने वाले प्रश्न","aria":{"FORYMO home":"FORYMO होम","SunShine Pro home":"SunShine Pro होम","Primary navigation":"मुख्य नेविगेशन","Language":"भाषा","Language selection":"भाषा चयन","Open menu":"मेनू खोलें","FORYMO interface preview":"FORYMO इंटरफ़ेस पूर्वावलोकन","FORYMO functions":"FORYMO सुविधाएँ","FORYMO language quality foundations":"FORYMO भाषा गुणवत्ता के आधार","SunShine Pro Desktop dashboard preview":"SunShine Pro डेस्कटॉप डैशबोर्ड पूर्वावलोकन"}}, ar: {"title":"FORYMO — التركيز والإيقاع واللحظات","description":"ينظم FORYMO يومك حول الانتباه والإيقاع اليومي والوقت المناسب.","sunshineDescription":"SunShine Pro — إدارة احترافية لعيادات العلاج الطبيعي على Windows وAndroid.","metrics":["3 مكتملة","75% مكتمل","مستحقة اليوم"],"skip":"انتقل إلى المحتوى","faq":"الأسئلة الشائعة","aria":{"FORYMO home":"الصفحة الرئيسية لـ FORYMO","SunShine Pro home":"الصفحة الرئيسية لـ SunShine Pro","Primary navigation":"التنقل الرئيسي","Language":"اللغة","Language selection":"اختيار اللغة","Open menu":"فتح القائمة","FORYMO interface preview":"معاينة واجهة FORYMO","FORYMO functions":"وظائف FORYMO","FORYMO language quality foundations":"أسس جودة اللغات في FORYMO","SunShine Pro Desktop dashboard preview":"معاينة لوحة SunShine Pro المكتبية"}}, tr: {"title":"FORYMO — Odak. Ritim. Anlar.","description":"FORYMO gününüzü dikkat, günlük ritim ve doğru zaman etrafında düzenler.","sunshineDescription":"SunShine Pro — Windows ve Android için profesyonel fizyoterapi kliniği yönetimi.","metrics":["3 tamamlandı","%75 tamamlandı","bugün yapılacak"],"skip":"İçeriğe geç","faq":"Sık sorulan sorular","aria":{"FORYMO home":"FORYMO ana sayfası","SunShine Pro home":"SunShine Pro ana sayfası","Primary navigation":"Ana gezinme","Language":"Dil","Language selection":"Dil seçimi","Open menu":"Menüyü aç","FORYMO interface preview":"FORYMO arayüz önizlemesi","FORYMO functions":"FORYMO işlevleri","FORYMO language quality foundations":"FORYMO dil kalitesi temelleri","SunShine Pro Desktop dashboard preview":"SunShine Pro masaüstü panel önizlemesi"}}, ja: {"title":"FORYMO — 集中・リズム・タイミング","description":"FORYMOは注意を向けるべきこと、日々のリズム、適切なタイミングを軸に一日を整理します。","sunshineDescription":"SunShine Pro — WindowsとAndroid向けの理学療法クリニック管理。","metrics":["3件完了","75%完了","今日が期限"],"skip":"本文へ移動","faq":"よくある質問","aria":{"FORYMO home":"FORYMOホーム","SunShine Pro home":"SunShine Proホーム","Primary navigation":"メインナビゲーション","Language":"言語","Language selection":"言語選択","Open menu":"メニューを開く","FORYMO interface preview":"FORYMO画面プレビュー","FORYMO functions":"FORYMOの機能","FORYMO language quality foundations":"FORYMOの言語品質の基本方針","SunShine Pro Desktop dashboard preview":"SunShine Proデスクトップ画面プレビュー"}}, it: {"title":"FORYMO — Concentrazione. Ritmo. Momenti.","description":"FORYMO organizza la tua giornata attorno a Focus, Rhythm e Moments: ciò che merita attenzione, ciò che crea ritmo e ciò che deve accadere al momento giusto.","sunshineDescription":"SunShine Pro — gestione professionale di studi di fisioterapia per Windows e Android.","metrics":["3 completate","75% completato","in scadenza oggi"],"skip":"Vai al contenuto","faq":"Domande frequenti","aria":{"FORYMO home":"Home FORYMO","SunShine Pro home":"Home SunShine Pro","Primary navigation":"Navigazione principale","Language":"Lingua","Language selection":"Selezione lingua","Open menu":"Apri menu","FORYMO interface preview":"Anteprima interfaccia FORYMO","FORYMO functions":"Funzioni FORYMO","FORYMO language quality foundations":"Principi di qualità linguistica FORYMO","SunShine Pro Desktop dashboard preview":"Anteprima del pannello desktop SunShine Pro"}}, fr: {"title":"FORYMO — Concentration. Rythme. Moments.","description":"FORYMO organise votre journée autour de Focus, Rhythm et Moments : ce qui mérite votre attention, ce qui donne du rythme et ce qui doit arriver au bon moment.","sunshineDescription":"SunShine Pro — gestion professionnelle de cabinets de kinésithérapie pour Windows et Android.","metrics":["3 terminées","75 % terminé","prévus aujourd'hui"],"skip":"Aller au contenu","faq":"Questions fréquentes","aria":{"FORYMO home":"Accueil FORYMO","SunShine Pro home":"Accueil SunShine Pro","Primary navigation":"Navigation principale","Language":"Langue","Language selection":"Sélection de la langue","Open menu":"Ouvrir le menu","FORYMO interface preview":"Aperçu de l'interface FORYMO","FORYMO functions":"Fonctions FORYMO","FORYMO language quality foundations":"Principes de qualité linguistique FORYMO","SunShine Pro Desktop dashboard preview":"Aperçu du tableau de bord SunShine Pro sur ordinateur"}}, ...{
+const localeExtras = {"pt-BR": ptBRExtra, id: {"title":"FORYMO — Fokus. Ritme. Momen.","description":"FORYMO mengatur hari Anda berdasarkan perhatian, ritme harian, dan saat yang tepat.","sunshineDescription":"SunShine Pro — pengelolaan klinik fisioterapi profesional untuk Windows dan Android.","metrics":["3 selesai","75% selesai","jatuh tempo hari ini"],"skip":"Lewati ke konten","faq":"Pertanyaan umum","aria":{"FORYMO home":"Beranda FORYMO","SunShine Pro home":"Beranda SunShine Pro","Primary navigation":"Navigasi utama","Language":"Bahasa","Language selection":"Pemilihan bahasa","Open menu":"Buka menu","FORYMO interface preview":"Pratinjau antarmuka FORYMO","FORYMO functions":"Fungsi FORYMO","FORYMO language quality foundations":"Dasar kualitas bahasa FORYMO","SunShine Pro Desktop dashboard preview":"Pratinjau dasbor desktop SunShine Pro"}}, hi: {"title":"FORYMO — ध्यान। लय। क्षण।","description":"FORYMO आपका दिन ध्यान, दैनिक लय और सही समय के आसपास व्यवस्थित करता है।","sunshineDescription":"SunShine Pro — Windows और Android के लिए पेशेवर फ़िज़ियोथेरेपी क्लिनिक प्रबंधन।","metrics":["3 पूर्ण","75% पूर्ण","आज देय"],"skip":"सामग्री पर जाएँ","faq":"अक्सर पूछे जाने वाले प्रश्न","aria":{"FORYMO home":"FORYMO होम","SunShine Pro home":"SunShine Pro होम","Primary navigation":"मुख्य नेविगेशन","Language":"भाषा","Language selection":"भाषा चयन","Open menu":"मेनू खोलें","FORYMO interface preview":"FORYMO इंटरफ़ेस पूर्वावलोकन","FORYMO functions":"FORYMO सुविधाएँ","FORYMO language quality foundations":"FORYMO भाषा गुणवत्ता के आधार","SunShine Pro Desktop dashboard preview":"SunShine Pro डेस्कटॉप डैशबोर्ड पूर्वावलोकन"}}, ar: {"title":"FORYMO — التركيز والإيقاع واللحظات","description":"ينظم FORYMO يومك حول الانتباه والإيقاع اليومي والوقت المناسب.","sunshineDescription":"SunShine Pro — إدارة احترافية لعيادات العلاج الطبيعي على Windows وAndroid.","metrics":["3 مكتملة","75% مكتمل","مستحقة اليوم"],"skip":"انتقل إلى المحتوى","faq":"الأسئلة الشائعة","aria":{"FORYMO home":"الصفحة الرئيسية لـ FORYMO","SunShine Pro home":"الصفحة الرئيسية لـ SunShine Pro","Primary navigation":"التنقل الرئيسي","Language":"اللغة","Language selection":"اختيار اللغة","Open menu":"فتح القائمة","FORYMO interface preview":"معاينة واجهة FORYMO","FORYMO functions":"وظائف FORYMO","FORYMO language quality foundations":"أسس جودة اللغات في FORYMO","SunShine Pro Desktop dashboard preview":"معاينة لوحة SunShine Pro المكتبية"}}, tr: {"title":"FORYMO — Odak. Ritim. Anlar.","description":"FORYMO gününüzü dikkat, günlük ritim ve doğru zaman etrafında düzenler.","sunshineDescription":"SunShine Pro — Windows ve Android için profesyonel fizyoterapi kliniği yönetimi.","metrics":["3 tamamlandı","%75 tamamlandı","bugün yapılacak"],"skip":"İçeriğe geç","faq":"Sık sorulan sorular","aria":{"FORYMO home":"FORYMO ana sayfası","SunShine Pro home":"SunShine Pro ana sayfası","Primary navigation":"Ana gezinme","Language":"Dil","Language selection":"Dil seçimi","Open menu":"Menüyü aç","FORYMO interface preview":"FORYMO arayüz önizlemesi","FORYMO functions":"FORYMO işlevleri","FORYMO language quality foundations":"FORYMO dil kalitesi temelleri","SunShine Pro Desktop dashboard preview":"SunShine Pro masaüstü panel önizlemesi"}}, ja: {"title":"FORYMO — 集中・リズム・タイミング","description":"FORYMOは注意を向けるべきこと、日々のリズム、適切なタイミングを軸に一日を整理します。","sunshineDescription":"SunShine Pro — WindowsとAndroid向けの理学療法クリニック管理。","metrics":["3件完了","75%完了","今日が期限"],"skip":"本文へ移動","faq":"よくある質問","aria":{"FORYMO home":"FORYMOホーム","SunShine Pro home":"SunShine Proホーム","Primary navigation":"メインナビゲーション","Language":"言語","Language selection":"言語選択","Open menu":"メニューを開く","FORYMO interface preview":"FORYMO画面プレビュー","FORYMO functions":"FORYMOの機能","FORYMO language quality foundations":"FORYMOの言語品質の基本方針","SunShine Pro Desktop dashboard preview":"SunShine Proデスクトップ画面プレビュー"}}, it: {"title":"FORYMO — Concentrazione. Ritmo. Momenti.","description":"FORYMO organizza la tua giornata attorno a Focus, Rhythm e Moments: ciò che merita attenzione, ciò che crea ritmo e ciò che deve accadere al momento giusto.","sunshineDescription":"SunShine Pro — gestione professionale di studi di fisioterapia per Windows e Android.","metrics":["3 completate","75% completato","in scadenza oggi"],"skip":"Vai al contenuto","faq":"Domande frequenti","aria":{"FORYMO home":"Home FORYMO","SunShine Pro home":"Home SunShine Pro","Primary navigation":"Navigazione principale","Language":"Lingua","Language selection":"Selezione lingua","Open menu":"Apri menu","FORYMO interface preview":"Anteprima interfaccia FORYMO","FORYMO functions":"Funzioni FORYMO","FORYMO language quality foundations":"Principi di qualità linguistica FORYMO","SunShine Pro Desktop dashboard preview":"Anteprima del pannello desktop SunShine Pro"}}, fr: {"title":"FORYMO — Concentration. Rythme. Moments.","description":"FORYMO organise votre journée autour de Focus, Rhythm et Moments : ce qui mérite votre attention, ce qui donne du rythme et ce qui doit arriver au bon moment.","sunshineDescription":"SunShine Pro — gestion professionnelle de cabinets de kinésithérapie pour Windows et Android.","metrics":["3 terminées","75 % terminé","prévus aujourd'hui"],"skip":"Aller au contenu","faq":"Questions fréquentes","aria":{"FORYMO home":"Accueil FORYMO","SunShine Pro home":"Accueil SunShine Pro","Primary navigation":"Navigation principale","Language":"Langue","Language selection":"Sélection de la langue","Open menu":"Ouvrir le menu","FORYMO interface preview":"Aperçu de l'interface FORYMO","FORYMO functions":"Fonctions FORYMO","FORYMO language quality foundations":"Principes de qualité linguistique FORYMO","SunShine Pro Desktop dashboard preview":"Aperçu du tableau de bord SunShine Pro sur ordinateur"}}, ...{
   "de": {
     "title": "FORYMO — Fokus. Rhythmus. Momente.",
     "description": "FORYMO organisiert Ihren Tag rund um Focus, Rhythm und Moments: was Aufmerksamkeit verdient, was Ihren Rhythmus prägt und was zum richtigen Zeitpunkt geschehen muss.",
