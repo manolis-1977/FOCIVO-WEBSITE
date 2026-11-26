@@ -422,6 +422,10 @@ const functionGuideCopy = {
 
 let activeGuideKey = "today";
 
+// A public locale must be explicitly released here AND pass the release manifest check.
+const publicLocales = Object.freeze(["en", "el"]);
+const stagedLocales = Object.freeze(["pt-BR"]);
+
 // PT-BR is staged; public language selection still depends on enabled controls.
 const ptBRExtra = {
   title: "FORYMO — Foco. Ritmo. Momentos.",
@@ -436,6 +440,7 @@ const ptBRExtra = {
     "Primary navigation": "Navegação principal",
     "Language": "Idioma",
     "Open menu": "Abrir menu",
+    "Language selection": "Seleção de idioma",
     "FORYMO interface preview": "Prévia da interface do FORYMO",
     "FORYMO functions": "Funções do FORYMO",
     "FORYMO language quality foundations": "Princípios de qualidade linguística do FORYMO",
@@ -443,7 +448,19 @@ const ptBRExtra = {
   }
 };
 const localPreviewAllowed = ["localhost", "127.0.0.1", "[::1]"].includes(location.hostname);
-const localPreviewLanguage = localPreviewAllowed && new URLSearchParams(location.search).get("preview-language") === "pt-BR" ? "pt-BR" : null;
+const requestedPreview = new URLSearchParams(location.search).get("preview-language");
+const localPreviewLanguage = localPreviewAllowed && stagedLocales.includes(requestedPreview) ? requestedPreview : null;
+const originalPreviewLinks = new Map();
+function updatePreviewLinks(lang){
+  const preview = localPreviewAllowed && lang === localPreviewLanguage;
+  document.querySelectorAll('a[href="sunshine-pro/"], a[href="../#top"]').forEach(link=>{
+    if(!originalPreviewLinks.has(link)) originalPreviewLinks.set(link,link.getAttribute("href"));
+  });
+  originalPreviewLinks.forEach((href,link)=>{
+    const [base,hash] = href.split("#");
+    link.setAttribute("href",preview ? base+"?preview-language="+encodeURIComponent(lang)+(hash ? "#"+hash : "") : href);
+  });
+}
 const originalExtraText = new Map();
 const originalExtraAria = new Map();
 const originalDescription = document.querySelector('meta[name="description"]')?.getAttribute("content");
@@ -528,13 +545,15 @@ function setMetricCopy(lang){
 }
 
 function setLanguage(lang, preview = false){
-  const publicLanguage = Array.from(buttons).some(btn => btn.dataset.lang === lang && !btn.disabled);
+  const publicLanguage = publicLocales.includes(lang) && Array.from(buttons).some(btn => btn.dataset.lang === lang && !btn.disabled);
   const localPreview = preview && lang === localPreviewLanguage;
   if(!Object.hasOwn(translations,lang) || (!publicLanguage && !localPreview)) lang = 'en';
   const dict = translations[lang];
   document.documentElement.lang = lang;
   if(lang==='pt-BR' && languageCode) languageCode.textContent = 'PT-BR';
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   applyExtraCopy(lang);
+  updatePreviewLinks(lang);
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.dataset.i18n;
     if(dict[key]) el.textContent = dict[key];
