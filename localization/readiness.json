@@ -1,0 +1,187 @@
+{
+  "schema": "FORYMO_LANGUAGE_READINESS_V1",
+  "policy": "AVAILABLE requires complete native copy, 14-function guide, visual and editorial QA, and Website/Windows/Mobile/Store/Support terminology approvals.",
+  "locales": [
+    {
+      "code": "en",
+      "name": "English",
+      "status": "AVAILABLE",
+      "approvals": {
+        "website": true,
+        "windows": true,
+        "mobile": true,
+        "store": true,
+        "support": true,
+        "terminology": true,
+        "layout": true,
+        "editorial": true
+      }
+    },
+    {
+      "code": "el",
+      "name": "Ελληνικά",
+      "status": "AVAILABLE",
+      "approvals": {
+        "website": true,
+        "windows": true,
+        "mobile": true,
+        "store": true,
+        "support": true,
+        "terminology": true,
+        "layout": true,
+        "editorial": true
+      }
+    },
+    {
+      "code": "pt-BR",
+      "name": "Português — Brasil",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    },
+    {
+      "code": "de",
+      "name": "Deutsch",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    },
+    {
+      "code": "es",
+      "name": "Español",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    },
+    {
+      "code": "fr",
+      "name": "Français",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    },
+    {
+      "code": "it",
+      "name": "Italiano",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    },
+    {
+      "code": "ja",
+      "name": "日本語",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    },
+    {
+      "code": "tr",
+      "name": "Türkçe",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    },
+    {
+      "code": "ar",
+      "name": "العربية",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false,
+        "rtl": false
+      }
+    },
+    {
+      "code": "hi",
+      "name": "हिन्दी",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    },
+    {
+      "code": "id",
+      "name": "Bahasa Indonesia",
+      "status": "IN PREPARATION",
+      "approvals": {
+        "website": false,
+        "windows": false,
+        "mobile": false,
+        "store": false,
+        "support": false,
+        "terminology": false,
+        "layout": false,
+        "editorial": false
+      }
+    }
+  ]
+}
