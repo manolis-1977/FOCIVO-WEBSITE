@@ -316,3 +316,28 @@ details p{color:#6d7a8e;max-width:660px;margin:-4px 0 24px;line-height:1.75;font
 .task-row{grid-template-columns:20px 1fr}
 .task-row .pill{display:none}
 }
+
+
+/* Localization: logical direction, wrapped translated text, and mixed-script isolation.
+   Existing LTR layout is unchanged except for wrapping in localized preview pages. */
+html[dir="rtl"] .skip{left:auto;right:-9999px}
+html[dir="rtl"] .skip:focus{left:auto;right:8px}
+html[dir="rtl"] .language-menu{right:auto;left:0}
+html[dir="rtl"] .language-option,html[dir="rtl"] .function-guide-tab{text-align:start}
+html[dir="rtl"] .function-guide-tab:hover{transform:translateX(-3px)}
+html[dir="rtl"] .function-guide-tab>b,html[dir="rtl"] .text-link>span[aria-hidden="true"]{display:inline-block;transform:scaleX(-1)}
+html[dir="rtl"] .function-guide-detail ol{padding-left:0;padding-right:22px}
+html[dir="rtl"] .function-guide-detail li{padding-left:0;padding-right:5px}
+html[dir="rtl"] .function-guide-detail aside{border-left:0;border-right:3px solid #2a91ef;border-radius:13px 0 0 13px}
+html[dir="rtl"] .sunshine-status{border-left:0;border-right:3px solid #e8ab24}
+html[dir="rtl"] summary:after{right:auto;left:4px}
+html[dir="rtl"] .brand,html[dir="rtl"] .mini-brand,html[dir="rtl"] .language-trigger,html[dir="rtl"] .function-guide-panel-head>span,html[dir="rtl"] .function-guide-tab>span,html[dir="rtl"] .stat>strong,html[dir="rtl"] .task-row small{direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] .function-guide-panel-head small{direction:ltr;unicode-bidi:isolate}
+html[dir="rtl"] .language-option[dir="rtl"]{direction:rtl}
+html[dir="rtl"] .language-status span,html[dir="rtl"] .language-option small{direction:ltr;unicode-bidi:isolate}
+html:not([lang="en"]):not([lang="el"]) .stat-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+html:not([lang="en"]):not([lang="el"]) .stat>span,html:not([lang="en"]):not([lang="el"]) .stat>em{white-space:normal;overflow-wrap:anywhere}
+html:not([lang="en"]):not([lang="el"]) .task-row>div,html:not([lang="en"]):not([lang="el"]) .function-guide-tab>strong{min-width:0;overflow-wrap:anywhere}
+html:not([lang="en"]):not([lang="el"]) .language-foundations article,html:not([lang="en"]):not([lang="el"]) .language-status,html:not([lang="en"]):not([lang="el"]) .feature-card{min-width:0;overflow-wrap:anywhere}
+@media(max-width:1120px){html[dir="rtl"] .menu-btn,html[dir="rtl"] .nav-actions{margin-left:0;margin-right:auto}}
+@media(max-width:700px){html[dir="rtl"] .language-menu{left:14px;right:14px}html[dir="rtl"] .function-guide-heading{text-align:start}}
