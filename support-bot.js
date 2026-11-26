@@ -271,7 +271,7 @@ const aliases={"en":["missing task|task missing|task not showing|task not appear
 const mobileSync={
   "en": {
     "title": "Mobile synchronization not working",
-    "answer": "If you are testing FORYMO Mobile, check that the mobile service is enabled in FORYMO for Windows and that the phone is listed as an authorized device. For a local-network connection, check that LAN access is enabled if required and that the devices can reach each other. Do not reset the app or delete data to troubleshoot. If the problem persists, tell support which app version and connection method you use and what message appears.",
+    "answer": "For local Mobile–Desktop synchronization, first make sure your phone and computer are connected to the same Wi-Fi network.\n\nIf you are testing FORYMO Mobile, check that the mobile service is enabled in FORYMO for Windows and that the phone is listed as an authorized device. For a local-network connection, check that LAN access is enabled if required and that the devices can reach each other. Do not reset the app or delete data to troubleshoot. If the problem persists, tell support which app version and connection method you use and what message appears.",
     "sync": [
       "sync",
       "synchron",
@@ -287,7 +287,7 @@ const mobileSync={
   },
   "el": {
     "title": "Το κινητό δεν συγχρονίζεται",
-    "answer": "Αν δοκιμάζεις το FORYMO Mobile, έλεγξε ότι είναι ενεργή η υπηρεσία κινητού στο FORYMO για Windows και ότι το κινητό εμφανίζεται ως εξουσιοδοτημένη συσκευή. Για σύνδεση μέσω τοπικού δικτύου, έλεγξε ότι η πρόσβαση LAN είναι ενεργή, αν απαιτείται, και ότι οι δύο συσκευές μπορούν να επικοινωνήσουν. Μην κάνεις επαναφορά της εφαρμογής και μη διαγράψεις δεδομένα. Αν το πρόβλημα παραμένει, ενημέρωσε την υποστήριξη για την έκδοση της εφαρμογής, τον τρόπο σύνδεσης και το μήνυμα που εμφανίζεται.",
+    "answer": "Για τον τοπικό συγχρονισμό Mobile–Desktop, πρώτα βεβαιώσου ότι το κινητό και ο υπολογιστής είναι συνδεδεμένα στο ίδιο δίκτυο Wi-Fi.\n\nΑν δοκιμάζεις το FORYMO Mobile, έλεγξε ότι είναι ενεργή η υπηρεσία κινητού στο FORYMO για Windows και ότι το κινητό εμφανίζεται ως εξουσιοδοτημένη συσκευή. Για σύνδεση μέσω τοπικού δικτύου, έλεγξε ότι η πρόσβαση LAN είναι ενεργή, αν απαιτείται, και ότι οι δύο συσκευές μπορούν να επικοινωνήσουν. Μην κάνεις επαναφορά της εφαρμογής και μη διαγράψεις δεδομένα. Αν το πρόβλημα παραμένει, ενημέρωσε την υποστήριξη για την έκδοση της εφαρμογής, τον τρόπο σύνδεσης και το μήνυμα που εμφανίζεται.",
     "sync": [
       "συγχρον",
       "συγχρων",
@@ -305,7 +305,7 @@ const mobileSync={
   },
   "pt-BR": {
     "title": "O celular não sincroniza",
-    "answer": "Se você está testando o FORYMO Mobile, verifique se o serviço móvel está ativado no FORYMO para Windows e se o celular aparece como dispositivo autorizado. Para conexão pela rede local, confirme que o acesso LAN está habilitado, se necessário, e que os dispositivos conseguem se comunicar. Não redefina o aplicativo nem exclua dados. Se o problema persistir, informe ao suporte a versão, o tipo de conexão e a mensagem exibida.",
+    "answer": "Para a sincronização local entre celular e computador, primeiro confirme que ambos estão conectados à mesma rede Wi-Fi.\n\nSe você está testando o FORYMO Mobile, verifique se o serviço móvel está ativado no FORYMO para Windows e se o celular aparece como dispositivo autorizado. Para conexão pela rede local, confirme que o acesso LAN está habilitado, se necessário, e que os dispositivos conseguem se comunicar. Não redefina o aplicativo nem exclua dados. Se o problema persistir, informe ao suporte a versão, o tipo de conexão e a mensagem exibida.",
     "sync": [
       "sincron",
       "sync",
@@ -321,7 +321,7 @@ const mobileSync={
   },
   "de": {
     "title": "Das Mobilgerät synchronisiert nicht",
-    "answer": "Wenn Sie FORYMO Mobile testen, prüfen Sie, ob der Mobilservice in FORYMO für Windows aktiviert und das Mobilgerät autorisiert ist. Bei einer lokalen Netzwerkverbindung prüfen Sie, ob der LAN-Zugriff bei Bedarf aktiviert ist und beide Geräte sich erreichen können. Setzen Sie die App nicht zurück und löschen Sie keine Daten. Teilen Sie dem Support bei anhaltenden Problemen die App-Version, Verbindungsart und angezeigte Meldung mit.",
+    "answer": "Für die lokale Synchronisierung zwischen Mobilgerät und Desktop prüfen Sie zuerst, ob beide mit demselben WLAN (Wi-Fi) verbunden sind.\n\nWenn Sie FORYMO Mobile testen, prüfen Sie, ob der Mobilservice in FORYMO für Windows aktiviert und das Mobilgerät autorisiert ist. Bei einer lokalen Netzwerkverbindung prüfen Sie, ob der LAN-Zugriff bei Bedarf aktiviert ist und beide Geräte sich erreichen können. Setzen Sie die App nicht zurück und löschen Sie keine Daten. Teilen Sie dem Support bei anhaltenden Problemen die App-Version, Verbindungsart und angezeigte Meldung mit.",
     "sync": [
       "synchron",
       "sync",
@@ -338,7 +338,7 @@ const mobileSync={
   },
   "es": {
     "title": "El móvil no se sincroniza",
-    "answer": "Si estás probando FORYMO Mobile, comprueba que el servicio móvil esté activado en FORYMO para Windows y que el teléfono aparezca como dispositivo autorizado. Para una conexión por red local, comprueba que el acceso LAN esté habilitado si se requiere y que los dispositivos puedan comunicarse. No restablezcas la aplicación ni borres datos. Si el problema persiste, comunica a soporte la versión, el método de conexión y el mensaje mostrado.",
+    "answer": "Para la sincronización local entre el móvil y el ordenador, comprueba primero que ambos estén conectados a la misma red Wi-Fi.\n\nSi estás probando FORYMO Mobile, comprueba que el servicio móvil esté activado en FORYMO para Windows y que el teléfono aparezca como dispositivo autorizado. Para una conexión por red local, comprueba que el acceso LAN esté habilitado si se requiere y que los dispositivos puedan comunicarse. No restablezcas la aplicación ni borres datos. Si el problema persiste, comunica a soporte la versión, el método de conexión y el mensaje mostrado.",
     "sync": [
       "sincron",
       "sync",
@@ -355,7 +355,7 @@ const mobileSync={
   },
   "fr": {
     "title": "Le mobile ne se synchronise pas",
-    "answer": "Si vous testez FORYMO Mobile, vérifiez que le service mobile est activé dans FORYMO pour Windows et que le téléphone figure parmi les appareils autorisés. Pour une connexion par réseau local, vérifiez que l'accès LAN est activé si nécessaire et que les appareils peuvent communiquer. Ne réinitialisez pas l'application et ne supprimez pas de données. Si le problème persiste, indiquez à l'assistance la version, le mode de connexion et le message affiché.",
+    "answer": "Pour la synchronisation locale entre le mobile et l’ordinateur, vérifiez d’abord que les deux appareils sont connectés au même réseau Wi-Fi.\n\nSi vous testez FORYMO Mobile, vérifiez que le service mobile est activé dans FORYMO pour Windows et que le téléphone figure parmi les appareils autorisés. Pour une connexion par réseau local, vérifiez que l'accès LAN est activé si nécessaire et que les appareils peuvent communiquer. Ne réinitialisez pas l'application et ne supprimez pas de données. Si le problème persiste, indiquez à l'assistance la version, le mode de connexion et le message affiché.",
     "sync": [
       "synchron",
       "sync",
@@ -371,7 +371,7 @@ const mobileSync={
   },
   "it": {
     "title": "Il telefono non si sincronizza",
-    "answer": "Se stai provando FORYMO Mobile, verifica che il servizio mobile sia attivo in FORYMO per Windows e che il telefono risulti autorizzato. Per una connessione tramite rete locale, controlla che l'accesso LAN sia attivo se necessario e che i dispositivi possano comunicare. Non reimpostare l'app e non eliminare dati. Se il problema persiste, indica all'assistenza versione, metodo di connessione e messaggio visualizzato.",
+    "answer": "Per la sincronizzazione locale tra telefono e computer, verifica prima che entrambi siano connessi alla stessa rete Wi-Fi.\n\nSe stai provando FORYMO Mobile, verifica che il servizio mobile sia attivo in FORYMO per Windows e che il telefono risulti autorizzato. Per una connessione tramite rete locale, controlla che l'accesso LAN sia attivo se necessario e che i dispositivi possano comunicare. Non reimpostare l'app e non eliminare dati. Se il problema persiste, indica all'assistenza versione, metodo di connessione e messaggio visualizzato.",
     "sync": [
       "sincron",
       "sync",
@@ -387,7 +387,7 @@ const mobileSync={
   },
   "ja": {
     "title": "モバイル端末が同期しない",
-    "answer": "FORYMO Mobileをテストしている場合は、Windows版FORYMOのモバイルサービスが有効で、端末が許可済みであることを確認してください。ローカルネットワーク接続の場合は、必要に応じてLANアクセスが有効で、端末間で通信できることを確認します。アプリのリセットやデータの削除は行わないでください。解決しない場合は、アプリのバージョン、接続方法、表示されたメッセージをサポートへお知らせください。",
+    "answer": "モバイル端末とパソコンのローカル同期では、まず両方が同じWi-Fiネットワークに接続されていることを確認してください。\n\nFORYMO Mobileをテストしている場合は、Windows版FORYMOのモバイルサービスが有効で、端末が許可済みであることを確認してください。ローカルネットワーク接続の場合は、必要に応じてLANアクセスが有効で、端末間で通信できることを確認します。アプリのリセットやデータの削除は行わないでください。解決しない場合は、アプリのバージョン、接続方法、表示されたメッセージをサポートへお知らせください。",
     "sync": [
       "同期",
       "sync",
@@ -405,7 +405,7 @@ const mobileSync={
   },
   "tr": {
     "title": "Mobil cihaz eşitlenmiyor",
-    "answer": "FORYMO Mobile'ı test ediyorsanız Windows için FORYMO'da mobil hizmetin etkin ve telefonun yetkilendirilmiş olduğunu kontrol edin. Yerel ağ bağlantısında, gerekiyorsa LAN erişiminin etkin olduğunu ve cihazların birbirine erişebildiğini doğrulayın. Uygulamayı sıfırlamayın veya verileri silmeyin. Sorun sürerse uygulama sürümünü, bağlantı yöntemini ve görüntülenen mesajı desteğe bildirin.",
+    "answer": "Mobil cihaz ile masaüstü bilgisayar arasında yerel eşitleme için önce her iki cihazın da aynı Wi-Fi ağına bağlı olduğunu kontrol edin.\n\nFORYMO Mobile'ı test ediyorsanız Windows için FORYMO'da mobil hizmetin etkin ve telefonun yetkilendirilmiş olduğunu kontrol edin. Yerel ağ bağlantısında, gerekiyorsa LAN erişiminin etkin olduğunu ve cihazların birbirine erişebildiğini doğrulayın. Uygulamayı sıfırlamayın veya verileri silmeyin. Sorun sürerse uygulama sürümünü, bağlantı yöntemini ve görüntülenen mesajı desteğe bildirin.",
     "sync": [
       "eşitle",
       "senkron",
@@ -421,7 +421,7 @@ const mobileSync={
   },
   "ar": {
     "title": "الجهاز المحمول لا يتزامن",
-    "answer": "إذا كنت تختبر FORYMO Mobile، تحقق من تفعيل خدمة الأجهزة المحمولة في FORYMO لنظام Windows ومن ظهور الهاتف كجهاز مصرح له. عند الاتصال عبر الشبكة المحلية، تحقق من تفعيل وصول LAN عند الحاجة ومن إمكانية اتصال الجهازين ببعضهما. لا تُعد ضبط التطبيق ولا تحذف البيانات. إذا استمرت المشكلة، أخبر الدعم بإصدار التطبيق وطريقة الاتصال والرسالة الظاهرة.",
+    "answer": "للمزامنة المحلية بين الهاتف والحاسوب، تأكد أولًا من اتصال الجهازين بشبكة Wi-Fi نفسها.\n\nإذا كنت تختبر FORYMO Mobile، تحقق من تفعيل خدمة الأجهزة المحمولة في FORYMO لنظام Windows ومن ظهور الهاتف كجهاز مصرح له. عند الاتصال عبر الشبكة المحلية، تحقق من تفعيل وصول LAN عند الحاجة ومن إمكانية اتصال الجهازين ببعضهما. لا تُعد ضبط التطبيق ولا تحذف البيانات. إذا استمرت المشكلة، أخبر الدعم بإصدار التطبيق وطريقة الاتصال والرسالة الظاهرة.",
     "sync": [
       "تزامن",
       "زامن",
@@ -442,7 +442,7 @@ const mobileSync={
   },
   "hi": {
     "title": "मोबाइल सिंक नहीं हो रहा",
-    "answer": "यदि आप FORYMO Mobile का परीक्षण कर रहे हैं, तो जाँचें कि Windows के लिए FORYMO में मोबाइल सेवा सक्रिय है और फ़ोन अधिकृत डिवाइस के रूप में दिखाई देता है। स्थानीय नेटवर्क कनेक्शन के लिए ज़रूरत पर LAN पहुँच सक्रिय होने और दोनों डिवाइस के बीच संचार की जाँच करें। ऐप रीसेट न करें और डेटा न हटाएँ। समस्या बनी रहे तो सहायता को ऐप संस्करण, कनेक्शन का तरीका और दिखने वाला संदेश बताएँ।",
+    "answer": "मोबाइल और डेस्कटॉप के बीच स्थानीय सिंक के लिए पहले सुनिश्चित करें कि दोनों डिवाइस एक ही Wi-Fi नेटवर्क से जुड़े हैं।\n\nयदि आप FORYMO Mobile का परीक्षण कर रहे हैं, तो जाँचें कि Windows के लिए FORYMO में मोबाइल सेवा सक्रिय है और फ़ोन अधिकृत डिवाइस के रूप में दिखाई देता है। स्थानीय नेटवर्क कनेक्शन के लिए ज़रूरत पर LAN पहुँच सक्रिय होने और दोनों डिवाइस के बीच संचार की जाँच करें। ऐप रीसेट न करें और डेटा न हटाएँ। समस्या बनी रहे तो सहायता को ऐप संस्करण, कनेक्शन का तरीका और दिखने वाला संदेश बताएँ।",
     "sync": [
       "सिंक",
       "सिंक्रोन",
@@ -460,7 +460,7 @@ const mobileSync={
   },
   "id": {
     "title": "Perangkat seluler tidak tersinkronisasi",
-    "answer": "Jika Anda sedang menguji FORYMO Mobile, pastikan layanan seluler aktif di FORYMO untuk Windows dan ponsel terdaftar sebagai perangkat terotorisasi. Untuk koneksi jaringan lokal, pastikan akses LAN aktif jika diperlukan dan perangkat dapat saling berkomunikasi. Jangan mengatur ulang aplikasi atau menghapus data. Jika masalah berlanjut, beri tahu dukungan versi aplikasi, metode koneksi, dan pesan yang muncul.",
+    "answer": "Untuk sinkronisasi lokal antara ponsel dan komputer, pastikan terlebih dahulu keduanya terhubung ke jaringan Wi-Fi yang sama.\n\nJika Anda sedang menguji FORYMO Mobile, pastikan layanan seluler aktif di FORYMO untuk Windows dan ponsel terdaftar sebagai perangkat terotorisasi. Untuk koneksi jaringan lokal, pastikan akses LAN aktif jika diperlukan dan perangkat dapat saling berkomunikasi. Jangan mengatur ulang aplikasi atau menghapus data. Jika masalah berlanjut, beri tahu dukungan versi aplikasi, metode koneksi, dan pesan yang muncul.",
     "sync": [
       "sinkron",
       "sync",

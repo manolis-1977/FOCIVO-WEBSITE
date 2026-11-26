@@ -72,6 +72,7 @@ test('EN/EL switching persists; preview does not replace stored language',async(
  await expect(page.locator('h1')).toHaveText(translations.en['hero.title']);
 });
 
+const wifiFirst={"en":"For local Mobile–Desktop synchronization, first make sure your phone and computer are connected to the same Wi-Fi network.","el":"Για τον τοπικό συγχρονισμό Mobile–Desktop, πρώτα βεβαιώσου ότι το κινητό και ο υπολογιστής είναι συνδεδεμένα στο ίδιο δίκτυο Wi-Fi.","pt-BR":"Para a sincronização local entre celular e computador, primeiro confirme que ambos estão conectados à mesma rede Wi-Fi.","de":"Für die lokale Synchronisierung zwischen Mobilgerät und Desktop prüfen Sie zuerst, ob beide mit demselben WLAN (Wi-Fi) verbunden sind.","es":"Para la sincronización local entre el móvil y el ordenador, comprueba primero que ambos estén conectados a la misma red Wi-Fi.","fr":"Pour la synchronisation locale entre le mobile et l’ordinateur, vérifiez d’abord que les deux appareils sont connectés au même réseau Wi-Fi.","it":"Per la sincronizzazione locale tra telefono e computer, verifica prima che entrambi siano connessi alla stessa rete Wi-Fi.","ja":"モバイル端末とパソコンのローカル同期では、まず両方が同じWi-Fiネットワークに接続されていることを確認してください。","tr":"Mobil cihaz ile masaüstü bilgisayar arasında yerel eşitleme için önce her iki cihazın da aynı Wi-Fi ağına bağlı olduğunu kontrol edin.","ar":"للمزامنة المحلية بين الهاتف والحاسوب، تأكد أولًا من اتصال الجهازين بشبكة Wi-Fi نفسها.","hi":"मोबाइल और डेस्कटॉप के बीच स्थानीय सिंक के लिए पहले सुनिश्चित करें कि दोनों डिवाइस एक ही Wi-Fi नेटवर्क से जुड़े हैं।","id":"Untuk sinkronisasi lokal antara ponsel dan komputer, pastikan terlebih dahulu keduanya terhubung ke jaringan Wi-Fi yang sama."};
 const mobileSyncQuestions={"en":"My phone won't sync","el":"δεν συγχρονιζεται το κινητο","pt-BR":"meu celular não sincroniza","de":"mein Handy synchronisiert nicht","es":"mi móvil no se sincroniza","fr":"mon téléphone ne se synchronise pas","it":"il cellulare non si sincronizza","ja":"スマホが同期しない","tr":"telefon eşitlenmiyor","ar":"الهاتف لا يتزامن","hi":"मेरा फोन सिंक नहीं हो रहा","id":"ponsel saya tidak sinkron"};
 for(const locale of Object.keys(localeNames)){
  test(locale+' support assistant and honest email handoff',async({page})=>{
@@ -86,6 +87,7 @@ for(const locale of Object.keys(localeNames)){
   await page.locator('#supportReset').click();await expect(page.locator('#supportLog .bot')).toHaveCount(0);
   await page.locator('#supportQuestion').fill(mobileSyncQuestions[locale]);
   await page.locator('#supportForm button').click();
+  await expect(page.locator('#supportLog .bot')).toContainText(wifiFirst[locale]);
   await expect(page.locator('#supportLog .bot')).toContainText(functionGuideCopy[locale].items.find(x=>x.key==="mobile").note);
   await expect(page.locator('#supportFeedback')).toBeVisible();
   await expect(page.locator('#supportHandoff')).toBeHidden();
