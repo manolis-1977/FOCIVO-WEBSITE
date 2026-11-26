@@ -20,6 +20,11 @@ for(const width of widths){
       await expect(page.locator('#functionGuidePanel ol li')).toHaveCount(3);
       await expect(page.locator('#functionGuidePanel')).toContainText('Como usar');
     }
+    await expect(page.locator('#support h2')).toHaveText('Ajuda com o FORYMO');
+    await expect(page.locator('#support details')).toHaveCount(4);
+    await expect(page.locator('#support a')).toHaveAttribute('href','mailto:forymo.support@gmail.com');
+    await page.locator('#support details summary').first().click();
+    await expect(page.locator('#support details').first()).toHaveAttribute('open','');
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
     await page.locator('#languageTrigger').click();
     await expect(page.locator('#languageMenu')).toBeVisible();
