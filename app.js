@@ -1,4 +1,164 @@
 const translations = {
+  it: {
+  "support.title": "Assistenza FORYMO",
+  "support.lead": "Trova soluzioni pratiche ai problemi comuni. Se hai bisogno di ulteriore aiuto, scrivi all'indirizzo di assistenza FORYMO.",
+  "support.q1": "Perché un'attività non compare in Oggi?",
+  "support.a1": "Controlla la data selezionata in Oggi. Apri Attività e verifica la data programmata e lo stato. Torna a Oggi e aggiorna la vista.",
+  "support.q2": "Perché non è comparso un promemoria?",
+  "support.a2": "Verifica che il promemoria sia attivo e che data e ora locali siano corrette. Controlla audio e finestre di notifica in Impostazioni. Se il problema persiste, consulta Diagnostica prima di contattare l'assistenza.",
+  "support.q3": "Come posso ripristinare il mio spazio di lavoro in sicurezza?",
+  "support.a3": "Apri Backup e ripristino, verifica il backup e controlla l'anteprima del ripristino. Applica il ripristino solo dopo aver confermato le modifiche proposte. Non reimpostare FORYMO come primo tentativo di risolvere un problema.",
+  "support.q4": "Quali informazioni devo includere nella richiesta di aiuto?",
+  "support.a4": "Indica la lingua preferita, la versione dell'app, il sistema operativo, la funzione interessata e i passaggi per riprodurre il problema. Non inviare mai password, chiavi di recupero, dati delle carte di pagamento o contenuti personali dello spazio di lavoro.",
+  "support.contact": "Contatta l'assistenza via e-mail",
+  "support.note": "L'e-mail si apre nell'applicazione di posta. La disponibilità dell'assistenza umana e tramite IA in ciascuna lingua è subordinata all'approvazione per il rilascio.",
+  "nav.product": "Prodotto",
+  "nav.how": "Come funziona",
+  "nav.desktop": "Windows",
+  "nav.mobile": "Mobile",
+  "nav.sunshine": "SunShine Pro",
+  "nav.languages": "Lingue",
+  "nav.faq": "Domande frequenti",
+  "nav.cta": "Scopri FORYMO",
+  "sunshine.nav.forymo": "FORYMO",
+  "sunshine.back": "Torna a FORYMO",
+  "sunshine.page.title": "SunShine Pro — Gestione professionale degli studi",
+  "sunshine.tag": "Prodotto professionale indipendente",
+  "sunshine.lead": "Un sistema gestionale professionale che riunisce schede clienti, storici strutturati, trattamenti, appuntamenti, inventario, pagamenti e amministrazione per ruoli in uno spazio organizzato.",
+  "sunshine.scope": "1 computer + 1 dispositivo mobile",
+  "sunshine.plan": "Abbonamento mensile o annuale.",
+  "sunshine.status": "L'applicazione desktop Windows è in sviluppo attivo. Android Mobile, il funzionamento offline e la sincronizzazione tra desktop e mobile sono ancora in sviluppo e non sono disponibili in produzione.",
+  "sunshine.panel": "Pannello centrale · Cura luminosa",
+  "sunshine.exit": "Esci dall'applicazione",
+  "sunshine.choose": "Scegli una funzione",
+  "sunshine.clients": "Clienti",
+  "sunshine.clients.desc": "Schede e storico",
+  "sunshine.remedies": "Rimedi",
+  "sunshine.remedies.desc": "Formule e quantità",
+  "sunshine.tinctures": "Tinture",
+  "sunshine.tinctures.desc": "Formule e quantità",
+  "sunshine.inventory": "Inventario",
+  "sunshine.inventory.desc": "Flaconi e materiali",
+  "sunshine.cashier": "Cassa",
+  "sunshine.cashier.desc": "Pagamenti e saldi",
+  "sunshine.admin": "Amministrazione",
+  "sunshine.admin.desc": "Personale e autorizzazioni",
+  "sunshine.appointments": "Appuntamenti",
+  "sunshine.appointments.desc": "Gestione appuntamenti",
+  "sunshine.calendar": "Calendario",
+  "sunshine.calendar.desc": "Vista di sola lettura",
+  "sunshine.open": "Apri",
+  "sunshine.preview.note": "Anteprima desktop in sviluppo · 8 moduli attivi · Telemetria disattivata",
+  "hero.eyebrow": "FOCUS · RHYTHM · MOMENTS",
+  "hero.title": "La tua giornata è più di un elenco di attività.",
+  "hero.lead": "FORYMO riunisce ciò che merita attenzione, ciò che dà ritmo alla tua giornata e ciò che deve accadere al momento giusto.",
+  "hero.primary": "Esplora FORYMO",
+  "hero.secondary": "Scopri come funziona",
+  "hero.trust1h": "FOCUS",
+  "hero.trust1b": "Ciò che merita la tua attenzione",
+  "hero.trust2h": "RHYTHM",
+  "hero.trust2b": "Ciò che si ripete e crea il tuo ritmo",
+  "hero.trust3h": "MOMENTS",
+  "hero.trust3b": "Ciò che deve accadere al momento giusto",
+  "mock.today": "Oggi",
+  "mock.tasks": "Attività",
+  "mock.routines": "Routine",
+  "mock.reminders": "Promemoria",
+  "mock.date": "Mercoledì",
+  "mock.heading": "La tua giornata, a colpo d'occhio.",
+  "mock.synced": "Pronto",
+  "mock.stat1": "Attività",
+  "mock.stat2": "Routine",
+  "mock.stat3": "Promemoria",
+  "mock.done": "completate",
+  "mock.today2": "in scadenza oggi",
+  "mock.focus": "Prossima priorità",
+  "mock.task1": "Rivedi le priorità di oggi",
+  "mock.task2": "Prepara il piano di domani",
+  "mock.task3": "Esegui il backup dello spazio di lavoro",
+  "mock.complete": "Completata",
+  "mock.upcoming": "In arrivo",
+  "mock.reminder": "Promemoria",
+  "product.kicker": "Più della gestione delle attività",
+  "product.title": "FOCUS · RHYTHM · MOMENTS",
+  "product.lead": "FORYMO non è un altro gestore di attività. Organizza la giornata su tre livelli: ciò che merita attenzione, ciò che si ripete e crea il tuo ritmo e ciò che deve accadere al momento giusto.",
+  "features.today.title": "MOMENTS — Oggi",
+  "features.today.body": "Oggi riunisce attività, routine e promemoria pertinenti in un'unica vista per mostrarti ciò che conta adesso.",
+  "features.tasks.title": "FOCUS — Attività",
+  "features.tasks.body": "Le attività trasformano l'attenzione in azione, mantenendo chiaro e visibile ciò su cui concentrarti.",
+  "features.routines.title": "RHYTHM — Routine",
+  "features.routines.body": "Le routine strutturano le azioni ricorrenti, aiutandoti a integrare la costanza nella vita quotidiana.",
+  "features.reminders.title": "MOMENTS — Promemoria",
+  "features.reminders.body": "I promemoria collegano un'azione al momento in cui richiede la tua attenzione.",
+  "features.backup.title": "Backup e ripristino",
+  "features.backup.body": "Crea backup verificati e recupera con sicurezza lo spazio di lavoro quando devi ripristinarlo.",
+  "features.control.title": "Un sistema sotto il tuo controllo",
+  "features.control.body": "Focus, Rhythm e Moments collaborano in uno spazio di lavoro comprensibile, mentre i tuoi dati reali restano sotto il tuo controllo.",
+  "how.kicker": "Come funziona FORYMO",
+  "how.title": "Dall'attenzione al ritmo, fino al momento giusto.",
+  "how.lead": "FORYMO collega ciò che devi fare, ciò che vuoi ripetere e ciò che deve emergere al momento giusto, senza trasformare la giornata in un sistema rigido.",
+  "how.s1h": "Registra",
+  "how.s1b": "Aggiungi l'attività, la routine o il promemoria mentre è ancora fresco nella memoria.",
+  "how.s2h": "Vedi con chiarezza",
+  "how.s2b": "Usa Oggi come vista di lavoro, senza cercare in elenchi separati.",
+  "how.s3h": "Agisci",
+  "how.s3b": "Completa ciò che conta, aggiorna lo stato e mantieni visibile il prossimo passo.",
+  "how.s4h": "Proteggi",
+  "how.s4b": "Conserva backup verificati per recuperare lo spazio di lavoro quando necessario.",
+  "guide.kicker": "GUIDA UTENTE FORYMO",
+  "guide.title": "Scegli una funzione e scopri esattamente come funziona.",
+  "guide.lead": "Esplora ogni parte di FORYMO per Windows. Seleziona una funzione per conoscerne scopo, flusso di lavoro e comandi principali.",
+  "desktop.tag": "Applicazione principale",
+  "desktop.title": "FORYMO per Windows",
+  "desktop.body": "Lo spazio di lavoro desktop completo in cui Focus, Rhythm e Moments si uniscono attraverso Oggi, Attività, Routine, Promemoria e backup verificati con ripristino.",
+  "desktop.meta": "Applicazione principale per Windows",
+  "desktop.cta": "Ricevi aggiornamenti sul rilascio",
+  "mobile.tag": "In sviluppo attivo",
+  "mobile.title": "FORYMO Mobile",
+  "mobile.body": "L'app complementare per Android si collega in modo sicuro a FORYMO per Windows e mantiene Oggi, Attività, Routine e Promemoria a portata di mano. Le modifiche autorizzate possono essere salvate offline e sincronizzate automaticamente quando il PC torna disponibile.",
+  "mobile.meta": "Collegamento sicuro al PC",
+  "mobile.scope": "1 PC Windows · 1 dispositivo mobile",
+  "mobile.cta": "Non ancora disponibile per l'installazione. Il rilascio in produzione seguirà i test e l'accettazione finale.",
+  "platforms.kicker": "Applicazioni FORYMO",
+  "platforms.title": "Windows e Mobile, un unico sistema personale.",
+  "trust.kicker": "Progettato per ispirare fiducia",
+  "trust.title": "Il tuo sistema deve aiutarti a vivere la giornata, non a gestire il sistema stesso.",
+  "trust.p1": "Focus per ciò che merita attenzione",
+  "trust.p2": "Rhythm per ciò che crea costanza",
+  "trust.p3": "Moments per ciò che appartiene al momento giusto",
+  "trust.p4": "Supporto linguistico coerente su sito, Windows, Mobile, store e assistenza",
+  "language.available": "Disponibile",
+  "language.preparing": "In preparazione",
+  "language.kicker": "Supporto linguistico",
+  "language.title": "La tua lingua fa parte del prodotto.",
+  "language.lead": "Una lingua diventa disponibile solo quando sito, Windows, Mobile, guide degli store e assistenza utilizzano la stessa terminologia chiara.",
+  "language.foundation1.title": "Organizzazione",
+  "language.foundation1.body": "Una struttura chiara per funzioni, guide, aggiornamenti e versioni.",
+  "language.foundation2.title": "Cura editoriale",
+  "language.foundation2.body": "Localizzazione naturale, fedele al significato, senza traduzioni automatiche trascurate.",
+  "language.foundation3.title": "Coerenza",
+  "language.foundation3.body": "Gli stessi termini su sito, Windows, Mobile, store e assistenza.",
+  "language.foundation4.title": "Assistenza",
+  "language.foundation4.body": "Guide, domande frequenti, assistenza IA e contatto umano nella lingua dell'utente.",
+  "language.roadmap.kicker": "Piano delle lingue",
+  "language.roadmap.title": "Supporto completo, rilasciato con responsabilità.",
+  "language.roadmap.note": "Inglese e greco sono attualmente disponibili. Ogni nuova lingua resta in preparazione fino alla revisione dell'intera esperienza.",
+  "faq.title": "Buone domande. Risposte chiare.",
+  "faq.q1": "Cos'è FORYMO?",
+  "faq.a1": "FORYMO è un sistema di produttività personale basato su Focus, Rhythm e Moments: le attività sostengono la concentrazione, le routine creano ritmo e i promemoria, insieme a Oggi, fanno emergere ciò che conta al momento giusto.",
+  "faq.q2": "FORYMO è disponibile in greco?",
+  "faq.a2": "Sì. FORYMO mantiene il proprio nome in ogni lingua, mentre menu e spiegazioni sono adattati a un greco naturale, rispettando il significato anziché la traduzione automatica parola per parola.",
+  "faq.q3": "L'app mobile è già disponibile?",
+  "faq.a3": "FORYMO Mobile è in sviluppo attivo e non è ancora disponibile per l'installazione. Sarà rilasciata solo dopo i test richiesti e l'accettazione finale.",
+  "faq.q4": "Posso recuperare i miei dati?",
+  "faq.a4": "L'applicazione Windows include un processo verificato di backup e ripristino che permette di creare e verificare backup, visualizzare l'anteprima e applicare un ripristino approvato.",
+  "cta.kicker": "FOCUS · RHYTHM · MOMENTS",
+  "cta.title": "Dai alla tua giornata concentrazione, ritmo e i momenti giusti.",
+  "cta.body": "FORYMO riunisce Focus, Rhythm e Moments in un sistema personale chiaro.",
+  "cta.button": "Torna in alto",
+  "footer.tagline": "Focus. Rhythm. Moments.",
+  "footer.note": "Tutti i diritti riservati."
+},
   fr: {
   "support.title": "Aide FORYMO",
   "support.lead": "Trouvez des solutions pratiques aux problèmes courants. Si vous avez besoin d'aide supplémentaire, écrivez à l'adresse d'assistance FORYMO.",
@@ -696,6 +856,206 @@ const translations = {
 };
 
 const functionGuideCopy = {
+  it: {
+  "labels": {
+    "purpose": "A cosa serve",
+    "workflow": "Come usarla",
+    "controls": "Comandi principali",
+    "note": "Importante"
+  },
+  "items": [
+    {
+      "key": "today",
+      "number": "01",
+      "title": "Oggi",
+      "summary": "La vista di lavoro del giorno selezionato riunisce attività programmate e progressi in una schermata chiara.",
+      "purpose": "Vedi cosa è in scadenza, completato o richiede ancora attenzione senza passare tra elenchi separati.",
+      "steps": [
+        "Scegli la data da consultare.",
+        "Seleziona un'attività dall'elenco giornaliero.",
+        "Avviala in Concentrazione, contrassegnala come completata o aprila in Attività per modificarla completamente."
+      ],
+      "controls": "Data, Aggiorna, Avvia, Completa, Apri in Attività."
+    },
+    {
+      "key": "focus",
+      "number": "02",
+      "title": "Concentrazione",
+      "summary": "Uno spazio dedicato a completare un'attività selezionata mediante passaggi chiari e gestibili.",
+      "purpose": "Riduci le distrazioni mantenendo visibili un'attività attiva e i passaggi successivi fino al termine della sessione.",
+      "steps": [
+        "Avvia un'attività disponibile da Oggi o Concentrazione.",
+        "Esegui i passaggi di concentrazione e completa ciascuno.",
+        "Metti in pausa o riprendi la sessione se necessario, poi completala."
+      ],
+      "controls": "Avvia concentrazione, Pausa, Riprendi, Completa passaggio, Completa sessione.",
+      "note": "Può esserci una sola sessione di concentrazione attiva o in pausa alla volta."
+    },
+    {
+      "key": "tasks",
+      "number": "03",
+      "title": "Attività",
+      "summary": "Gestione completa delle attività con date, orari, durata, note, stato e sottoattività.",
+      "purpose": "Registra il lavoro con precisione, suddividilo in azioni minori e controlla lo stato di completamento.",
+      "steps": [
+        "Crea una nuova attività e imposta i dati di pianificazione.",
+        "Aggiungi sottoattività se servono passaggi più piccoli.",
+        "Carica, modifica, completa o elimina l'attività selezionata."
+      ],
+      "controls": "Nuova, Salva attività, Completa, Elimina, Aggiungi sottoattività, Cambia stato sottoattività."
+    },
+    {
+      "key": "routines",
+      "number": "04",
+      "title": "Routine",
+      "summary": "Azioni ricorrenti organizzate per giorno della settimana, stato di attivazione e singole occorrenze.",
+      "purpose": "Crea un ritmo attorno alle azioni ripetute mantenendo lo stato di completamento di ciascuna occorrenza.",
+      "steps": [
+        "Crea una routine e scegli i giorni della settimana in cui si ripete.",
+        "Mantienila attiva o disattivala temporaneamente.",
+        "Carica le occorrenze e contrassegna ciascuna come completata o non completata."
+      ],
+      "controls": "Salva routine, Attiva/disattiva, Carica occorrenze, Cambia stato occorrenza."
+    },
+    {
+      "key": "reminders",
+      "number": "05",
+      "title": "Promemoria",
+      "summary": "Avvisi programmati collegati ad attività o routine FORYMO, con audio e finestre di notifica configurabili.",
+      "purpose": "Richiama l'attenzione su un elemento esistente nella data e ora locale esatta che scegli.",
+      "steps": [
+        "Seleziona l'attività o routine a cui appartiene il promemoria.",
+        "Imposta programmazione locale, audio e comportamento delle finestre di notifica.",
+        "Crea, attiva, disattiva, posticipa o elimina il promemoria secondo necessità."
+      ],
+      "controls": "Crea promemoria, Attiva/disattiva, Elimina promemoria, Esegui pianificatore, Posticipa.",
+      "note": "Le notifiche persistenti e critiche si possono controllare anche da Impostazioni."
+    },
+    {
+      "key": "search",
+      "number": "06",
+      "title": "Ricerca",
+      "summary": "Un'area unica per cercare informazioni in tutto lo spazio di lavoro FORYMO.",
+      "purpose": "Trova l'elemento necessario senza aprire e controllare ogni modulo separatamente.",
+      "steps": [
+        "Inserisci la parola o espressione da cercare.",
+        "Esamina i risultati corrispondenti e la loro origine.",
+        "Seleziona un risultato e aprilo nella sezione FORYMO appropriata."
+      ],
+      "controls": "Cerca, Aggiorna, Apri selezionato."
+    },
+    {
+      "key": "calendar",
+      "number": "07",
+      "title": "Calendario",
+      "summary": "Viste giornaliere, settimanali e mensili per attività, occorrenze di routine e promemoria.",
+      "purpose": "Comprendi la tua pianificazione nel tempo e sposta attività a date più adatte quando i programmi cambiano.",
+      "steps": [
+        "Passa tra le viste giorno, settimana e mese.",
+        "Usa Precedente e Successivo per navigare nel calendario.",
+        "Apri un elemento selezionato o riprogramma direttamente un'attività."
+      ],
+      "controls": "Giorno, Settimana, Mese, Precedente, Successivo, Apri selezionato, Riprogramma attività.",
+      "note": "I dettagli di routine e promemoria restano gestiti nei rispettivi moduli."
+    },
+    {
+      "key": "analytics",
+      "number": "08",
+      "title": "Analisi",
+      "summary": "Una panoramica della produttività basata su attività, routine e storico reale dei completamenti.",
+      "purpose": "Visualizza progressi e schemi di attività senza modificare i dati sottostanti.",
+      "steps": [
+        "Scegli il periodo o la vista da esaminare.",
+        "Controlla totali, elementi completati e attività rimanenti.",
+        "Aggiorna il riepilogo quando il lavoro cambia."
+      ],
+      "controls": "Selezione data o periodo, Aggiorna, indicatori riepilogativi."
+    },
+    {
+      "key": "organize",
+      "number": "09",
+      "title": "Organizzazione",
+      "summary": "Un punto centrale per categorie, colori ed etichette che strutturano lo spazio di lavoro.",
+      "purpose": "Riconosci, raggruppa e trova facilmente attività correlate in FORYMO.",
+      "steps": [
+        "Crea una categoria con un nome chiaro.",
+        "Assegna un colore e le etichette necessarie.",
+        "Aggiorna o rimuovi i dati organizzativi quando cambia il flusso di lavoro."
+      ],
+      "controls": "Categoria, Colore, Etichetta, Salva categoria, Elimina."
+    },
+    {
+      "key": "backup",
+      "number": "10",
+      "title": "Backup e ripristino",
+      "summary": "Backup locali verificati, esportazioni professionali e un processo di ripristino soggetto ad approvazione.",
+      "purpose": "Proteggi lo spazio di lavoro e recuperalo in modo controllato, con verifica e anteprima prima del ripristino dei dati.",
+      "steps": [
+        "Crea un backup verificato e conferma lo stato di verifica.",
+        "Esporta le informazioni nel formato necessario.",
+        "Visualizza l'anteprima del piano di ripristino, approvalo e solo dopo applica il ripristino."
+      ],
+      "controls": "Crea backup verificato, Verifica, Rimuovi backup obsoleti, Esporta JSON, CSV ZIP, PDF, Excel e Markdown, Anteprima ripristino, Applica ripristino approvato, Rifiuta.",
+      "note": "Il ripristino non viene mai applicato in silenzio: richiede anteprima e approvazione esplicita."
+    },
+    {
+      "key": "sync",
+      "number": "11",
+      "title": "Sincronizzazione",
+      "summary": "Sincronizzazione di cartelle con protezione dai conflitti per il trasferimento controllato dei dati FORYMO.",
+      "purpose": "Trasferisci modifiche approvate attraverso una posizione scelta, rilevando conflitti prima che i dati vengano sovrascritti.",
+      "steps": [
+        "Scegli e apri la cartella di sincronizzazione.",
+        "Usa Invia per preparare i dati correnti approvati.",
+        "Prepara la ricezione, esamina la richiesta e annullala se non deve proseguire."
+      ],
+      "controls": "Scegli destinazione, Apri, Invia, Prepara ricezione, Annulla ricezione in sospeso, Aggiorna richieste.",
+      "note": "Le funzionalità cloud e BYOC rimangono soggette al rispettivo stato di rilascio e accettazione."
+    },
+    {
+      "key": "mobile",
+      "number": "12",
+      "title": "Dispositivi mobili",
+      "summary": "Configurazione e gestione sicure dell'app complementare FORYMO Mobile.",
+      "purpose": "Collega un dispositivo mobile autorizzato all'app Windows con il livello di accesso scelto.",
+      "steps": [
+        "Attiva il servizio mobile e, se necessario, l'accesso alla rete locale.",
+        "Genera un codice temporaneo di associazione per sola lettura o accesso completo.",
+        "Controlla i dispositivi connessi e revoca l'accesso se un dispositivo non deve più connettersi."
+      ],
+      "controls": "Attiva servizio mobile, Accesso LAN, Codici di associazione, Sola lettura, Accesso completo, Revoca accesso.",
+      "note": "FORYMO Mobile è ancora in sviluppo attivo e non viene offerto per installazioni in produzione."
+    },
+    {
+      "key": "settings",
+      "number": "13",
+      "title": "Impostazioni",
+      "summary": "Preferenze dell'app per lingua, aspetto, avvio e notifiche.",
+      "purpose": "Adatta FORYMO al tuo modo di lavorare su Windows mantenendo esplicite le decisioni di sicurezza importanti.",
+      "steps": [
+        "Scegli lingua, tema, sezione iniziale e scala di visualizzazione.",
+        "Configura le notifiche, il suono dei promemoria e la durata predefinita del rinvio.",
+        "Salva le preferenze o ripristina i valori predefiniti."
+      ],
+      "controls": "Salva, Ripristina predefiniti, Avvia con Windows, Reimposta FORYMO, Esci da FORYMO.",
+      "note": "Reimpostare FORYMO elimina i dati locali di produttività; i file esistenti di backup ed esportazione sono conservati."
+    },
+    {
+      "key": "diagnostics",
+      "number": "14",
+      "title": "Diagnostica",
+      "summary": "Una panoramica professionale di sola lettura dello stato dell'app e dei servizi locali.",
+      "purpose": "Conferma il corretto funzionamento di applicazione, database e servizi ausiliari e fornisci informazioni utili all'assistenza.",
+      "steps": [
+        "Esegui o aggiorna il controllo diagnostico.",
+        "Controlla lo stato di applicazione, database e piattaforma.",
+        "Apri i dettagli tecnici solo per risolvere problemi o collaborare con l'assistenza."
+      ],
+      "controls": "Aggiorna diagnostica, Stato del sistema, Controlli di integrità, Dettagli tecnici.",
+      "note": "La diagnostica fornisce informazioni sullo stato; non modifica attività o contenuti personali."
+    }
+  ]
+},
   fr: {
   "labels": {
     "purpose": "À quoi sert cette fonction",
@@ -1540,7 +1900,7 @@ let activeGuideKey = "today";
 
 // A public locale must be explicitly released here AND pass the release manifest check.
 const publicLocales = Object.freeze(["en", "el"]);
-const stagedLocales = Object.freeze(["pt-BR", "de", "es", "fr"]);
+const stagedLocales = Object.freeze(["pt-BR", "de", "es", "fr", "it"]);
 
 // PT-BR is staged; public language selection still depends on enabled controls.
 const ptBRExtra = {
@@ -1563,7 +1923,7 @@ const ptBRExtra = {
     "SunShine Pro Desktop dashboard preview": "Prévia do painel do SunShine Pro para computador"
   }
 };
-const localeExtras = {"pt-BR": ptBRExtra, fr: {"title":"FORYMO — Concentration. Rythme. Moments.","description":"FORYMO organise votre journée autour de Focus, Rhythm et Moments : ce qui mérite votre attention, ce qui donne du rythme et ce qui doit arriver au bon moment.","sunshineDescription":"SunShine Pro — gestion professionnelle de cabinets de kinésithérapie pour Windows et Android.","metrics":["3 terminées","75 % terminé","prévus aujourd'hui"],"skip":"Aller au contenu","faq":"Questions fréquentes","aria":{"FORYMO home":"Accueil FORYMO","SunShine Pro home":"Accueil SunShine Pro","Primary navigation":"Navigation principale","Language":"Langue","Language selection":"Sélection de la langue","Open menu":"Ouvrir le menu","FORYMO interface preview":"Aperçu de l'interface FORYMO","FORYMO functions":"Fonctions FORYMO","FORYMO language quality foundations":"Principes de qualité linguistique FORYMO","SunShine Pro Desktop dashboard preview":"Aperçu du tableau de bord SunShine Pro sur ordinateur"}}, ...{
+const localeExtras = {"pt-BR": ptBRExtra, it: {"title":"FORYMO — Concentrazione. Ritmo. Momenti.","description":"FORYMO organizza la tua giornata attorno a Focus, Rhythm e Moments: ciò che merita attenzione, ciò che crea ritmo e ciò che deve accadere al momento giusto.","sunshineDescription":"SunShine Pro — gestione professionale di studi di fisioterapia per Windows e Android.","metrics":["3 completate","75% completato","in scadenza oggi"],"skip":"Vai al contenuto","faq":"Domande frequenti","aria":{"FORYMO home":"Home FORYMO","SunShine Pro home":"Home SunShine Pro","Primary navigation":"Navigazione principale","Language":"Lingua","Language selection":"Selezione lingua","Open menu":"Apri menu","FORYMO interface preview":"Anteprima interfaccia FORYMO","FORYMO functions":"Funzioni FORYMO","FORYMO language quality foundations":"Principi di qualità linguistica FORYMO","SunShine Pro Desktop dashboard preview":"Anteprima del pannello desktop SunShine Pro"}}, fr: {"title":"FORYMO — Concentration. Rythme. Moments.","description":"FORYMO organise votre journée autour de Focus, Rhythm et Moments : ce qui mérite votre attention, ce qui donne du rythme et ce qui doit arriver au bon moment.","sunshineDescription":"SunShine Pro — gestion professionnelle de cabinets de kinésithérapie pour Windows et Android.","metrics":["3 terminées","75 % terminé","prévus aujourd'hui"],"skip":"Aller au contenu","faq":"Questions fréquentes","aria":{"FORYMO home":"Accueil FORYMO","SunShine Pro home":"Accueil SunShine Pro","Primary navigation":"Navigation principale","Language":"Langue","Language selection":"Sélection de la langue","Open menu":"Ouvrir le menu","FORYMO interface preview":"Aperçu de l'interface FORYMO","FORYMO functions":"Fonctions FORYMO","FORYMO language quality foundations":"Principes de qualité linguistique FORYMO","SunShine Pro Desktop dashboard preview":"Aperçu du tableau de bord SunShine Pro sur ordinateur"}}, ...{
   "de": {
     "title": "FORYMO — Fokus. Rhythmus. Momente.",
     "description": "FORYMO organisiert Ihren Tag rund um Focus, Rhythm und Moments: was Aufmerksamkeit verdient, was Ihren Rhythmus prägt und was zum richtigen Zeitpunkt geschehen muss.",
