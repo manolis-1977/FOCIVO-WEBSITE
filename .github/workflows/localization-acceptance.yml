@@ -1,0 +1,37 @@
+name: Website localization acceptance
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  localization:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript and release gate
+        run: |
+          node --check app.js
+          node scripts/check-language-readiness.cjs
+          node scripts/test-pt-br.cjs
+      - name: Install browser test runner
+        run: |
+          npm install --no-save --package-lock=false @playwright/test@1.51.1
+          npx playwright install --with-deps chromium
+      - name: Real browser localization acceptance
+        run: |
+          python3 -m http.server 8788 --bind 127.0.0.1 &
+          server=$!
+          trap 'kill "$server" 2>/dev/null || true' EXIT
+          for i in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:8788/ >/dev/null; then break; fi
+            sleep 1
+          done
+          npx playwright test scripts/website-language.spec.cjs --workers=1 --reporter=line
