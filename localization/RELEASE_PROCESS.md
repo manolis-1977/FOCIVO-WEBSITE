@@ -53,3 +53,6 @@ acceptance was freshly audited by this check.
 
 ## Expanded release validation
 The runtime public allowlist, both pages' language selectors, roadmap and manifest must agree. New languages require documented account/subscription, transactional email, legal/privacy and AI support approval in addition to the original eight approvals. GitHub Actions runs structural checks and Chromium tests at 320, 375, 768, 1280 and 1920 pixels; automated results do not substitute for editorial or cross-platform acceptance. The site now offers real troubleshooting and a mailto contact; receipt of email and language-specific human support have not yet been verified.
+
+## All 12 website translation datasets
+All 12 locale dictionaries contain 158 entries each (1,896 entries including English), and all 12 guide datasets contain 14 guides each (168 guides). Ten additional languages are staged, not published. All ten use a loopback-only query preview: `?preview-language=CODE`. Arabic has semantic RTL and explicit layout CSS, pending actual visual acceptance. Run `node scripts/test-all-locales.cjs` in addition to the existing checks. The 85 simulated DOM/coverage checks passed at implementation time; real Chromium screenshots, independent language review and cross-platform evidence are not yet approved.
