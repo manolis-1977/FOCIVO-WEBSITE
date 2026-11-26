@@ -12,7 +12,7 @@ A disabled item in the language picker is not a shipped translation.
 4. **Support** — translated guides, FAQ, AI-support copy and human support instructions.
 
 ## Release gate
-- Full key parity with the English website (currently 146 keys).
+- Full key parity with the English website (currently 158 keys (146 original + 12 support keys)).
 - Full translation of **all 14 function guides**, including titles, summaries, purposes,
   usage steps, controls and any notes.
 - Translate every visible language-dependent message including dynamically injected status
@@ -50,3 +50,6 @@ Windows and Mobile test runs, support/store reviews, and deployment check.
 If any item fails, retain or restore IN PREPARATION and disable selection.
 The existing EN/EL status is an inherited baseline and is not a claim that cross-platform
 acceptance was freshly audited by this check.
+
+## Expanded release validation
+The runtime public allowlist, both pages' language selectors, roadmap and manifest must agree. New languages require documented account/subscription, transactional email, legal/privacy and AI support approval in addition to the original eight approvals. GitHub Actions runs structural checks and Chromium tests at 320, 375, 768, 1280 and 1920 pixels; automated results do not substitute for editorial or cross-platform acceptance. The site now offers real troubleshooting and a mailto contact; receipt of email and language-specific human support have not yet been verified.
