@@ -32,6 +32,8 @@ jobs:
           node scripts/test-pt-br.cjs
           node scripts/test-all-locales.cjs
           node scripts/test-support-bot.cjs
+          node scripts/test-customer-copy.cjs
+          node scripts/build-public.cjs
 
       - name: Configure and enable GitHub Pages
         uses: actions/configure-pages@v5
@@ -41,7 +43,7 @@ jobs:
       - name: Upload website artifact
         uses: actions/upload-pages-artifact@v4
         with:
-          path: '.'
+          path: '_public'
 
       - name: Wait for artifact registration
         run: sleep 10
