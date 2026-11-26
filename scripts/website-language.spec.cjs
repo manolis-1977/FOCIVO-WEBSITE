@@ -175,3 +175,37 @@ for(const locale of Object.keys(localeNames)){
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
  });
 }
+
+/* Navigation must show the whole overview, not scroll to an obscured card. */
+for(const locale of Object.keys(localeNames)){
+ test(locale+' complete desktop anchor views',async({page},testInfo)=>{
+  await page.emulateMedia({reducedMotion:'reduce'});
+  await page.setViewportSize({width:1440,height:665});
+  await page.goto(base+'/');
+  await page.locator('#languageTrigger').click();
+  await page.locator('button[data-lang="'+locale+'"]').click();
+  const routes=[['top','#top .hero-grid'],['product','#product .shell'],['how','#how .flow-grid'],['desktop','#desktop .platform-grid'],['mobile','#desktop .platform-grid'],['languages','#languages .shell']];
+  for(const [width,height] of [[1440,665],[1366,768],[1920,900]]){
+   await page.setViewportSize({width,height});
+   for(const [id,selector] of routes){
+    const link=id==='top'?page.locator('.site-header .brand'):page.locator('.site-header .nav a[href="#'+id+'"]');
+    if(await link.isHidden())await page.locator('.site-header .menu-btn').click();
+    await link.click();
+    await expect(page).toHaveURL(new RegExp('#'+id+'$'));
+    const bounds=await page.locator(selector).evaluate(n=>{const r=n.getBoundingClientRect();return {top:r.top,bottom:r.bottom,left:r.left,right:r.right,header:document.querySelector('.site-header').getBoundingClientRect().bottom,height:innerHeight,width:innerWidth};});
+    expect(bounds.top,locale+' '+id+' '+width+'x'+height+' below header').toBeGreaterThanOrEqual(bounds.header-2);
+    expect(bounds.bottom,locale+' '+id+' '+width+'x'+height+' entire view').toBeLessThanOrEqual(bounds.height+2);
+    expect(bounds.left).toBeGreaterThanOrEqual(-2);expect(bounds.right).toBeLessThanOrEqual(bounds.width+2);
+    if(width===1440)await page.screenshot({path:testInfo.outputPath('anchor-'+id+'.png')});
+   }
+  }
+  await page.goto(base+'/?utm_source=acceptance#mobile');
+  await expect(page.locator('html')).toHaveAttribute('lang',locale);
+  const direct=await page.locator('#desktop .platform-grid').evaluate(n=>({top:n.getBoundingClientRect().top,bottom:n.getBoundingClientRect().bottom,header:document.querySelector('.site-header').getBoundingClientRect().bottom,height:innerHeight}));
+  expect(direct.top).toBeGreaterThanOrEqual(direct.header-2);expect(direct.bottom).toBeLessThanOrEqual(direct.height+2);
+  await page.locator('.site-header .nav a[href="#how"]').click();
+  await page.locator('.guide-jump').click();
+  await expect(page).toHaveURL(/#guides$/);
+  await expect(page.locator('#functionGuideList [role=tab]')).toHaveCount(14);
+ });
+}

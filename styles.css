@@ -450,3 +450,103 @@ html[dir="rtl"] .footer-brand img{object-position:right center!important}
   .site-header:not(.sunshine-page-header) .nav-actions{gap:10px}
   .site-header:not(.sunshine-page-header) .nav-actions .button-small{padding-inline:12px}
 }
+
+/* FORYMO home: anchor destinations fit the available desktop viewport.
+   Keep all content in normal document flow; do not crop or disable zoom/scroll. */
+.forymo-home{--home-header:79px;--home-anchor-gap:12px}
+.forymo-home main>section:not(#top),.forymo-home #mobile,.forymo-home #backup,.forymo-home #main{
+  scroll-margin-top:calc(var(--home-header) + var(--home-anchor-gap));
+}
+.forymo-home #top{scroll-margin-top:0}
+.forymo-home #desktop{position:relative}
+.forymo-home .platform-anchor{position:absolute;inset-block-start:0;inset-inline-start:0;width:1px;height:1px;pointer-events:none}
+.forymo-home .guide-jump{margin-top:12px;font-size:13px;min-height:42px;text-align:center}
+.forymo-home .guide-section .function-guide{margin-top:0;padding-top:0;border-top:0}
+.forymo-home #how .sticky-copy{position:static}
+@media(max-width:700px){.forymo-home{--home-header:69px;--home-anchor-gap:10px}}
+@media(min-width:1121px){
+ .forymo-home .section:is(#product,#how,#desktop,#languages){
+   padding-block:clamp(14px,3.3vh,36px);
+   min-height:calc(100svh - var(--home-header) - var(--home-anchor-gap));
+   display:flex;flex-direction:column;justify-content:center;
+ }
+ .forymo-home .section:is(#product,#how,#desktop,#languages)>.shell{flex:none}
+ .forymo-home #top{
+   min-height:100svh;padding:calc(var(--home-header) + clamp(12px,3.2vh,34px)) 0 clamp(18px,4vh,40px);
+   display:flex;align-items:center;
+ }
+ .forymo-home #top:after{height:clamp(10px,2vh,22px)}
+ .forymo-home #top .hero-grid{grid-template-columns: minmax(0,.94fr) minmax(0,1.06fr);gap:clamp(24px,4vw,58px)}
+ .forymo-home #top h1{font-size:clamp(36px,min(4.5vw,7.25vh),68px);line-height:1.04;margin:12px 0 14px}
+ .forymo-home #top .hero-lead{font-size:clamp(14px,2.15vh,18px);line-height:1.55;margin:0}
+ .forymo-home #top .hero-actions{margin:20px 0;gap:18px}
+ .forymo-home #top .hero-actions .button{min-height:42px;padding:8px 18px;font-size:13px}
+ .forymo-home #top .text-link{font-size:13px}
+ .forymo-home #top .trust-row{padding-top:14px;gap:16px}
+ .forymo-home #top .trust-row strong{font-size:12px}
+ .forymo-home #top .trust-row span{font-size:11px;line-height:1.4}
+ .forymo-home #top .app-topbar{height:42px}
+ .forymo-home #top .app-body{min-height:0;grid-template-columns:minmax(95px,24%) minmax(0,1fr)}
+ .forymo-home #top .app-side{padding:16px 8px}
+ .forymo-home #top .side-item{padding:8px 6px}
+ .forymo-home #top .app-content{padding:16px}
+ .forymo-home #top .mock-head h3{font-size:18px}
+ .forymo-home #top .stat-grid{gap:8px;margin:12px 0}
+ .forymo-home #top .stat{min-height:78px;padding:10px 8px}
+ .forymo-home #top .stat>span{margin-bottom:6px}
+ .forymo-home #top .stat>strong{font-size:24px;margin-bottom:7px}
+ .forymo-home #top .stat>em{white-space:normal;overflow-wrap:anywhere}
+ .forymo-home #top .today-card{padding:10px 12px}
+ .forymo-home #top .task-row{padding:8px 0}
+ .forymo-home :is(#product,#how,#desktop,#languages) .section-heading h2{
+   font-size:clamp(30px,min(3.5vw,5.2vh),46px);line-height:1.1;margin:0 0 10px
+ }
+ .forymo-home :is(#product,#how,#desktop,#languages) .section-heading p{
+   font-size:clamp(14px,2vh,17px);line-height:1.5;margin:8px 0 0
+ }
+ .forymo-home :is(#product,#desktop,#languages) .section-heading.narrow{margin:0 auto clamp(12px,2.7vh,28px);max-width:900px}
+ .forymo-home :is(#product,#how,#desktop,#languages) .kicker{margin-bottom:8px}
+ .forymo-home #product .feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+ .forymo-home #product .feature-card{min-height:0;padding:clamp(14px,2.4vh,24px)}
+ .forymo-home #product .feature-icon{padding-bottom:9px;margin-bottom:12px}
+ .forymo-home #product .feature-card h3{font-size:clamp(17px,2.5vh,21px);margin-bottom:7px;line-height:1.25}
+ .forymo-home #product .feature-card p{font-size:14px;line-height:1.5}
+ .forymo-home #how .flow-grid{grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,68px);align-items:center}
+ .forymo-home #how .steps{gap:10px}
+ .forymo-home #how .steps article{padding:14px 18px;grid-template-columns:38px minmax(0,1fr);gap:12px}
+ .forymo-home #how .steps article>span{width:36px;height:36px}
+ .forymo-home #how .steps h3{font-size:18px;margin-bottom:4px}
+ .forymo-home #how .steps p{font-size:14px;line-height:1.5}
+ .forymo-home #desktop .platform-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+ .forymo-home #desktop .platform-card{position:static;min-height:0;padding:clamp(18px,3.3vh,34px);overflow:visible}
+ .forymo-home #desktop .platform-icon{width:64px;height:64px;border-radius:18px;margin:16px 0 14px}
+ .forymo-home #desktop .platform-icon img{width:48px;height:48px}
+ .forymo-home #desktop .platform-card h2{font-size:clamp(25px,4vh,36px);margin:0 0 8px}
+ .forymo-home #desktop .platform-card p{font-size:15px;line-height:1.55;margin:5px 0}
+ .forymo-home #desktop .platform-meta{margin:12px 0 16px}
+ .forymo-home #desktop .button{min-height:42px;font-size:14px;padding:8px 18px}
+ .forymo-home #languages .language-foundations{grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+ .forymo-home #languages .language-foundations article{min-height:0;padding:12px 15px}
+ .forymo-home #languages .language-foundations article>span{width:32px;height:32px;margin-bottom:8px}
+ .forymo-home #languages .language-foundations h3{font-size:17px;margin-bottom:5px}
+ .forymo-home #languages .language-foundations p{font-size:13px;line-height:1.45}
+ .forymo-home #languages .language-roadmap{margin-top:12px;padding:15px 20px;border-radius:20px}
+ .forymo-home #languages .language-roadmap-head{gap:20px;padding-bottom:10px;align-items:center}
+ .forymo-home #languages .language-roadmap-head h3{font-size:21px;margin:0}
+ .forymo-home #languages .language-roadmap-head p{font-size:13px;line-height:1.4}
+ .forymo-home #languages .language-status-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:10px}
+ .forymo-home #languages .language-status{min-height:43px;padding:6px 10px;border-radius:9px;gap:2px 5px}
+ .forymo-home #languages .language-status strong{font-size:12px}
+}
+@media(min-width:1121px) and (max-height:750px){
+ .forymo-home .section:is(#product,#how,#desktop,#languages){padding-block:10px}
+ .forymo-home :is(#product,#desktop,#languages) .section-heading.narrow{margin-bottom:12px}
+ .forymo-home #desktop .platform-card{padding:18px}
+ .forymo-home #desktop .platform-icon{margin:10px 0;width:54px;height:54px}
+ .forymo-home #desktop .platform-icon img{width:42px;height:42px}
+ .forymo-home #languages .language-foundations article{padding:10px 12px}
+ .forymo-home #languages .language-foundations article>span{width:28px;height:28px;margin-bottom:5px}
+ .forymo-home #languages .language-roadmap{padding:10px 15px;margin-top:10px}
+ .forymo-home #languages .language-status{min-height:39px;padding:4px 8px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
