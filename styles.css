@@ -320,8 +320,8 @@ details p{color:#6d7a8e;max-width:660px;margin:-4px 0 24px;line-height:1.75;font
 
 /* Localization: logical direction, wrapped translated text, and mixed-script isolation.
    Existing LTR layout is unchanged except for wrapping in localized preview pages. */
-html[dir="rtl"] .skip{left:auto;right:-9999px}
-html[dir="rtl"] .skip:focus{left:auto;right:8px}
+html[dir="rtl"] .skip{left:auto;right:8px;clip-path:inset(50%)}
+html[dir="rtl"] .skip:focus{left:auto;right:8px;clip-path:none}
 html[dir="rtl"] .language-menu{right:auto;left:0}
 html[dir="rtl"] .language-option,html[dir="rtl"] .function-guide-tab{text-align:start}
 html[dir="rtl"] .function-guide-tab:hover{transform:translateX(-3px)}
