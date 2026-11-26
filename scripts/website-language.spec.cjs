@@ -89,3 +89,54 @@ for(const locale of Object.keys(localeNames)){
   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
  });
 }
+
+for(const locale of Object.keys(localeNames)){
+ test(locale+' header: one line, no overlap, responsive menu',async({page})=>{
+  await page.setViewportSize({width:1920,height:900});
+  await page.goto(base+'/');
+  await page.locator('#languageTrigger').click();
+  await page.locator('button[data-lang="'+locale+'"]').click();
+  for(const width of [1920,1440,1366]){
+   await page.setViewportSize({width,height:900});
+   await expect(page.locator('.site-header .nav')).toBeVisible();
+   await expect(page.locator('.site-header .nav a')).toHaveCount(8);
+   await expect(page.locator('.site-header .menu-btn')).toBeHidden();
+   const metrics=await page.evaluate(()=>{
+    const wrap=document.querySelector('.site-header .nav-wrap');
+    const box=wrap.getBoundingClientRect(), nav=wrap.querySelector('.nav');
+    const controls=[wrap.querySelector('.brand'),...nav.querySelectorAll('a'),wrap.querySelector('.language-trigger'),wrap.querySelector('.button-small')];
+    const rects=controls.map(n=>n.getBoundingClientRect());
+    const lines=controls.slice(1).map(n=>{
+     const target=n.classList.contains('language-trigger')?n.querySelector('strong'):n;
+     const range=document.createRange();range.selectNodeContents(target);
+     return new Set(Array.from(range.getClientRects()).filter(r=>r.width>0&&r.height>0).map(r=>Math.round(r.top))).size;
+    });
+    return {lines,inside:rects.every(r=>r.left>=box.left-1&&r.right<=box.right+1&&r.top>=box.top-1&&r.bottom<=box.bottom+1),noOverlap:rects.every((a,i)=>rects.every((b,j)=>i===j||a.right<=b.left+1||b.right<=a.left+1)),navCenters:[...nav.querySelectorAll('a')].map(n=>{const r=n.getBoundingClientRect();return r.top+r.height/2;})};
+   });
+   expect(metrics.lines.every(n=>n===1)).toBe(true);
+   expect(metrics.inside).toBe(true);expect(metrics.noOverlap).toBe(true);
+   expect(Math.max(...metrics.navCenters)-Math.min(...metrics.navCenters)).toBeLessThan(1);
+  }
+  for(const width of [1350,1280,768,375,320]){
+   await page.setViewportSize({width,height:900});
+   await expect(page.locator('.site-header .nav')).toBeHidden();
+   await expect(page.locator('.site-header .menu-btn')).toBeVisible();
+   const codeLines=await page.locator('#languageCode').evaluate(n=>{const range=document.createRange();range.selectNodeContents(n);return range.getClientRects().length;});
+   expect(codeLines).toBe(1);
+   await page.locator('.site-header .menu-btn').click();
+   await expect(page.locator('.site-header .nav')).toBeVisible();
+   await expect(page.locator('.site-header .nav a')).toHaveCount(8);
+   await expect(page.locator('.site-header .nav a[href="#support"]')).toBeVisible();
+   await page.locator('.site-header .nav a[href="#support"]').click();
+   await expect(page.locator('.site-header .nav')).toBeHidden();
+   expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
+  }
+  await page.setViewportSize({width:1920,height:900});
+  await page.locator('.site-header .nav a[href="sunshine-pro/"]').click();
+  await expect(page.locator('html')).toHaveAttribute('lang',locale);
+  await expect(page.locator('.site-header .nav')).toBeVisible();
+  await page.setViewportSize({width:320,height:900});
+  await expect(page.locator('.site-header .menu-btn')).toBeVisible();
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=window.innerWidth+1)).toBe(true);
+ });
+}

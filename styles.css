@@ -351,7 +351,7 @@ html[dir="rtl"] .stat{align-items:flex-start}
 html:not([lang="en"]):not([lang="el"]) .side-item{min-width:0;overflow-wrap:anywhere}
 html:not([lang="en"]):not([lang="el"]) .hero-copy,html:not([lang="en"]):not([lang="el"]) .hero-visual{min-width:0;overflow-wrap:anywhere}
 html[dir="rtl"] .footer-brand img{object-position:right center!important}
-@media(max-width:1200px){html:not([lang="en"]):not([lang="el"]) .nav-wrap{gap:14px}html:not([lang="en"]):not([lang="el"]) .nav{gap:12px}}
+
 
 /* FORYMO support center */
 #support{scroll-margin-top:95px}
@@ -380,4 +380,40 @@ html[dir="rtl"] .footer-brand img{object-position:right center!important}
 .support-assistant [hidden]{display:none!important}
 .support-faq{grid-column:1/-1}
 @media(max-width:700px){.support-assistant{padding:16px}.support-input-row{grid-template-columns:minmax(0,1fr)}.support-actions>*{max-width:100%}}
-@media(min-width:1121px) and (max-width:1350px){.nav-wrap{gap:18px}.nav{gap:12px}}
+
+
+/* Header: keep translated labels on a single line, independently of content width. */
+.site-header .nav-wrap{width:min(calc(100% - 48px),1360px);gap:24px}
+.site-header .brand{min-width:0;flex:0 0 auto;white-space:nowrap}
+.site-header .nav{align-items:center;justify-content:center;gap:clamp(12px,1.25vw,24px);margin:0 auto;flex:0 0 auto}
+.site-header .nav>a{display:block;flex:none;white-space:nowrap;line-height:1.4}
+.site-header .nav-actions{flex:0 0 auto;gap:14px;margin:0}
+.site-header .language-selector{flex:none}
+.site-header .language-trigger,.site-header .language-trigger strong,.site-header .nav-actions .button-small{white-space:nowrap;flex-shrink:0}
+.site-header .language-trigger{width:max-content;min-width:92px}
+.site-header .menu-btn{flex:0 0 38px;margin:0}
+.site-header .nav>a:focus-visible,.site-header button:focus-visible,.site-header .button-small:focus-visible{outline:2px solid #76c8ff;outline-offset:4px}
+@media(max-width:1350px){
+  .site-header:not(.sunshine-page-header) .nav{display:none}
+  .site-header:not(.sunshine-page-header) .nav-actions .button-small{display:none}
+  .site-header:not(.sunshine-page-header) .menu-btn{display:block}
+  .site-header:not(.sunshine-page-header) .nav.open{display:flex}
+}
+@media(max-width:1350px){
+  html .site-header:not(.sunshine-page-header) .nav-actions{margin:0;margin-inline-start:auto}
+  .site-header:not(.sunshine-page-header) .nav.open{position:absolute;inset-inline:0;top:100%;background:#07111f;padding:16px 24px;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;max-height:calc(100dvh - 80px);overflow:auto;border-top:1px solid rgba(255,255,255,.08)}
+  .site-header:not(.sunshine-page-header) .nav.open>a{padding:12px 0;white-space:normal}
+}
+@media(max-width:1120px){
+  html .site-header .nav-actions{margin:0;margin-inline-start:auto}
+  html .site-header .menu-btn{margin:0}
+  .site-header .nav.open{position:absolute;inset-inline:0;top:100%;background:#07111f;padding:16px 24px;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;max-height:calc(100dvh - 80px);overflow:auto}
+  .site-header .nav.open>a{padding:12px 0;white-space:normal}
+}
+@media(max-width:700px){
+  .site-header .nav-wrap{width:calc(100% - 28px);gap:12px}
+  .site-header .language-trigger{min-width:78px}
+  .site-header.sunshine-page-header .brand{min-width:0}
+  .site-header.sunshine-page-header .brand>span{font-size:clamp(15px,5vw,20px)!important}
+  .site-header .nav.open{max-height:calc(100dvh - 68px)}
+}
